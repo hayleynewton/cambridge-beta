@@ -44,8 +44,6 @@ $on-laptop:        800px !default;
 }
 
 // Import partials.
-@import
-  "beta/base",
-  "beta/layout",
-  "beta/syntax-highlighting"
-;
+@import 'base';
+@import 'layout';
+@import 'syntax-highlighting';
