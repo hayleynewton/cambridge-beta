@@ -1,0 +1,41 @@
+html, body {
+    font-family: 'Source Sans Pro', 'Source Serif Pro';
+    line-height: 1.5;
+    color: #333333;
+}
+
+// This is the logo
+h1 {
+    font-family: 'Source Serif Pro', serif;
+    font-size: 2.4rem;
+    line-height: 48px;
+    font-weight: 400;
+    margin: 0;
+}
+
+h2 {
+    font-size: 2.4rem;
+    line-height: 32px;
+    font-weight: 900;
+}
+
+h3 {
+    font-size: 1.6rem;
+    font-weight: 900;
+    line-height: 24px;
+}
+
+p {
+font-family: 'Source Serif Pro', serif;
+}
+
+
+//  @media (min-width: 768px) {
+    
+//     h3 {
+//         font-size: 2.4rem;
+//         font-weight: 900;
+//         line-height: 24px;
+//     }
+    
+// }

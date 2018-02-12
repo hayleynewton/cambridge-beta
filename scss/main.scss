@@ -1,0 +1,75 @@
+@import 'helpers';
+
+html, body {  
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    height: calc(80px - 32px);
+    padding: 16px;
+    color: white;
+    background-color: #333333;
+
+    li {
+        display: inline-block;
+    }
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;;
+}
+
+:not(section) ul { 
+    padding: 0;
+    margin: 0; 
+}
+
+article { 
+    height: calc(100% - 80px);
+    width: 100%;
+
+    h2 { @extend %hidden; }
+
+}
+
+ul[aria-label="featured"] {
+    width: 400%;
+    height: 100%;
+
+    li {
+        display: inline-block;
+        height: 100%;
+        width: 25%;
+
+        &:not(:target) article {
+            display: none;
+        }
+
+        &:target {
+            animation: slide-up 0.5s ease-in-out 0.25s both;
+        }            
+    }
+
+    figure { height: 100%; }
+}
+
+ul[aria-label="filterable"] {
+
+}
+
+@keyframes slide-up {
+
+    0% { transform: translateY(0); }
+    
+    100% { transform: translateY(-100%); }
+
+}
