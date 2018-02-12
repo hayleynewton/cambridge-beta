@@ -1,7 +1,8 @@
 html, body {
   font-family: 'Source Sans Pro', 'Source Serif Pro';
   line-height: 1.5;
-  color: #333333; }
+  color: #333333;
+  font-size: 62.5%; }
 
 h1 {
   font-family: 'Source Serif Pro', serif;
@@ -21,4 +22,10 @@ h3 {
   line-height: 24px; }
 
 p {
-  font-family: 'Source Serif Pro', serif; }
+  font-family: 'Source Serif Pro', serif;
+  font-size: 2.0rem;
+  line-height: 30px; }
+
+a {
+  font-size: 2.0rem;
+  line-height: 30px; }

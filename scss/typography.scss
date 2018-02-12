@@ -2,6 +2,7 @@ html, body {
     font-family: 'Source Sans Pro', 'Source Serif Pro';
     line-height: 1.5;
     color: #333333;
+    font-size: 62.5%
 }
 
 // This is the logo
@@ -26,9 +27,15 @@ h3 {
 }
 
 p {
-font-family: 'Source Serif Pro', serif;
+    font-family: 'Source Serif Pro', serif;
+    font-size: 2.0rem;
+    line-height: 30px;
 }
 
+a {
+    font-size: 2.0rem;
+    line-height: 30px;
+}
 
 //  @media (min-width: 768px) {
     
