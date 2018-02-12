@@ -23,10 +23,6 @@ nav {
         align-items: center;
     }
 
-    li:first-of-type {
-        margin-right: auto;
-    }
-
     li {
         display: inline-block;
         padding: 0 16px;
@@ -37,14 +33,19 @@ nav {
         border-bottom: solid 2px #12B4BA;
     }
 
+    li:first-of-type {
+        margin-right: auto;
+    }
+
+    li:first-of-type:hover {
+        border: 0;
+    }
+
     a {
         text-decoration: none;
         color: #fff;
     }
 
-    a:hover {
-        
-    }
 }
 
 .fixed-header {
@@ -56,8 +57,6 @@ nav {
     padding: 0;
     margin: 0; 
 }
-
-
 
 #home > article { 
     height: calc(100% - 80px);
@@ -88,6 +87,7 @@ ul[aria-label="featured"] {
 
     figure { 
         margin: 0;
+        height: 100%;
 
     }
 
@@ -96,6 +96,12 @@ ul[aria-label="featured"] {
         padding-left: 12.5%;
         padding-right: 25%;
         
+    }
+
+    article {
+        padding-top: calc((100vh - 80px) - 75vh);
+        padding-left: 12.5%;
+        padding-right: 25%;
     }
 
     h3 {

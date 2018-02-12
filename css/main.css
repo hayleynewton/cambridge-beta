@@ -28,14 +28,16 @@ nav {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
-  nav li:first-of-type {
-    margin-right: auto; }
   nav li {
     display: inline-block;
     padding: 0 16px;
     border-bottom: solid 2px #333333; }
   nav li:hover {
     border-bottom: solid 2px #12B4BA; }
+  nav li:first-of-type {
+    margin-right: auto; }
+  nav li:first-of-type:hover {
+    border: 0; }
   nav a {
     text-decoration: none;
     color: #fff; }
@@ -66,8 +68,13 @@ ul[aria-label="featured"] {
       -webkit-animation: slide-up 0.5s ease-in-out 0.25s both;
       animation: slide-up 0.5s ease-in-out 0.25s both; }
   ul[aria-label="featured"] figure {
-    margin: 0; }
+    margin: 0;
+    height: 100%; }
   ul[aria-label="featured"] figcaption {
+    padding-top: calc((100vh - 80px) - 75vh);
+    padding-left: 12.5%;
+    padding-right: 25%; }
+  ul[aria-label="featured"] article {
     padding-top: calc((100vh - 80px) - 75vh);
     padding-left: 12.5%;
     padding-right: 25%; }
