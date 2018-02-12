@@ -5,16 +5,16 @@ html, body {
     padding: 0;
 }
 
-header {
+#index header {
     height: calc(100% - 80px);
     margin-bottom: 80px
 }
 
-header ul {
+#index header ul {
     height: 100%;;
 }
 
-header li {
+#index header li {
     width:100%;
     height: 22.3333%;
     max-height: 22.3333%;
@@ -24,14 +24,13 @@ header li {
     overflow: hidden; /* temporary */
 }
 
-header li:first-of-type {
+#index header li:first-of-type {
     height: 33%;
     max-height: 33%;
 }
 
-header img {
-    height: 50%;
-    display: none;
+#index header img {
+    
 }
 
 nav {
@@ -54,14 +53,14 @@ nav {
 
 @media (min-width: 768px) {
     
-    header li {
+    #index header li {
         width: 50%;
         height: 50%;
         max-height: 50%;
         display: inline-block;
     }
 
-    header li:first-of-type {
+    #index header li:first-of-type {
         height: 50%;
         max-height: 50%;
     }
