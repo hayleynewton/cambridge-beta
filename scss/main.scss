@@ -18,8 +18,32 @@ nav {
     color: white;
     background-color: #333333;
 
+    ul {
+        display: flex;
+        align-items: center;
+    }
+
+    li:first-of-type {
+        margin-right: auto;
+    }
+
     li {
         display: inline-block;
+        padding: 0 16px;
+        border-bottom: solid 2px #333333;
+    }
+
+    li:hover {
+        border-bottom: solid 2px #12B4BA;
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    a:hover {
+        
     }
 }
 
@@ -62,12 +86,21 @@ ul[aria-label="featured"] {
         }            
     }
 
-    figure { height: 100%; }
+    figure { 
+        margin: 0;
+
+    }
+
+    figcaption {
+        padding-top: calc((100vh - 80px) - 75vh);
+        padding-left: 12.5%;
+        padding-right: 25%;
+        
+    }
 
     h3 {
         font-size: 4.4rem;
         line-height: 48px;
-        margin: 25% 12.5% 0;
     }
 
     p {
@@ -102,7 +135,6 @@ ul[aria-label="filterable"] {
     
     li {
         width: 100%;
-        display: inline-block;
     }
 
     figure {

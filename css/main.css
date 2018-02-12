@@ -21,8 +21,24 @@ nav {
   padding: 16px;
   color: white;
   background-color: #333333; }
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  nav li:first-of-type {
+    margin-right: auto; }
   nav li {
-    display: inline-block; }
+    display: inline-block;
+    padding: 0 16px;
+    border-bottom: solid 2px #333333; }
+  nav li:hover {
+    border-bottom: solid 2px #12B4BA; }
+  nav a {
+    text-decoration: none;
+    color: #fff; }
 
 .fixed-header {
   position: fixed;
@@ -50,11 +66,14 @@ ul[aria-label="featured"] {
       -webkit-animation: slide-up 0.5s ease-in-out 0.25s both;
       animation: slide-up 0.5s ease-in-out 0.25s both; }
   ul[aria-label="featured"] figure {
-    height: 100%; }
+    margin: 0; }
+  ul[aria-label="featured"] figcaption {
+    padding-top: calc((100vh - 80px) - 75vh);
+    padding-left: 12.5%;
+    padding-right: 25%; }
   ul[aria-label="featured"] h3 {
     font-size: 4.4rem;
-    line-height: 48px;
-    margin: 25% 12.5% 0; }
+    line-height: 48px; }
   ul[aria-label="featured"] p {
     font-size: 2.4rem;
     line-height: 36px; }
@@ -77,8 +96,7 @@ ul[aria-label="filterable"] article {
     line-height: 40px; }
 
 ul[aria-label="filterable"] li {
-  width: 100%;
-  display: inline-block; }
+  width: 100%; }
 
 ul[aria-label="filterable"] figure {
   float: left;
