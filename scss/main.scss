@@ -33,7 +33,9 @@ nav {
     margin: 0; 
 }
 
-article { 
+
+
+#home > article { 
     height: calc(100% - 80px);
     width: 100%;
 
@@ -44,6 +46,7 @@ article {
 ul[aria-label="featured"] {
     width: 400%;
     height: 100%;
+    padding-bottom: 80px;
 
     li {
         display: inline-block;
@@ -63,6 +66,40 @@ ul[aria-label="featured"] {
 }
 
 ul[aria-label="filterable"] {
+
+    article {
+        width: calc(40% - 32px);
+        float: left;
+        padding: 128px 16px 16px;
+
+        h3 {
+            font-size: 3.2rem;
+            line-height: 40px;
+        }
+    }
+    
+    li {
+        width: 100%;
+        display: inline-block;
+    }
+
+    figure {
+        float: left;
+        width: 60%;
+        height: 640px;
+        padding: 0;
+        margin: 0;
+        background: grey;
+        border-bottom: solid 1px red;
+    }
+
+    li:nth-of-type(2n+0) figure {
+        float: right;
+    }
+
+    figcaption {
+        visibility: hidden;
+    }
 
 }
 
