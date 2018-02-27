@@ -1,0 +1,19 @@
+// HELPERS 
+
+// For any consistently reusble snippets 
+
+// accessible hidden text
+%hide {
+    position:absolute;
+    left:-10000px;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+
+// block reset 
+%block-me {
+    margin: 0;
+    padding: 0;
+    display: block;
+}

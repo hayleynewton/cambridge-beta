@@ -1,0 +1,8 @@
+// MIXINS
+
+// Typographical combos
+@mixin font($fontSize, $lineHeight, $fontColor:null) {
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    color: $fontColor;
+}

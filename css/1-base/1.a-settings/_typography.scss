@@ -1,0 +1,23 @@
+// TYPOGRAPHY
+
+// For product typographcal styles
+
+// FAMILY
+$font-family: "Source Sans Pro", sans-serif;
+
+// SIZES
+$font-label: 1.4rem;
+$font-small: 1.6rem;
+$font-medium: 2.0rem;
+$font-heading: 2.4rem;
+$font-large: 3.2rem;
+$font-block: 4.0rem;
+
+// WEIGHTS
+$font-light: 100;
+$font-regular: 300;
+$font-bold: 600;
+
+// BASE VALUES
+$font-base-value: x-small;
+$font-base-set: #{$font-medium}/#{$bl-3} #{$font-family};
