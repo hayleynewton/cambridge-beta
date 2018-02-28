@@ -1,5 +1,7 @@
 // MIXINS
 
+@import '../1.a-settings/screen-sizes';
+
 // Typographical combos
 @mixin font($fontSize, $lineHeight, $fontColor:null) {
     font-size: $fontSize;

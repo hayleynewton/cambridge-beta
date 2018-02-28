@@ -1,0 +1,76 @@
+@import '../1-base/1.a-settings/color';
+@import '../1-base/1.a-settings/typography';
+@import '../1-base/1.a-settings/spacing';
+@import '../1-base/1.b-tools/mixins';
+
+html, body {  
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-top: 80px;
+
+    @include small-screen {
+        padding-top: 56px;
+    }
+}
+
+nav {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    height: 80px;
+    padding: 8px;
+
+    background-color: $darkgray;
+    color: $white;
+
+    @include small-screen {
+        height: 56px;
+    }
+
+    ul {
+        display: flex;
+        align-items: left;
+    }
+    
+    li {
+        display: inline-block;
+
+        &.label {
+            @include small-screen {
+                display:none;
+            }
+        }
+    }
+}
+
+.panels {
+    >li {
+        >img {
+            float: right;
+        }
+    }
+}
+
+.app-stores {
+    >li {
+        background: black;
+        border-radius: 8px;
+        overflow: hidden;
+        display: inline-flex;
+
+        img {
+            display: block;
+        }
+    }
+}
+
+.detail-list {
+    font-family: $font-family-serif;
+}

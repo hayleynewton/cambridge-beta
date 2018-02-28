@@ -1,0 +1,74 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding-top: 80px;
+}
+
+@media (max-width: 769px) {
+  body {
+    padding-top: 56px;
+  }
+}
+
+nav {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  height: 80px;
+  padding: 8px;
+  background-color: #333;
+  color: #fff;
+}
+
+@media (max-width: 769px) {
+  nav {
+    height: 56px;
+  }
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: left;
+  -ms-flex-align: left;
+  align-items: left;
+}
+
+nav li {
+  display: inline-block;
+}
+
+@media (max-width: 769px) {
+  nav li.label {
+    display: none;
+  }
+}
+
+.panels > li > img {
+  float: right;
+}
+
+.app-stores > li {
+  background: black;
+  border-radius: 8px;
+  overflow: hidden;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.app-stores > li img {
+  display: block;
+}
+
+.detail-list {
+  font-family: "Source Serif Pro", serif;
+}
