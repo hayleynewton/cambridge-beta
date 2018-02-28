@@ -1,0 +1,7 @@
+// SCREEN-SIZES
+
+$smallScreenMax: 767px;
+$bigScreenMin: 1920px;
+
+$mediumScreenMin: $smallScreenMax + 1px;
+$mediumScreenMax: $bigScreenMin - 1px;

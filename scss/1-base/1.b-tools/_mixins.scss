@@ -6,3 +6,24 @@
     line-height: $lineHeight;
     color: $fontColor;
 }
+
+// Do a block only on small screens
+@mixin small-screen {
+    @media (max-width: $smallScreenMax) {
+        @content;
+    }
+}
+
+// Do a block only on medium screens
+@mixin medium-screen {
+    @media (min-width: $mediumScreenMin) and (max-width: $mediumScreenMax) {
+        @content;
+    }
+}
+
+// Do a block only on big screens
+@mixin big-screen {
+    @media (min-width: $bigScreenMin) {
+        @content;
+    }
+}
