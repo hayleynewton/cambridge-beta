@@ -152,6 +152,7 @@ ul[aria-label="featured"] {
 ul[aria-label="filterable"] {
 
     article {
+        display: none;
         width: calc(40% - 32px);
         padding: 128px 16px 16px;
         max-height: calc(640px - 144px);
@@ -195,8 +196,7 @@ ul[aria-label="filterable"] {
     }
 
     figcaption {
-        visibility: hidden;
-        position: absolute;
+        
     }
 
     footer {
