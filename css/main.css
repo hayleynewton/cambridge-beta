@@ -20,7 +20,7 @@ nav {
   height: calc(80px - 32px);
   padding: 16px;
   color: white;
-  background-color: #333333; }
+  background-color: #333; }
   nav ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -31,13 +31,13 @@ nav {
   nav li {
     display: inline-block;
     padding: 0 16px;
-    border-bottom: solid 2px #333333; }
+    border-bottom: solid 2px #333; }
   nav li:hover {
     border-bottom: solid 2px #12B4BA; }
   nav li:first-of-type {
     margin-right: auto; }
   nav li:first-of-type:hover {
-    border: 0; }
+    border-bottom-color: #333; }
   nav a {
     text-decoration: none;
     color: #fff; }
