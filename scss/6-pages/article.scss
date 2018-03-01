@@ -1,3 +1,5 @@
 .article {
-    background: red;
+    // @imports base sass ($variables, %placeholders, resets etc), scoped to context
+    @import '../5-templates/global-imports';
+    
 } 

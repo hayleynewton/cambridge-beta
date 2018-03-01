@@ -1,0 +1,11 @@
+// Import base settings (in the right order)
+@import 
+    '../1-base/1.a-settings/color',
+    '../1-base/1.a-settings/spacing',
+    '../1-base/1.a-settings/typography',
+    '../1-base/1.b-tools/aliases',
+    '../1-base/1.b-tools/animate',
+    '../1-base/1.b-tools/mixins',
+    '../1-base/1.c-base/resets',
+    '../1-base/1.c-base/global',
+    '../1-base/1.c-base/helpers';
