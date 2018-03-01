@@ -1,0 +1,10 @@
+@import '../1-base/1.b-tools/mixins';
+
+.back {
+
+    @include small-screen {
+        .label {
+            display: none;
+        }
+    }
+}

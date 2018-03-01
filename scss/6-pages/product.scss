@@ -3,6 +3,7 @@
 @import '../1-base/1.a-settings/spacing';
 @import '../1-base/1.b-tools/mixins';
 @import '../1-base/1.c-base/resets';
+@import '../1-base/1.c-base/common-typography';
 
 // Resets
 * {
@@ -13,7 +14,7 @@
     -webkit-padding-start: 0;
 }
 
-
+// Not needed?
 html, body {  
     height: 100%;
     width: 100%;
@@ -21,94 +22,21 @@ html, body {
     padding: 0;
 }
 
-%sans-black {
-    font-family: $font-family;
-    font-weight: $font-boldest;
-}
-
-%product-heading {
-    @extend %sans-black;
-
-    @include font(44px, 48px);
-
-    @include small-screen {
-        @include font(24px, 32px);
-    }
-
-    // @include big-screen {
-    //     @include font(88px, 96px);
-    // }
-}
-
-%product-subheading {
-    @extend %sans-black;
-
-    @include font(32px, 40px);
-
-    @include small-screen {
-        @include font(16px, 24px);
-    }
-
-    // @include big-screen {
-    //     @include font(64px, 80px);
-    // }
-}
-
-%body-text {
-    font-family: $font-family-serif;
-
-    @include font(20px, 30px);
-
-    @include small-screen {
-        @include font(16px, 24px);
-    }
-
-    // @include big-screen {
-    //     @include font(40px, 60px);
-    // }
-}
-
-nav {
-    position: fixed;
-    right: 0;
-    left: 0;
-    top: 0;
-    z-index: 10;
-    height: 10vh;
-    padding: 8px;
-    box-sizing: border-box;
-
-    background-color: $darkgray;
-    color: $white;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
-
-    ul {
-        display: flex;
-        align-items: left;
-    }
-    
-    li {
-        display: inline-block;
-
-        &.back {
-            .label {
-                @include small-screen {
-                    display:none;
-                }
-            }
-        }
-    }
-}
+@import '../4-organisms/nav';
 
 h2 {
-    @extend %product-heading;
+    @extend %product-title;
+    
+    margin: 0px 0px 16px;
+
+    @include small-screen {
+        margin: 0px 0px 8px;
+    }
 }
 
 h3 {
     @extend %product-subheading;
-}
 
-h2, h3 {
     margin: 16px 0px;
 
     @include small-screen {
@@ -260,7 +188,7 @@ h2, h3 {
     
     font-family: $font-family-serif;
 
-    @extend %body-text;
+    @extend %article-body-text;
 
     >li {
         &:not(:first-child) {

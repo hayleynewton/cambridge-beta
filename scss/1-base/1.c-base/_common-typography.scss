@@ -1,0 +1,70 @@
+// COMMON-TYPOGRAPHY
+
+// For common typographical styles
+// I.e. as listed in the style guide
+
+@import '../1.a-settings/color';
+@import '../1.a-settings/typography';
+@import '../1.b-tools/mixins';
+
+%sans-black {
+    font-family: $font-family;
+    font-weight: $font-boldest;
+}
+
+%detail-nav-title {
+    @extend %sans-black;
+
+    @include font(24px, 32px);
+
+    @include small-screen {
+        font-family: $font-family;
+        font-weight: $font-regular;
+
+        @include font(12px, 16px);
+
+        border-bottom: solid 1px $link;
+    }
+}
+
+%product-title {
+    @extend %sans-black;
+
+    @include font(44px, 48px);
+
+    @include small-screen {
+        @include font(24px, 32px);
+    }
+
+    // @include big-screen {
+    //     @include font(88px, 96px);
+    // }
+}
+
+%product-subheading {
+    @extend %sans-black;
+
+    @include font(32px, 40px);
+
+    @include small-screen {
+        @include font(16px, 24px);
+    }
+
+    // @include big-screen {
+    //     @include font(64px, 80px);
+    // }
+}
+
+%article-body-text {
+    font-family: $font-family-serif;
+
+    @include font(20px, 30px);
+
+    @include small-screen {
+        @include font(16px, 24px);
+    }
+
+    // @include big-screen {
+    //     @include font(40px, 60px);
+    // }
+}

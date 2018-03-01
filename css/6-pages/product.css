@@ -14,24 +14,24 @@ button {
   border: none;
 }
 
-* {
-  -webkit-margin-before: 0;
-  -webkit-margin-after: 0;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
-  -webkit-padding-start: 0;
-}
-
-html, body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-h2, h3 {
+nav[subpage] h1, h2, h3, nav[subpage] h2, nav[subpage] h3 {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 900;
+}
+
+nav[subpage] h1 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+@media (max-width: 769px) {
+  nav[subpage] h1 {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+    border-bottom: solid 1px #12B4BA;
+  }
 }
 
 h2 {
@@ -71,18 +71,40 @@ h3 {
   }
 }
 
+* {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-start: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 nav {
-  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-items: center;
+  position: absolute;
   right: 0;
   left: 0;
-  top: 0;
+  bottom: 0;
   z-index: 10;
   height: 10vh;
-  padding: 8px;
+  padding: 16px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  background-color: #333;
   color: #fff;
+  background-color: #333;
   -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
 }
@@ -91,27 +113,128 @@ nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: left;
-  -ms-flex-align: left;
-  align-items: left;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-nav li {
+nav ul li {
   display: inline-block;
+  padding: 0 16px;
+  border-bottom: solid 2px #333;
+}
+
+nav ul li:hover {
+  border-bottom: solid 2px #12B4BA;
+}
+
+nav ul li.logo {
+  margin-right: auto;
+}
+
+nav ul li.logo:hover {
+  border-bottom-color: #333;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+nav .logo {
+  margin-right: auto;
+}
+
+nav[subpage] {
+  position: fixed;
+  bottom: unset;
+  top: 0;
+}
+
+nav[subpage] h1, nav[subpage] h2, nav[subpage] h3 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 900;
+}
+
+nav[subpage] h1 {
+  font-size: 24px;
+  line-height: 32px;
 }
 
 @media (max-width: 769px) {
-  nav li.back .label {
+  nav[subpage] h1 {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+    border-bottom: solid 1px #12B4BA;
+  }
+}
+
+nav[subpage] h2 {
+  font-size: 44px;
+  line-height: 48px;
+}
+
+@media (max-width: 769px) {
+  nav[subpage] h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+nav[subpage] h3 {
+  font-size: 32px;
+  line-height: 40px;
+}
+
+@media (max-width: 769px) {
+  nav[subpage] h3 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+nav[subpage] .detail-list {
+  font-family: "Source Serif Pro", serif;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+@media (max-width: 769px) {
+  nav[subpage] .detail-list {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 769px) {
+  nav[subpage] .back .label {
     display: none;
   }
 }
 
-h2, h3 {
+nav[subpage] .logo {
+  margin-left: auto;
+  margin-right: unset;
+}
+
+h2 {
+  margin: 0px 0px 16px;
+}
+
+@media (max-width: 769px) {
+  h2 {
+    margin: 0px 0px 8px;
+  }
+}
+
+h3 {
   margin: 16px 0px;
 }
 
 @media (max-width: 769px) {
-  h2, h3 {
+  h3 {
     margin: 8px 0px;
   }
 }
@@ -173,7 +296,7 @@ h2, h3 {
 
 @media (max-width: 769px) {
   .panels > li > .body {
-    padding: 0px 16px 0px;
+    padding: 32px 16px 0px;
     width: 100%;
   }
   .panels > li > .body .detail-list {
