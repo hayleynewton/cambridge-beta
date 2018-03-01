@@ -152,7 +152,7 @@ h2, h3 {
             justify-content: center;
 
             @include small-screen {
-                padding: 0px 16px 0px;
+                padding: 32px 16px 0px;
                 width: 100%;
 
                 .detail-list {
