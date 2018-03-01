@@ -1,0 +1,15 @@
+nav {
+
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    height: calc(80px - 32px);
+    padding: 16px;
+    color: white;
+    background-color: $darkgray;
+
+    @import '../3-molecules/nav-items';
+
+}

@@ -1,3 +1,26 @@
 .article {
-  background: red;
+  /* BASE */
+}
+
+.article article, .article aside, .article details, .article figcaption, .article figure,
+.article footer, .article header, .article hgroup, .article menu, .article nav, .article section {
+  display: block;
+}
+
+.article table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.article button {
+  -webkit-appearance: none;
+  background: none;
+  border: none;
+}
+
+.article html, .article body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }

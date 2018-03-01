@@ -2,30 +2,36 @@ html, body {
   font-family: 'Source Sans Pro', 'Source Serif Pro';
   line-height: 1.5;
   color: #333333;
-  font-size: 62.5%; }
+  font-size: 62.5%;
+}
 
 h1 {
   font-family: 'Source Serif Pro', serif;
   font-size: 2.4rem;
   line-height: 48px;
   font-weight: 400;
-  margin: 0; }
+  margin: 0;
+}
 
 h2 {
   font-size: 2.4rem;
   line-height: 32px;
-  font-weight: 900; }
+  font-weight: 900;
+}
 
 h3 {
   font-size: 1.6rem;
   font-weight: 900;
-  line-height: 24px; }
+  line-height: 24px;
+}
 
 p {
   font-family: 'Source Serif Pro', serif;
   font-size: 2.0rem;
-  line-height: 30px; }
+  line-height: 30px;
+}
 
 a {
   font-size: 2.0rem;
-  line-height: 30px; }
+  line-height: 30px;
+}

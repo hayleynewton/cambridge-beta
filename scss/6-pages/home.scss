@@ -1,54 +1,51 @@
-@import 'helpers';
+@import '../5-templates/global-imports';
+@import '../4-organisms/nav';
 
-html, body {  
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
 
-nav {
-    $bg-color: #333;
 
-    position: absolute;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    z-index: 10;
-    height: calc(80px - 32px);
-    padding: 16px;
-    color: white;
-    background-color: $bg-color;
+// separate out..
 
-    ul {
-        display: flex;
-        align-items: center;
-    }
+// nav {
 
-    li {
-        display: inline-block;
-        padding: 0 16px;
-        border-bottom: solid 2px $bg-color;
-    }
+//     position: absolute;
+//     right: 0;
+//     left: 0;
+//     bottom: 0;
+//     z-index: 10;
+//     height: calc(80px - 32px);
+//     padding: 16px;
+//     color: white;
+//     background-color: $darkgray;
 
-    li:hover {
-        border-bottom: solid 2px #12B4BA;
-    }
+//     ul {
+//         display: flex;
+//         align-items: center;
+//     }
 
-    li:first-of-type {
-        margin-right: auto;
-    }
+//     li {
+//         display: inline-block;
+//         padding: 0 16px;
+//         border-bottom: solid 2px $bg-color;
+//     }
 
-    li:first-of-type:hover {
-        border-bottom-color: $bg-color;
-    }
+//     li:hover {
+//         border-bottom: solid 2px #12B4BA;
+//     }
 
-    a {
-        text-decoration: none;
-        color: #fff;
-    }
+//     li:first-of-type {
+//         margin-right: auto;
+//     }
 
-}
+//     li:first-of-type:hover {
+//         border-bottom-color: $bg-color;
+//     }
+
+//     a {
+//         text-decoration: none;
+//         color: #fff;
+//     }
+
+// }
 
 .fixed-header {
     position: fixed;
@@ -64,7 +61,7 @@ nav {
     height: calc(100% - 80px);
     width: 100%;
 
-    h2 { @extend %hidden; }
+    h2 { @extend %hide; }
 
 }
 
