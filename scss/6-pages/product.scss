@@ -35,9 +35,9 @@ html, body {
         @include font(24px, 32px);
     }
 
-    @include big-screen {
-        @include font(88px, 96px);
-    }
+    // @include big-screen {
+    //     @include font(88px, 96px);
+    // }
 }
 
 %product-subheading {
@@ -49,9 +49,9 @@ html, body {
         @include font(16px, 24px);
     }
 
-    @include big-screen {
-        @include font(64px, 80px);
-    }
+    // @include big-screen {
+    //     @include font(64px, 80px);
+    // }
 }
 
 %body-text {
@@ -63,9 +63,9 @@ html, body {
         @include font(16px, 24px);
     }
 
-    @include big-screen {
-        @include font(40px, 60px);
-    }
+    // @include big-screen {
+    //     @include font(40px, 60px);
+    // }
 }
 
 nav {
@@ -132,6 +132,12 @@ h2, h3 {
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
         overflow: hidden;
 
+        >* {
+            display: inline-block;
+            height: 100%;
+            vertical-align: top;
+        }
+
         >.body {
             display: inline-block;
             width: 60vw;
@@ -165,6 +171,7 @@ h2, h3 {
 
             img {
                 max-height: 100%;
+                display: inline;
             }
         }
 
@@ -215,7 +222,6 @@ h2, h3 {
 
         &:not(:last-child) {
             margin-right: 34px;
-            margin-bottom: 16px;
 
             @include small-screen {
                 margin-right: 24px;
@@ -235,10 +241,38 @@ h2, h3 {
     font-family: $font-family-serif;
 
     @extend %body-text;
+
+    >li {
+        &:not(:first-child) {
+            margin-top: 16px;
+
+            @include small-screen {
+                margin-top: 8px;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+
+            @include small-screen {
+                margin-bottom: 8px;
+            }
+        }
+
+        ul {
+            padding-left: 1.25em;
+            list-style-type: disc;
+        }
+    }
 }
 
 footer {
     padding: 20px;
+    height: 10vh;
     background-color: $darkgray;
     box-sizing: border-box;
+
+    img {
+        height: 100%;
+    }
 }

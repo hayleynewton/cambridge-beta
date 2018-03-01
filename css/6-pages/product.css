@@ -1,3 +1,13 @@
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 button {
   -webkit-appearance: none;
   background: none;
@@ -36,13 +46,6 @@ h2 {
   }
 }
 
-@media (min-width: 1920px) {
-  h2 {
-    font-size: 88px;
-    line-height: 96px;
-  }
-}
-
 h3 {
   font-size: 32px;
   line-height: 40px;
@@ -52,13 +55,6 @@ h3 {
   h3 {
     font-size: 16px;
     line-height: 24px;
-  }
-}
-
-@media (min-width: 1920px) {
-  h3 {
-    font-size: 64px;
-    line-height: 80px;
   }
 }
 
@@ -72,13 +68,6 @@ h3 {
   .detail-list {
     font-size: 16px;
     line-height: 24px;
-  }
-}
-
-@media (min-width: 1920px) {
-  .detail-list {
-    font-size: 40px;
-    line-height: 60px;
   }
 }
 
@@ -145,6 +134,12 @@ h2, h3 {
   overflow: hidden;
 }
 
+.panels > li > * {
+  display: inline-block;
+  height: 100%;
+  vertical-align: top;
+}
+
 .panels > li > .body {
   display: inline-block;
   width: 60vw;
@@ -189,6 +184,7 @@ h2, h3 {
 
 .panels > li > .image-holder img {
   max-height: 100%;
+  display: inline;
 }
 
 .panels > li:nth-child(even) > .body {
@@ -285,7 +281,6 @@ h2, h3 {
 
 .app-stores > li:not(:last-child) {
   margin-right: 34px;
-  margin-bottom: 16px;
 }
 
 @media (max-width: 769px) {
@@ -306,9 +301,39 @@ h2, h3 {
   font-family: "Source Serif Pro", serif;
 }
 
+.detail-list > li:not(:first-child) {
+  margin-top: 16px;
+}
+
+@media (max-width: 769px) {
+  .detail-list > li:not(:first-child) {
+    margin-top: 8px;
+  }
+}
+
+.detail-list > li:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+@media (max-width: 769px) {
+  .detail-list > li:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+
+.detail-list > li ul {
+  padding-left: 1.25em;
+  list-style-type: disc;
+}
+
 footer {
   padding: 20px;
+  height: 10vh;
   background-color: #333;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+footer img {
+  height: 100%;
 }
