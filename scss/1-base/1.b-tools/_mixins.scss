@@ -9,6 +9,23 @@
     color: $fontColor;
 }
 
+// Alternating Background Colors
+@mixin alternate-bg-colors($colorList, $maxEntries) {
+    $colIndex: 1;
+    @for $i from 1 through $maxEntries {
+        &:nth-child(#{$i}) {
+            background-color: nth($colorList, $colIndex);
+        }
+
+        $colIndex: $colIndex + 1;
+        @if $colIndex > length($colorList) {
+            $colIndex: 1;
+        }
+    }
+}
+
+// SCREEN SIZES
+
 // Do a block only on small screens
 @mixin small-screen {
     @media (max-width: $smallScreenMax) {

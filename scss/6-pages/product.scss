@@ -2,6 +2,17 @@
 @import '../1-base/1.a-settings/typography';
 @import '../1-base/1.a-settings/spacing';
 @import '../1-base/1.b-tools/mixins';
+@import '../1-base/1.c-base/resets';
+
+// Resets
+* {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 0;
+}
+
 
 html, body {  
     height: 100%;
@@ -10,11 +21,50 @@ html, body {
     padding: 0;
 }
 
-body {
-    padding-top: 80px;
+%sans-black {
+    font-family: $font-family;
+    font-weight: $font-boldest;
+}
+
+%product-heading {
+    @extend %sans-black;
+
+    @include font(44px, 48px);
 
     @include small-screen {
-        padding-top: 56px;
+        @include font(24px, 32px);
+    }
+
+    @include big-screen {
+        @include font(88px, 96px);
+    }
+}
+
+%product-subheading {
+    @extend %sans-black;
+
+    @include font(32px, 40px);
+
+    @include small-screen {
+        @include font(16px, 24px);
+    }
+
+    @include big-screen {
+        @include font(64px, 80px);
+    }
+}
+
+%body-text {
+    font-family: $font-family-serif;
+
+    @include font(20px, 30px);
+
+    @include small-screen {
+        @include font(16px, 24px);
+    }
+
+    @include big-screen {
+        @include font(40px, 60px);
     }
 }
 
@@ -24,15 +74,13 @@ nav {
     left: 0;
     top: 0;
     z-index: 10;
-    height: 80px;
+    height: 10vh;
     padding: 8px;
+    box-sizing: border-box;
 
     background-color: $darkgray;
     color: $white;
-
-    @include small-screen {
-        height: 56px;
-    }
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
 
     ul {
         display: flex;
@@ -42,23 +90,114 @@ nav {
     li {
         display: inline-block;
 
-        &.label {
-            @include small-screen {
-                display:none;
+        &.back {
+            .label {
+                @include small-screen {
+                    display:none;
+                }
             }
         }
     }
 }
 
+h2 {
+    @extend %product-heading;
+}
+
+h3 {
+    @extend %product-subheading;
+}
+
+h2, h3 {
+    margin: 16px 0px;
+
+    @include small-screen {
+        margin: 8px 0px;
+    }
+}
+
 .panels {
+    padding: 0;
+    margin: 0;
+
+    padding-top: 10vh;
+
+    font-family: $font-family;
+
     >li {
-        >img {
-            float: right;
+        display: block;
+        height: 80vh;
+        width: 100%;
+        box-sizing: border-box;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
+        overflow: hidden;
+
+        >.body {
+            display: inline-block;
+            width: 60vw;
+            height: 100%;
+            box-sizing: border-box;
+
+            @include small-screen {
+                padding: 32px 16px 0px;
+                width: 100vw;
+            }
+
+            @include medium-screen {
+                padding: 128px 44px 0px;
+            }
+
+            @include big-screen {
+                padding: 64px 160px 0px;
+            }
+        }
+
+        >.image-holder {
+            width: 40vw;
+            height: 100%;
+            box-sizing: border-box;
+            display: inline-block;
+            overflow: hidden;
+
+            @include small-screen {
+                width: 100vw;
+            }
+
+            img {
+                max-height: 100%;
+            }
+        }
+
+        &:nth-child(even) {
+            >.body {
+                order: 1;
+            }
+            >.image-holder {
+                order: 0;
+            }
         }
     }
 }
 
+.qye-product-theme {
+    color: $white;
+
+    >* {
+        @include alternate-bg-colors($qye-bg-colors, 10);
+    }
+}
+
 .app-stores {
+    margin: 36px 52px;
+
+    @include small-screen {
+        margin: 16px 32px;
+    }
+
+    @include big-screen {
+        margin: 36px 0px;
+    }
+
     >li {
         background: black;
         border-radius: 8px;
@@ -67,10 +206,39 @@ nav {
 
         img {
             display: block;
+            height: 44px;
+
+            @include small-screen {
+                height: 32px;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-right: 34px;
+            margin-bottom: 16px;
+
+            @include small-screen {
+                margin-right: 24px;
+            }
+
+            @include big-screen {
+                margin-right: 44px;
+            }
         }
     }
 }
 
 .detail-list {
+    padding: 0;
+    margin-top: 24px;
+    
     font-family: $font-family-serif;
+
+    @extend %body-text;
+}
+
+footer {
+    padding: 20px;
+    background-color: $darkgray;
+    box-sizing: border-box;
 }
