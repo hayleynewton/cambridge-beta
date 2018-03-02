@@ -1,0 +1,38 @@
+
+li {
+    display: block;
+    padding: $bl-2;
+    width: 100%;
+    margin: 0 0 $bl-2 0;
+
+    @media screen and (min-width: $bp-medium) {
+        &:not(:first-child) { margin: 0 0 $bl-2 $bl-4; }
+    }
+    
+    // These are all atoms / molecules
+
+    h3 { 
+        @include font($font-small,$bl-3);
+        font-family: $font-family;
+        margin: 0;
+    }
+
+    p,
+    a {
+        @include font($font-small,$bl-3);
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+
+        a.more {
+            font-family: $font-family;
+            text-transform: uppercase;
+            font-weight: $font-bold;
+            text-decoration: none;
+        }
+
+    }
+
+}

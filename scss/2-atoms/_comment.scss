@@ -2,9 +2,8 @@ textarea {
     @include font($font-small,$bl-4);
 
     font-family: $font-family-serif;
-
     border: none;
     background: none;
     padding: $bl-1;
-        width: 100%;
+    width: 100%;
 }

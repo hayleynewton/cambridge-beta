@@ -223,18 +223,18 @@ a {
   margin-right: auto;
 }
 
-.home nav[subpage] {
+.home nav.subpage {
   position: fixed;
   bottom: unset;
   top: 0;
 }
 
-.home nav[subpage] h1 {
+.home nav.subpage h1 {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 900;
 }
 
-.home nav[subpage] h1 {
+.home nav.subpage h1 {
   font-size: 24px;
   line-height: 32px;
   padding: 10px 0px;
@@ -242,7 +242,7 @@ a {
 }
 
 @media (max-width: 769px) {
-  .home nav[subpage] h1 {
+  .home nav.subpage h1 {
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 300;
     font-size: 12px;
@@ -252,55 +252,55 @@ a {
   }
 }
 
-.home nav[subpage] .back {
+.home nav.subpage .back {
   display: flex;
   align-items: center;
   color: #fff;
 }
 
-.home nav[subpage] .back:hover {
+.home nav.subpage .back:hover {
   color: #c1bfc1;
 }
 
-.home nav[subpage] .back .label {
+.home nav.subpage .back .label {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
   text-transform: uppercase;
 }
 
-.home nav[subpage] .back .arrow {
+.home nav.subpage .back .arrow {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 16px;
   padding: 4px;
 }
 
-.home nav[subpage] .back .label {
+.home nav.subpage .back .label {
   margin-left: 16px;
 }
 
 @media (max-width: 769px) {
-  .home nav[subpage] .back .label {
+  .home nav.subpage .back .label {
     display: none;
   }
 }
 
-.home nav[subpage] .back {
+.home nav.subpage .back {
   margin-right: 64px;
 }
 
 @media (max-width: 769px) {
-  .home nav[subpage] .back {
+  .home nav.subpage .back {
     margin-right: 24px;
   }
 }
 
 @media (min-width: 1920px) {
-  .home nav[subpage] .back {
+  .home nav.subpage .back {
     margin-right: 72px;
   }
 }
 
-.home nav[subpage] .logo {
+.home nav.subpage .logo {
   margin-left: auto;
   margin-right: unset;
 }

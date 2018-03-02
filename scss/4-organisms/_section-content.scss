@@ -1,6 +1,10 @@
 section.content {
     padding: $bl-2;
 
-    > { @import '../2-atoms/copy'; }
+    @import '../2-atoms/copy';
+
+    &.copy {
+        position: relative;
+    }
     
 }

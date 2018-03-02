@@ -1,7 +1,7 @@
 aside.profile {
     max-width: $line-max-copy;
-    margin: 0 auto $bl-6 auto;
-    padding: $bl-2;
+    margin: 0 auto;
+    padding: $bl-3 0 0 0;
 
     @import '../3-molecules/card-profile';
 }

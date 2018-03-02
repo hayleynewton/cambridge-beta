@@ -1,0 +1,53 @@
+aside.social {
+
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    @include medium-screen {
+        margin-left: -($line-max-heading / 2);        
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 832px) {
+        left: $bl-2;
+        margin-left: 0;
+    }
+
+    @media screen and (min-width: $bp-large) {
+        margin-left: -(($line-max-copy / 2) + ($line-max-heading - $line-max-copy));
+    }
+
+    h2 {
+        @include font($font-small,$bl-4);
+        font-family: $font-family;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    a {
+        display: block;
+        text-decoration: none;
+        padding: $bl-2;
+        
+        .material-icons {
+            display: block;
+        }
+    }
+
+    @include small-screen {
+        flex-direction: row;
+        justify-content: flex-end;
+        position: fixed;
+        top: auto;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        h2 {
+            display: none;
+        }
+    }
+
+}

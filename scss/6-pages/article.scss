@@ -10,6 +10,18 @@
 
 .detail.article {
 
+    a {
+        color: $color-action;
+            
+        &:hover,
+        &:focus {
+            color: $color-action-active;                
+        }
+    
+    }
+
+    header { background-color: $color-background-light; }
+
     section.content { background: $color-background-light; }
 
     li.tag a { 
@@ -35,12 +47,30 @@
 
     }
 
+    aside.social {
+
+        @include small-screen {
+            background: $color-background-light; 
+            border-top: 1px solid $color-border; 
+        }
+    }
+ 
+    aside.related {
+
+        li {
+            background: $color-background-light; 
+            border: 1px solid $color-border; 
+            box-shadow: 0 0 $bl-1/2 rgba(0,0,0,0.08);                
+        }
+    }
+
     section.comments {
 
         h2 { @extend %hide; }
 
         ol {
             background: $color-background-light; 
+            border: 1px solid $color-border; 
             box-shadow: 0 0 $bl-1/2 rgba(0,0,0,0.08);
         }
 
@@ -54,6 +84,11 @@
         h2 { @extend %hide; }
 
         small { color: $color-text-inverse; }
+
+        @include small-screen {
+            margin-bottom: $bl-7; 
+        }
+
     } 
 
 } 
