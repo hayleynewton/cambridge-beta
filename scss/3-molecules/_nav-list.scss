@@ -2,5 +2,6 @@ ul {
     display: flex;
     align-items: center;
 
-    @import '../2-atoms/list';
 }
+
+@import '../2-atoms/nav-item';

@@ -1,55 +1,36 @@
 @import '../5-templates/global-imports';
-@import '../4-organisms/nav';
 
+.home {
+    @import '../4-organisms/nav';
 
+    > article { 
+        height: calc(100% - 80px);
+        width: 100%;
+    
+        h2 { @extend %hide; }
+    }
 
-// separate out..
+    nav {
+        color: white;
+        background-color: $darkgray;
 
-// nav {
+        li {
+            border-bottom: solid 2px $darkgray;
 
-//     position: absolute;
-//     right: 0;
-//     left: 0;
-//     bottom: 0;
-//     z-index: 10;
-//     height: calc(80px - 32px);
-//     padding: 16px;
-//     color: white;
-//     background-color: $darkgray;
+            &:hover {
+                border-bottom: solid 2px #12B4BA;
+            }
 
-//     ul {
-//         display: flex;
-//         align-items: center;
-//     }
+            &:first-of-type {
+                margin-right: auto;
+            }
 
-//     li {
-//         display: inline-block;
-//         padding: 0 16px;
-//         border-bottom: solid 2px $bg-color;
-//     }
+            &:first-of-type:hover {
+                border-bottom-color: $darkgray;
+            }
+        }
+    }
 
-//     li:hover {
-//         border-bottom: solid 2px #12B4BA;
-//     }
-
-//     li:first-of-type {
-//         margin-right: auto;
-//     }
-
-//     li:first-of-type:hover {
-//         border-bottom-color: $bg-color;
-//     }
-
-//     a {
-//         text-decoration: none;
-//         color: #fff;
-//     }
-
-// }
-
-.fixed-header {
-    position: fixed;
-    top: 0;;
 }
 
 :not(section) ul { 
@@ -57,13 +38,6 @@
     margin: 0; 
 }
 
-#home > article { 
-    height: calc(100% - 80px);
-    width: 100%;
-
-    h2 { @extend %hide; }
-
-}
 
 ul[aria-label="featured"] {
     width: 400%;
@@ -168,11 +142,17 @@ ul[aria-label="filterable"] {
     }
 
     figure {
+        margin: 0;
+        width: 100%;
+    }
+
+    figure figure {
         position: relative;
         width: 60%;
         height: 640px;
         overflow: hidden;
         margin: 0;
+        display: inline-block;
 
         img {
             position: absolute;
@@ -186,6 +166,15 @@ ul[aria-label="filterable"] {
             transform: translateX(-50%);
 
         }
+
+        figcaption {
+            display: none;
+        }
+    }
+
+    figcaption {
+        width: 40%;
+        display: inline-block;
     }
 
 
