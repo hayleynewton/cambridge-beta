@@ -34,6 +34,14 @@ body {
   background: #FAFAFA;
 }
 
+.detail.article footer[role="contact"] h2 {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .article.detail header[role="banner"] {
   position: relative;
   overflow: hidden;
@@ -89,4 +97,25 @@ body {
   text-decoration: none;
   padding: 8px 16px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.18);
+}
+
+.article.detail footer[role="contact"] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+
+.article.detail footer[role="contact"] a.logo,
+.article.detail footer[role="contact"] img {
+  display: inline-block;
+  height: 40px;
+}
+
+.detail.article footer[role="contact"] {
+  background: #333333;
+}
+
+.detail.article footer[role="contact"] small {
+  color: #FFFFFF;
 }

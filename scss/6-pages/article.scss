@@ -7,6 +7,13 @@
 }
 
 // Now colour it in
-.article.detail {
+.detail.article {
 
+    footer[role="contact"] {
+        background: $color-text;
+
+        h2 { @extend %hide; }
+
+        small { color: $color-text-inverse; }
+    } 
 } 
