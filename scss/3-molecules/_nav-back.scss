@@ -1,6 +1,24 @@
+// NAV-BACK
+
+// Back button shown in subpage nav
+
 @import '../1-base/1.b-tools/mixins';
 
 .back {
+    display: flex;
+    align-items: center;
+    color: $white;
+
+    &:hover {
+        color: $lightgray;
+    }
+
+    @import '../2-atoms/nav-back-label';
+    @import '../2-atoms/nav-back-arrow';
+
+    .label {
+        margin-left: 16px;
+    }
 
     @include small-screen {
         .label {
