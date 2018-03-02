@@ -15,6 +15,14 @@ button {
   border: none;
 }
 
+textarea,
+input,
+button {
+  font: 2rem/32px Source Serif Pro, serif;
+  font-weight: 300;
+  color: #333333;
+}
+
 /* BASE */
 html {
   font-size: x-small;
@@ -66,6 +74,14 @@ h3 {
   -webkit-appearance: none;
   background: none;
   border: none;
+}
+
+.home textarea,
+.home input,
+.home button {
+  font: 2rem/32px Source Serif Pro, serif;
+  font-weight: 300;
+  color: #333333;
 }
 
 .home html {

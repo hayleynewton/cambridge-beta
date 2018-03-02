@@ -15,6 +15,14 @@ button {
   border: none;
 }
 
+textarea,
+input,
+button {
+  font: 2rem/32px Source Serif Pro, serif;
+  font-weight: 300;
+  color: #333333;
+}
+
 /* BASE */
 html {
   font-size: x-small;
@@ -34,6 +42,10 @@ body {
   background: #FAFAFA;
 }
 
+h3 {
+  font-size: 3.2rem;
+  line-height: 40px;
+}
 
 .detail.article footer[role="contact"] h2 {
   position: absolute;
@@ -41,11 +53,6 @@ body {
   width: 1px;
   height: 1px;
   overflow: hidden;
-}
-
-h3 {
-  font-size: 3.2rem;
-  line-height: 40px;
 }
 
 .article.detail header[role="banner"] {
@@ -102,7 +109,31 @@ h3 {
   font-family: "Source Sans Pro", sans-serif;
   text-decoration: none;
   padding: 8px 16px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.18);
+}
+
+.article.detail section.comments {
+  max-width: 640px;
+  margin: 0 auto 48px auto;
+}
+
+.article.detail section.comments ol {
+  margin: 0;
+  padding: 0;
+}
+
+.article.detail section.comments li {
+  display: flex;
+  padding: 16px;
+}
+
+.article.detail section.comments textarea {
+  font-size: 1.6rem;
+  line-height: 32px;
+  font-family: "Source Serif Pro", serif;
+  border: none;
+  background: none;
+  padding: 8px;
+  width: 100%;
 }
 
 .article.detail footer[role="contact"] {
@@ -110,6 +141,8 @@ h3 {
   justify-content: space-between;
   align-items: center;
   padding: 16px;
+  height: 10vh;
+  box-sizing: border-box;
 }
 
 .article.detail footer[role="contact"] a.logo,
@@ -118,10 +151,30 @@ h3 {
   height: 40px;
 }
 
+.article.detail footer[role="contact"] small {
+  font-family: "Source Serif Pro", serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+}
+
 @media (max-width: 769px) {
   .article.detail footer[role="contact"] small {
     display: none;
   }
+}
+
+.detail.article li.tag a {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.18);
+}
+
+.detail.article section.comments ol {
+  background: #FFFFFF;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.08);
+}
+
+.detail.article section.comments .material-icons {
+  line-height: 1.6;
 }
 
 .detail.article footer[role="contact"] {

@@ -7,13 +7,28 @@
 }
 
 // Now colour it in
+
 .detail.article {
 
+    li.tag a { box-shadow: 0 0 $bl-1/2 rgba(0,0,0,0.18); }
+
+    section.comments {
+
+        ol {
+            background: $color-background-light; 
+            box-shadow: 0 0 $bl-1/2 rgba(0,0,0,0.08);
+        }
+
+        .material-icons { line-height: 1.6; }
+    } 
+
     footer[role="contact"] {
-        background: $darkgray;
-    
+        
+        background: $color-text;
+
         h2 { @extend %hide; }
-    
-        small {color: $color-text-inverse; }
-    }
-}
+
+        small { color: $color-text-inverse; }
+    } 
+
+} 

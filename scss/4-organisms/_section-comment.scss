@@ -1,0 +1,12 @@
+section.comments {
+    max-width: $l-max;
+    margin: 0 auto $bl-6 auto;
+
+    ol {
+        margin: 0;
+        padding: 0;
+    }
+
+    @import '../3-molecules/list-comment';
+
+}
