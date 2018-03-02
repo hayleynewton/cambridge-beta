@@ -17,13 +17,17 @@
 
     @include font(24px, 32px);
 
+    padding: 10px 0px;
+    border-bottom: solid 2px $link;
+
     @include small-screen {
         font-family: $font-family;
         font-weight: $font-regular;
 
         @include font(12px, 16px);
 
-        border-bottom: solid 1px $link;
+        padding: 6px 0px;
+        border-bottom-width: 1px;
     }
 }
 
@@ -55,8 +59,39 @@
     // }
 }
 
+%card-headline {
+    @extend %sans-black;
+
+    @include font(32px, 40px);
+}
+
+%headline-feature, %nav-feature {
+    @extend %sans-black;
+
+    @include font(24px, 32px);
+}
+
+%nav-item {
+    font-family: $font-family;
+    font-weight: $font-bold;
+
+    @include font(16px, 24px);
+}
+
+%article-subheading {
+    font-family: $font-family-serif;
+    font-weight: $font-regular;
+
+    @include font(24px, 30px);
+
+    @include small-screen {
+        @include font(20px, 30px);
+    }
+}
+
 %article-body-text {
     font-family: $font-family-serif;
+    font-weight: $font-regular;
 
     @include font(20px, 30px);
 
@@ -67,4 +102,25 @@
     // @include big-screen {
     //     @include font(40px, 60px);
     // }
+}
+
+%card-body-text {
+    font-family: $font-family-serif;
+    font-weight: $font-regular;
+
+    @include font(16px, 24px);
+}
+
+%button-text {
+    font-family: $font-family;
+    font-weight: $font-bold;
+    text-transform: uppercase;
+    color: $link;
+
+    @include font(16px, 24px);
+
+    &:hover {
+        // Placeholder value, to be updated later
+        color: lighten($link, 20%);
+    }
 }
