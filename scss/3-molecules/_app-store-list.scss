@@ -1,0 +1,19 @@
+.app-stores {
+    display: flex;
+
+    @import '../2-atoms/app-store-button';
+
+    li {
+        &:not(:last-child) {
+            margin-right: 34px;
+
+            @include small-screen {
+                margin-right: 24px;
+            }
+
+            @include big-screen {
+                margin-right: 44px;
+            }
+        }
+    }
+}

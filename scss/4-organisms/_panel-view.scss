@@ -1,0 +1,25 @@
+// PANEL-VIEW
+
+// Contains a list of panel items
+
+
+.panel-view {
+    padding: 0;
+    margin: 0;
+
+    @import '../3-molecules/panel';
+
+    .panel {
+
+        .body {
+            width: 60vw;
+            justify-content: center;
+
+            @include small-screen {
+                padding: 32px 16px 0px;
+                width: 100%;
+            }
+            
+        }
+    }
+}

@@ -28,7 +28,7 @@ nav {
         margin-right: auto;
     }
 
-    &[subpage] {
+    &.subpage {
         position: fixed;
         bottom: unset;
         top: 0;

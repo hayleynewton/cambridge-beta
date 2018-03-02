@@ -1,0 +1,28 @@
+.detail-list {
+    padding: 0;
+
+    @extend %article-body-text;
+
+    >li {
+        &:not(:first-child) {
+            margin-top: 16px;
+
+            @include small-screen {
+                margin-top: 8px;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+
+            @include small-screen {
+                margin-bottom: 8px;
+            }
+        }
+
+        ul {
+            padding-left: 1.25em;
+            list-style-type: disc;
+        }
+    }
+}

@@ -1,0 +1,56 @@
+@import '../1-base/1.b-tools/mixins';
+
+.body {
+    flex-direction: column;
+    justify-content: center;
+
+    @include small-screen {
+        padding: 32px 16px 0px;
+    }
+
+    @include medium-screen {
+        padding: 0px 44px 0px;
+    }
+
+    @include big-screen {
+        padding: 0px 160px 0px;
+    }
+    
+    @import '../3-molecules/app-store-list';
+    @import '../3-molecules/detail-list';
+
+    h2 {
+        margin: 0px 0px 16px;
+
+        @include small-screen {
+            margin: 0px 0px 8px;
+        }
+    }
+
+    h3 {
+        margin: 16px 0px;
+
+        @include small-screen {
+            margin: 8px 0px;
+        }
+    }
+
+    .app-stores {
+        margin: 36px 52px;
+    
+        @include small-screen {
+            margin: 16px 32px;
+            justify-content: center;
+        }
+    
+        @include big-screen {
+            margin: 36px 0px;
+        }
+    }
+
+    .detail-list {
+        @include small-screen {
+            margin-top: 8px;
+        }
+    }
+}

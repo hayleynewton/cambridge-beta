@@ -6,7 +6,10 @@
 @import '../1-base/1.c-base/resets';
 @import '../1-base/1.c-base/global';
 @import '../1-base/1.c-base/common-typography';
+
+@import '../4-organisms/nav';
 @import '../4-organisms/footer-brand';
+@import '../4-organisms/panel-view';
 
 // Resets
 * {
@@ -25,112 +28,19 @@ html, body {
     padding: 0;
 }
 
-@import '../4-organisms/nav';
-
-h2 {
-    @extend %product-title;
-    
-    margin: 0px 0px 16px;
-
-    @include small-screen {
-        margin: 0px 0px 8px;
-    }
-}
-
-h3 {
-    @extend %product-subheading;
-
-    margin: 16px 0px;
-
-    @include small-screen {
-        margin: 8px 0px;
-    }
-}
-
-.panels {
-    padding: 0;
-    margin: 0;
-
+body {
     padding-top: 10vh;
+}
 
-    font-family: $font-family;
-
-    >li {
-        display: flex;
-        height: 80vh;
-        width: 100%;
-        box-sizing: border-box;
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
-        overflow: hidden;
-
-        @include small-screen {
-            flex-direction: column;
-            height: unset;
-            overflow: unset;
-            align-items: center;
-        }
-
-        >* {
-            display: flex;
-            height: 100%;
-            vertical-align: top;
-            box-sizing: border-box;
-        }
-
-        >.body {
-            width: 60vw;
-            flex-direction: column;
-            justify-content: center;
-
-            @include small-screen {
-                padding: 32px 16px 0px;
-                width: 100%;
-
-                .detail-list {
-                    margin-top: 8px;
-                }
+.panel-view {
+    .panel {
+        .body {
+            h2 {
+                @extend %product-title;
             }
 
-            @include medium-screen {
-                padding: 0px 44px 0px;
-            }
-
-            @include big-screen {
-                padding: 0px 160px 0px;
-            }
-        }
-
-        >.image-holder {
-            width: 40vw;
-            height: 100%;
-            overflow: hidden;
-            justify-content: center;
-            align-items: flex-end;
-
-            @include small-screen {
-                max-height: 50vh;
-                align-items: flex-start;
-            }
-
-            img {
-                max-height: 100%;
-                max-width: 100%;
-                display: inline;
-            }
-        }
-
-        &:nth-child(even) {
-            >.body {
-                order: 1;
-            }
-            >.image-holder {
-                order: 0;
-            }
-
-            @include small-screen {
-                .body, .image-holder {
-                    order: unset;
-                }
+            h3 {
+                @extend %product-subheading;
             }
         }
     }
@@ -141,79 +51,6 @@ h3 {
 
     >* {
         @include alternate-bg-colors($qye-bg-colors);
-    }
-}
-
-.app-stores {
-    margin: 36px 52px;
-    display: flex;
-
-    @include small-screen {
-        margin: 16px 32px;
-        justify-content: center;
-    }
-
-    @include big-screen {
-        margin: 36px 0px;
-    }
-
-    >li {
-        background: black;
-        border-radius: 8px;
-        overflow: hidden;
-        display: inline-flex;
-
-        img {
-            display: block;
-            height: 44px;
-
-            @include small-screen {
-                height: 32px;
-            }
-        }
-
-        &:not(:last-child) {
-            margin-right: 34px;
-
-            @include small-screen {
-                margin-right: 24px;
-            }
-
-            @include big-screen {
-                margin-right: 44px;
-            }
-        }
-    }
-}
-
-.detail-list {
-    padding: 0;
-    
-    font-family: $font-family-serif;
-
-    @extend %article-body-text;
-
-    >li {
-        &:not(:first-child) {
-            margin-top: 16px;
-
-            @include small-screen {
-                margin-top: 8px;
-            }
-        }
-
-        &:not(:last-child) {
-            margin-bottom: 16px;
-
-            @include small-screen {
-                margin-bottom: 8px;
-            }
-        }
-
-        ul {
-            padding-left: 1.25em;
-            list-style-type: disc;
-        }
     }
 }
 
