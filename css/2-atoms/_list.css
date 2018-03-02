@@ -1,0 +1,22 @@
+li {
+  display: inline-block;
+  padding: 0 16px;
+  border-bottom: solid 2px #333;
+}
+
+li:hover {
+  border-bottom: solid 2px #12B4BA;
+}
+
+li:first-of-type {
+  margin-right: auto;
+}
+
+li:first-of-type:hover {
+  border-bottom-color: #333;
+}
+
+li a {
+  text-decoration: none;
+  color: #fff;
+}

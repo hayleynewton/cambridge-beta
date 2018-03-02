@@ -1,0 +1,5 @@
+@import '../1-base/1.c-base/common-typography';
+
+h1 {
+    @extend %detail-nav-title;
+}

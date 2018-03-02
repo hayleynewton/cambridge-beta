@@ -1,0 +1,9 @@
+// NAV-BACK-lABEL
+
+@import '../1-base/1.a-settings/typography';
+
+.label {
+    font-family: $font-family;
+    font-weight: $font-bold;
+    text-transform: uppercase;
+}
