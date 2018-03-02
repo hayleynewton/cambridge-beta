@@ -1,3 +1,21 @@
 .card.profile {
-    padding: $bl-2;
+    display: inline-block;
+    margin: $bl-2 0;
+
+    h3 {
+        @include font($font-heading,$bl-4);
+        font-family: $font-family;
+        margin: 0; 
+    }
+
+    p { @include font($font-small,$bl-3) }
+
+    @media screen and (min-width: $bp-medium) {
+        width: calc(50% - #{$bl-2});
+
+        &:nth-child(odd) {
+            margin-right: $bl-4;
+        }
+    } 
+
 }

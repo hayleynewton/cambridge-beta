@@ -27,6 +27,14 @@
 
     footer.content { h2 { @extend %hide; } }
 
+    aside.profile {
+
+        border-top: 1px solid $color-border;
+
+        h2 { @extend %hide; }
+
+    }
+
     section.comments {
 
         h2 { @extend %hide; }

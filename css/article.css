@@ -51,7 +51,7 @@ a {
   transition: all 0.25s ease-in-out;
 }
 
-.detail.article footer.content h2, .detail.article section.comments h2, .detail.article footer[role="contact"] h2 {
+.detail.article footer.content h2, .detail.article aside.profile h2, .detail.article section.comments h2, .detail.article footer[role="contact"] h2 {
   position: absolute;
   left: -10000px;
   width: 1px;
@@ -88,7 +88,7 @@ a {
   margin: 0 auto 32px auto;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
   .article.detail section.content > p:first-of-type {
     transform: translateX(-80px);
   }
@@ -134,6 +134,38 @@ a {
   font-family: "Source Sans Pro", sans-serif;
   text-decoration: none;
   padding: 8px 16px;
+}
+
+.article.detail aside.profile {
+  max-width: 640px;
+  margin: 0 auto 48px auto;
+  padding: 16px;
+}
+
+.article.detail aside.profile .card.profile {
+  display: inline-block;
+  margin: 16px 0;
+}
+
+.article.detail aside.profile .card.profile h3 {
+  font-size: 2.4rem;
+  line-height: 32px;
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 0;
+}
+
+.article.detail aside.profile .card.profile p {
+  font-size: 1.6rem;
+  line-height: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .article.detail aside.profile .card.profile {
+    width: calc(50% - 16px);
+  }
+  .article.detail aside.profile .card.profile:nth-child(odd) {
+    margin-right: 32px;
+  }
 }
 
 .article.detail section.comments {
@@ -203,6 +235,10 @@ a {
   outline: none;
   color: #0E8682;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.16);
+}
+
+.detail.article aside.profile {
+  border-top: 1px solid #E8E8E8;
 }
 
 .detail.article section.comments ol {
