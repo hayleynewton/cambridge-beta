@@ -4,6 +4,7 @@
 @import '../1-base/1.b-tools/mixins';
 @import '../1-base/1.c-base/resets';
 @import '../1-base/1.c-base/common-typography';
+@import '../4-organisms/footer-brand';
 
 // Resets
 * {
@@ -211,16 +212,5 @@ h3 {
             padding-left: 1.25em;
             list-style-type: disc;
         }
-    }
-}
-
-footer {
-    padding: 20px;
-    height: 10vh;
-    background-color: $darkgray;
-    box-sizing: border-box;
-
-    img {
-        height: 100%;
     }
 }

@@ -1,1 +1,9 @@
-small { @include small-screen { display: none;} }
+small {
+    font-size: 16px;
+
+    color: $color-text-inverse;
+
+    @include small-screen {
+        display: none;
+    }
+}
