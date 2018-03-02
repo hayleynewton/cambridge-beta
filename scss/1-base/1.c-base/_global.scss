@@ -2,9 +2,20 @@
 
 /* BASE */
 
-html, body {  
+html {
+    font-size: $font-base-value;
+}
+
+html,
+body {
     height: 100%;
-    width: 100%;
     margin: 0;
     padding: 0;
+}
+
+body {
+    font: $font-base-set;
+    font-weight: $font-regular;
+    color: $color-text;
+    background: $color-background;
 }

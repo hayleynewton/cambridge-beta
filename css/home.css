@@ -22,7 +22,7 @@ html, body {
   padding: 0;
 }
 
-#home > article h2 {
+.home > article h2 {
   position: absolute;
   left: -10000px;
   width: 1px;
@@ -30,19 +30,65 @@ html, body {
   overflow: hidden;
 }
 
-.fixed-header {
+.home nav {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  height: calc(80px - 32px);
+  padding: 16px;
+}
+
+.home nav .fixed-header {
   position: fixed;
   top: 0;
+}
+
+.home nav ul {
+  display: flex;
+  align-items: center;
+}
+
+.home nav li {
+  display: inline-block;
+  padding: 0 16px;
+}
+
+.home nav li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.home > article {
+  height: calc(100% - 80px);
+  width: 100%;
+}
+
+.home nav {
+  color: white;
+  background-color: #333;
+}
+
+.home nav li {
+  border-bottom: solid 2px #333;
+}
+
+.home nav li:hover {
+  border-bottom: solid 2px #12B4BA;
+}
+
+.home nav li:first-of-type {
+  margin-right: auto;
+}
+
+.home nav li:first-of-type:hover {
+  border-bottom-color: #333;
 }
 
 :not(section) ul {
   padding: 0;
   margin: 0;
-}
-
-#home > article {
-  height: calc(100% - 80px);
-  width: 100%;
 }
 
 ul[aria-label="featured"] {
@@ -144,14 +190,20 @@ ul[aria-label="filterable"] li {
 }
 
 ul[aria-label="filterable"] figure {
+  margin: 0;
+  width: 100%;
+}
+
+ul[aria-label="filterable"] figure figure {
   position: relative;
   width: 60%;
   height: 640px;
   overflow: hidden;
   margin: 0;
+  display: inline-block;
 }
 
-ul[aria-label="filterable"] figure img {
+ul[aria-label="filterable"] figure figure img {
   position: absolute;
   height: auto;
   top: 0;
@@ -161,6 +213,15 @@ ul[aria-label="filterable"] figure img {
   height: auto;
   left: 50%;
   transform: translateX(-50%);
+}
+
+ul[aria-label="filterable"] figure figure figcaption {
+  display: none;
+}
+
+ul[aria-label="filterable"] figcaption {
+  width: 40%;
+  display: inline-block;
 }
 
 ul[aria-label="filterable"] li:nth-of-type(2n+0) {

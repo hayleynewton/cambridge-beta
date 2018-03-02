@@ -16,8 +16,13 @@ nav {
     color: $white;
     background-color: $darkgray;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
+    
+    @import '../3-molecules/nav-list';
 
-    @import '../3-molecules/nav-items';
+    .fixed-header {
+        position: fixed;
+        top: 0;
+    }
 
     .logo {
         margin-right: auto;
