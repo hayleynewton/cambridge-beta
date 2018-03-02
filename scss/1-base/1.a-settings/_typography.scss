@@ -14,7 +14,7 @@ $font-small: 1.6rem;
 $font-medium: 2.0rem;
 $font-heading: 2.4rem;
 $font-large: 3.2rem;
-$font-block: 4.0rem;
+$font-block: 8.0rem;
 
 // WEIGHTS
 $font-light: 100;
@@ -24,4 +24,4 @@ $font-boldest: 900; // Use for the "Black" font variants.
 
 // BASE VALUES
 $font-base-value: x-small;
-$font-base-set: #{$font-medium}/#{$bl-3} #{$font-family};
+$font-base-set: #{$font-medium}/#{$bl-4} #{$font-family-serif};

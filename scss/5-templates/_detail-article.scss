@@ -1,0 +1,21 @@
+// Build up the details.article template
+&.detail {
+
+    // 1. Add the banner
+    @import '../4-organisms/header-banner';
+    // 2. Add the content section
+    @import '../4-organisms/section-content';
+    // 3. Add the content footer
+    @import '../4-organisms/footer-content';
+    // 4. Add the profile cards
+    @import '../4-organisms/aside-profile';
+    // 5. Add the social links
+    @import '../4-organisms/aside-social';
+    // 6. Add the related content footer
+    @import '../4-organisms/aside-related';
+    // 7. Add the comments section
+    @import '../4-organisms/section-comment';
+    // 8. Add the client / brand footer
+    @import '../4-organisms/footer-brand';
+
+}

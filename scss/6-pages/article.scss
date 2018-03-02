@@ -1,5 +1,12 @@
+@import '../5-templates/global-imports'; 
+
 .article {
-    // @imports base sass ($variables, %placeholders, resets etc), scoped to context
-    @import '../5-templates/global-imports';
-    
+    // Add the layout template for details.articles 
+    @import '../5-templates/detail-article';
+
+}
+
+// Now colour it in
+.article.detail {
+
 } 

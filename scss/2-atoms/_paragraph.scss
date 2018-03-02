@@ -1,0 +1,14 @@
+p {
+    &:first-of-type {
+        @include font($font-heading,$bl-4,$color-text);
+        font-weight: $font-light;
+        
+        &::first-letter {
+            @include font($font-block,$bl-8,$color-brand);
+            float: left;
+            margin: 0 $bl-1 0 0;
+            vertical-align: text-top;
+        }
+    }
+
+}

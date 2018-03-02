@@ -1,0 +1,14 @@
+li.tag {
+    margin: 0 $bl-1 $bl-1 0;
+    display: inline-block;
+
+    a {
+        @include font($font-small,$bl-3,$color-text);
+
+        font-family: $font-family;
+        text-decoration: none;
+        padding: $bl-1 $bl-2;
+        box-shadow: 0 0 $bl-1/2 rgba(0,0,0,0.18);
+    }
+
+}
