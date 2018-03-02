@@ -112,6 +112,12 @@ body {
   height: 40px;
 }
 
+@media (max-width: 769px) {
+  .article.detail footer[role="contact"] small {
+    display: none;
+  }
+}
+
 .detail.article footer[role="contact"] {
   background: #333333;
 }
