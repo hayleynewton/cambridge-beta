@@ -1,7 +1,7 @@
-small {
-    font-size: 16px;
+@import '../1-base/1.c-base/common-typography';
 
-    color: $color-text-inverse;
+small {
+    @extend %copyright;
 
     @include small-screen {
         display: none;

@@ -2,6 +2,7 @@
 @import '../1-base/1.a-settings/typography';
 @import '../1-base/1.a-settings/spacing';
 @import '../1-base/1.b-tools/mixins';
+@import '../1-base/1.c-base/helpers';
 @import '../1-base/1.c-base/resets';
 @import '../1-base/1.c-base/global';
 @import '../1-base/1.c-base/common-typography';
@@ -214,4 +215,12 @@ h3 {
             list-style-type: disc;
         }
     }
+}
+
+footer[role="contact"] {
+    background: $darkgray;
+
+    h2 { @extend %hide; }
+
+    small {color: $color-text-inverse; }
 }

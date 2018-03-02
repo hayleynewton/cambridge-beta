@@ -5,3 +5,15 @@
     @import '../5-templates/detail-article';
 
 }
+
+// Now colour it in
+.detail.article {
+
+    footer[role="contact"] {
+        background: $darkgray;
+    
+        h2 { @extend %hide; }
+    
+        small {color: $color-text-inverse; }
+    }
+}

@@ -124,3 +124,10 @@
         color: lighten($link, 20%);
     }
 }
+
+%copyright {
+    font-family: $font-family-serif;
+    font-weight: $font-regular;
+
+    @include font(16px, 24px);
+}

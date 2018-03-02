@@ -1,7 +1,6 @@
 footer[role="contact"] {
     display: flex;
     justify-content: space-between;
-    background: $darkgray;
     align-items: center;
     padding: 16px;
     height: 10vh;
@@ -9,6 +8,4 @@ footer[role="contact"] {
 
     @import '../2-atoms/logo';
     @import '../2-atoms/copyright';
-
-    h2 { @extend %hide; }
 }
