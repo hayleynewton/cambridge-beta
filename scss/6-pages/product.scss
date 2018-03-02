@@ -137,7 +137,7 @@ h3 {
     color: $white;
 
     >* {
-        @include alternate-bg-colors($qye-bg-colors, 10);
+        @include alternate-bg-colors($qye-bg-colors);
     }
 }
 

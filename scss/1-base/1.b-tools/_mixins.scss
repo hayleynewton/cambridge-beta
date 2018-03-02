@@ -10,16 +10,13 @@
 }
 
 // Alternating Background Colors
-@mixin alternate-bg-colors($colorList, $maxEntries) {
+@mixin alternate-bg-colors($colorList) {
     $colIndex: 1;
-    @for $i from 1 through $maxEntries {
-        &:nth-child(#{$i}) {
-            background-color: nth($colorList, $colIndex);
-        }
+    $length: length($colorList);
 
-        $colIndex: $colIndex + 1;
-        @if $colIndex > length($colorList) {
-            $colIndex: 1;
+    @for $i from 1 through $length {
+        &:nth-child(#{$length}n+#{$i}) {
+            background-color: nth($colorList, $i);
         }
     }
 }
