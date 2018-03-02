@@ -10,9 +10,26 @@
 
 .detail.article {
 
-    li.tag a { box-shadow: 0 0 $bl-1/2 rgba(0,0,0,0.18); }
+    section.content { background: $color-background-light; }
+
+    li.tag a { 
+        background: $color-background;
+        border: 1px solid $color-border; 
+        box-shadow: 0 0 $bl-1/2 rgba(0,0,0,0.08);
+
+        &:hover,
+        &:focus {
+            outline: none;
+            color: $color-action-active;
+            box-shadow: 0 0 $bl-1 rgba(0,0,0,0.16);
+        }
+    }
+
+    footer.content { h2 { @extend %hide; } }
 
     section.comments {
+
+        h2 { @extend %hide; }
 
         ol {
             background: $color-background-light; 

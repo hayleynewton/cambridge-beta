@@ -47,6 +47,10 @@ h3 {
   line-height: 40px;
 }
 
+a {
+  transition: all 0.25s ease-in-out;
+}
+
 .home > article h2 {
   position: absolute;
   left: -10000px;
@@ -105,6 +109,10 @@ h3 {
 .home h3 {
   font-size: 3.2rem;
   line-height: 40px;
+}
+
+.home a {
+  transition: all 0.25s ease-in-out;
 }
 
 .home > article h2 {

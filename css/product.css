@@ -1,3 +1,11 @@
+footer[role="contact"] h2 {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 /* RESETS */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -23,7 +31,35 @@ button {
   color: #333333;
 }
 
-nav[subpage] h1, h2, h3, nav[subpage] h2, nav[subpage] h3 {
+/* BASE */
+html {
+  font-size: x-small;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 2rem/32px Source Serif Pro, serif;
+  font-weight: 300;
+  color: #333333;
+  background: #FAFAFA;
+}
+
+h3 {
+  font-size: 3.2rem;
+  line-height: 40px;
+}
+
+a {
+  transition: all 0.25s ease-in-out;
+}
+
+nav[subpage] h1, h2, h3, footer[role="contact"] nav[subpage] h1, nav[subpage] footer[role="contact"] h1, footer[role="contact"] h2, footer[role="contact"] h3, nav[subpage] h2, nav[subpage] h3 {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 900;
 }
@@ -84,6 +120,102 @@ h3 {
   }
 }
 
+footer[role="contact"] small {
+  font-family: "Source Serif Pro", serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+footer[role="contact"] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  height: 10vh;
+  box-sizing: border-box;
+}
+
+footer[role="contact"] a.logo,
+footer[role="contact"] img {
+  display: inline-block;
+  height: 40px;
+}
+
+footer[role="contact"] nav[subpage] h1, nav[subpage] footer[role="contact"] h1, footer[role="contact"] h2, footer[role="contact"] h3, footer[role="contact"] nav[subpage] h2, nav[subpage] footer[role="contact"] h2, footer[role="contact"] nav[subpage] h3, nav[subpage] footer[role="contact"] h3 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 900;
+}
+
+footer[role="contact"] nav[subpage] h1, nav[subpage] footer[role="contact"] h1 {
+  font-size: 24px;
+  line-height: 32px;
+  padding: 10px 0px;
+  border-bottom: solid 2px #12B4BA;
+}
+
+@media (max-width: 769px) {
+  footer[role="contact"] nav[subpage] h1, nav[subpage] footer[role="contact"] h1 {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 6px 0px;
+    border-bottom-width: 1px;
+  }
+}
+
+footer[role="contact"] h2 {
+  font-size: 44px;
+  line-height: 48px;
+}
+
+@media (max-width: 769px) {
+  footer[role="contact"] h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+footer[role="contact"] h3 {
+  font-size: 32px;
+  line-height: 40px;
+}
+
+@media (max-width: 769px) {
+  footer[role="contact"] h3 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+footer[role="contact"] .detail-list {
+  font-family: "Source Serif Pro", serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+@media (max-width: 769px) {
+  footer[role="contact"] .detail-list {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+footer[role="contact"] small {
+  font-family: "Source Serif Pro", serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@media (max-width: 769px) {
+  footer[role="contact"] small {
+    display: none;
+  }
+}
+
 * {
   -webkit-margin-before: 0;
   -webkit-margin-after: 0;
@@ -92,7 +224,8 @@ h3 {
   -webkit-padding-start: 0;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
   margin: 0;
@@ -119,6 +252,8 @@ nav {
 nav ul {
   display: flex;
   align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 nav li {
@@ -146,7 +281,7 @@ nav[subpage] {
   top: 0;
 }
 
-nav[subpage] h1, nav[subpage] h2, nav[subpage] h3 {
+nav[subpage] h1, footer[role="contact"] nav[subpage] h1, nav[subpage] footer[role="contact"] h1, nav[subpage] footer[role="contact"] h2, footer[role="contact"] nav[subpage] h2, nav[subpage] footer[role="contact"] h3, footer[role="contact"] nav[subpage] h3, nav[subpage] h2, nav[subpage] h3 {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 900;
 }
@@ -205,6 +340,13 @@ nav[subpage] .detail-list {
     font-size: 16px;
     line-height: 24px;
   }
+}
+
+nav[subpage] footer[role="contact"] small, footer[role="contact"] nav[subpage] small {
+  font-family: "Source Serif Pro", serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 nav[subpage] .back {
@@ -477,13 +619,10 @@ h3 {
   list-style-type: disc;
 }
 
-footer {
-  padding: 20px;
-  height: 10vh;
-  background-color: #333;
-  box-sizing: border-box;
+footer[role="contact"] {
+  background: #333;
 }
 
-footer img {
-  height: 100%;
+footer[role="contact"] small {
+  color: #FFFFFF;
 }

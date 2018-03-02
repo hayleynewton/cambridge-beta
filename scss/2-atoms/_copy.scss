@@ -2,6 +2,12 @@ p {
     &:first-of-type {
         @include font($font-heading,$bl-4,$color-text);
         font-weight: $font-light;
+        max-width: $line-max-heading;
+        margin: 0 auto $bl-4 auto;
+
+        @media screen and (min-width: $bp-wide) {
+            transform: translateX(-(($line-max-heading - $line-max-copy) / 2));
+        }
         
         &::first-letter {
             @include font($font-block,$bl-8,$color-brand);
@@ -9,6 +15,11 @@ p {
             margin: 0 $bl-1 0 0;
             vertical-align: text-top;
         }
+    }
+
+    &:not(:first-of-type) {
+        max-width: $line-max-copy;
+        margin: 0 auto $bl-4 auto;
     }
 
 }

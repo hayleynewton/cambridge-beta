@@ -47,7 +47,11 @@ h3 {
   line-height: 40px;
 }
 
-.article.detail footer[role="contact"] h2 {
+a {
+  transition: all 0.25s ease-in-out;
+}
+
+.detail.article footer.content h2, .detail.article section.comments h2, .detail.article footer[role="contact"] h2 {
   position: absolute;
   left: -10000px;
   width: 1px;
@@ -80,6 +84,14 @@ h3 {
   line-height: 32px;
   color: #333333;
   font-weight: 100;
+  max-width: 800px;
+  margin: 0 auto 32px auto;
+}
+
+@media screen and (min-width: 1440px) {
+  .article.detail section.content > p:first-of-type {
+    transform: translateX(-80px);
+  }
 }
 
 .article.detail section.content > p:first-of-type::first-letter {
@@ -91,21 +103,34 @@ h3 {
   vertical-align: text-top;
 }
 
+.article.detail section.content > p:not(:first-of-type) {
+  max-width: 640px;
+  margin: 0 auto 32px auto;
+}
+
+.article.detail footer.content {
+  display: flex;
+  max-width: 640px;
+  margin: 0 auto 32px auto;
+}
+
 .article.detail ul {
   display: block;
+  width: 100%;
   margin: 0;
   padding: 0;
 }
 
 .article.detail li.tag {
-  margin: 0 8px 8px 0;
+  margin: 0 16px 16px 0;
   display: inline-block;
 }
 
 .article.detail li.tag a {
   font-size: 1.6rem;
   line-height: 24px;
-  color: #333333;
+  color: #12B4BA;
+  display: block;
   font-family: "Source Sans Pro", sans-serif;
   text-decoration: none;
   padding: 8px 16px;
@@ -139,7 +164,6 @@ h3 {
 .article.detail footer[role="contact"] {
   display: flex;
   justify-content: space-between;
-  background: #333;
   align-items: center;
   padding: 16px;
   height: 10vh;
@@ -153,15 +177,10 @@ h3 {
 }
 
 .article.detail footer[role="contact"] small {
-<<<<<<< HEAD
   font-family: "Source Serif Pro", serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
-=======
-  font-size: 16px;
-  color: #FFFFFF;
->>>>>>> Added in the links for read more and started the feature styles
 }
 
 @media (max-width: 769px) {
@@ -169,10 +188,21 @@ h3 {
     display: none;
   }
 }
-<<<<<<< HEAD
+
+.detail.article section.content {
+  background: #FFFFFF;
+}
 
 .detail.article li.tag a {
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.18);
+  background: #FAFAFA;
+  border: 1px solid #E8E8E8;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.08);
+}
+
+.detail.article li.tag a:hover, .detail.article li.tag a:focus {
+  outline: none;
+  color: #0E8682;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.16);
 }
 
 .detail.article section.comments ol {
@@ -191,5 +221,3 @@ h3 {
 .detail.article footer[role="contact"] small {
   color: #FFFFFF;
 }
-=======
->>>>>>> Added in the links for read more and started the feature styles

@@ -23,3 +23,7 @@ body {
 h3 {
     @include font($font-large, 40px, $fontColor:null);
 }
+
+a {
+    transition: all 0.25s ease-in-out;
+}
