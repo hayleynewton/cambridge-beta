@@ -1,0 +1,36 @@
+ul[aria-label="filterable"] {
+
+    margin: 0;
+    padding: 0;
+
+    article {
+        display: none;
+    }
+
+    li {
+        width: 100%;
+        display: flex;
+        height: auto;
+    }
+
+    figure {
+        margin: 0;
+        width: 100%;
+        display: flex;
+
+        @import '../3-molecules/figure-nested';
+    }
+
+    figcaption {
+        width: 40%;
+        display: inline-block;
+    }
+}
+
+
+
+// li:nth-of-type(2n+0) {
+//     flex-direction: row-reverse;
+// }
+
+

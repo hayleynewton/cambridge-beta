@@ -34,12 +34,18 @@ body {
   background: #FAFAFA;
 }
 
+
 .detail.article footer[role="contact"] h2 {
   position: absolute;
   left: -10000px;
   width: 1px;
   height: 1px;
   overflow: hidden;
+}
+
+h3 {
+  font-size: 3.2rem;
+  line-height: 40px;
 }
 
 .article.detail header[role="banner"] {

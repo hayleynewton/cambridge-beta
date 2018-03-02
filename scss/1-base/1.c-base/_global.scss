@@ -19,3 +19,9 @@ body {
     color: $color-text;
     background: $color-background;
 }
+
+
+
+h3 {
+    @include font($font-large, 40px, $fontColor:null);
+}

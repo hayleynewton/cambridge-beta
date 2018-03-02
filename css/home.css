@@ -34,12 +34,126 @@ body {
   background: #FAFAFA;
 }
 
+h3 {
+  font-size: 3.2rem;
+  line-height: 40px;
+}
+
 .home > article h2 {
   position: absolute;
   left: -10000px;
   width: 1px;
   height: 1px;
   overflow: hidden;
+}
+
+.home {
+  /* RESETS */
+  /* BASE */
+}
+
+.home article, .home aside, .home details, .home figcaption, .home figure,
+.home footer, .home header, .home hgroup, .home menu, .home nav, .home section {
+  display: block;
+}
+
+.home table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.home button {
+  -webkit-appearance: none;
+  background: none;
+  border: none;
+}
+
+.home html {
+  font-size: x-small;
+}
+
+.home html,
+.home body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.home body {
+  font: 2rem/32px Source Serif Pro, serif;
+  font-weight: 300;
+  color: #333333;
+  background: #FAFAFA;
+}
+
+.home h3 {
+  font-size: 3.2rem;
+  line-height: 40px;
+}
+
+.home > article h2 {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.home ul[aria-label="filterable"] {
+  margin: 0;
+  padding: 0;
+}
+
+.home ul[aria-label="filterable"] article {
+  display: none;
+}
+
+.home ul[aria-label="filterable"] li {
+  width: 100%;
+  display: flex;
+  height: auto;
+}
+
+.home ul[aria-label="filterable"] figure {
+  margin: 0;
+  width: 100%;
+  display: flex;
+}
+
+.home ul[aria-label="filterable"] figure figure {
+  position: relative;
+  width: 60%;
+  height: 640px;
+  overflow: hidden;
+  margin: 0;
+  display: inline-block;
+}
+
+.home ul[aria-label="filterable"] figure figure img {
+  min-height: 100%;
+  min-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+.home ul[aria-label="filterable"] figure figure img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.home ul[aria-label="filterable"] figure figure figcaption {
+  display: none;
+}
+
+.home ul[aria-label="filterable"] figure figcaption {
+  padding: 128px 16px 0;
+}
+
+.home ul[aria-label="filterable"] figcaption {
+  width: 40%;
+  display: inline-block;
 }
 
 .home nav {
@@ -62,6 +176,8 @@ body {
 .home nav ul {
   display: flex;
   align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .home nav li {
@@ -191,15 +307,11 @@ body {
   border-bottom-color: #333;
 }
 
-:not(section) ul {
-  padding: 0;
-  margin: 0;
-}
-
 ul[aria-label="featured"] {
   width: 400%;
   height: 100%;
-  padding-bottom: 80px;
+  padding: 0 0 80px;
+  margin: 0;
 }
 
 ul[aria-label="featured"] li {
@@ -273,84 +385,4 @@ ul[aria-label="featured"] a {
   line-height: 24px;
   border-radius: 4px;
   font-weight: bold;
-}
-
-ul[aria-label="filterable"] article {
-  display: none;
-  width: calc(40% - 32px);
-  padding: 128px 16px 16px;
-  max-height: calc(640px - 144px);
-  position: relative;
-}
-
-ul[aria-label="filterable"] article h3 {
-  font-size: 3.2rem;
-  line-height: 40px;
-}
-
-ul[aria-label="filterable"] li {
-  width: 100%;
-  display: flex;
-  height: auto;
-}
-
-ul[aria-label="filterable"] figure {
-  margin: 0;
-  width: 100%;
-}
-
-ul[aria-label="filterable"] figure figure {
-  position: relative;
-  width: 60%;
-  height: 640px;
-  overflow: hidden;
-  margin: 0;
-  display: inline-block;
-}
-
-ul[aria-label="filterable"] figure figure img {
-  position: absolute;
-  height: auto;
-  top: 0;
-  min-height: 100%;
-  min-width: 100%;
-  width: auto;
-  height: auto;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-ul[aria-label="filterable"] figure figure figcaption {
-  display: none;
-}
-
-ul[aria-label="filterable"] figcaption {
-  width: 40%;
-  display: inline-block;
-}
-
-ul[aria-label="filterable"] li:nth-of-type(2n+0) {
-  flex-direction: row-reverse;
-}
-
-ul[aria-label="filterable"] footer {
-  font-size: 1.6rem;
-}
-
-ul[aria-label="filterable"] footer a {
-  position: absolute;
-  bottom: 0;
-}
-
-ul[aria-label="filterable"] a {
-  text-decoration: none;
-}
-
-@keyframes slide-up {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-100%);
-  }
 }

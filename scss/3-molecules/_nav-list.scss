@@ -1,7 +1,8 @@
 ul {
     display: flex;
     align-items: center;
-
+    margin: 0;
+    padding: 0;
 }
 
 @import '../2-atoms/nav-item';
