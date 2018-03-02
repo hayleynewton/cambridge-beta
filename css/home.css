@@ -323,11 +323,15 @@ h3 {
   border-bottom-color: #333;
 }
 
+:not(section) ul {
+  padding: 0;
+  margin: 0;
+}
+
 ul[aria-label="featured"] {
   width: 400%;
   height: 100%;
-  padding: 0 0 80px;
-  margin: 0;
+  padding-bottom: 80px;
 }
 
 ul[aria-label="featured"] li {
