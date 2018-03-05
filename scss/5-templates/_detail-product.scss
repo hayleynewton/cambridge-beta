@@ -1,0 +1,49 @@
+@import 'global-imports';
+@import '../1-base/1.c-base/common-typography';
+
+@import '../4-organisms/nav';
+@import '../4-organisms/footer-brand';
+@import '../4-organisms/panel-view';
+
+// Resets
+* {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 0;
+}
+
+// Not needed?
+html, body {  
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-top: 10vh;
+}
+
+.panel-view {
+    .panel {
+        .body {
+            h2 {
+                @extend %product-title;
+            }
+
+            h3 {
+                @extend %product-subheading;
+            }
+        }
+    }
+}
+
+footer[role="contact"] {
+    background: $darkgray;
+
+    h2 { @extend %hide; }
+
+    small {color: $color-text-inverse; }
+}

@@ -1,0 +1,11 @@
+@import '../5-templates/detail-product';
+
+$qye-bg-colors: #422F5D, #EB812E, #0E8682, #D62879;
+
+.qye-product-theme {
+    color: $white;
+
+    >* {
+        @include alternate-bg-colors($qye-bg-colors);
+    }
+}
