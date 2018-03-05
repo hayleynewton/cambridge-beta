@@ -1,0 +1,37 @@
+.fig-image{
+    width: 100%;
+    display: inline-block;
+    
+    @include medium-screen-all {
+        width: 60%;
+        overflow: hidden;
+        height: 640px;
+        position: relative;
+
+        @import '../2-atoms/img';
+    }
+
+    img {
+        width:100%;
+
+        @include medium-screen-all {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: auto;
+        }
+    }
+
+    figcaption { 
+        @include font($font-large, 40px, null);
+        padding: 0 16px;
+
+        @include medium-screen-all {
+            display: none;
+        }
+    }
+}
+
+//@import '../2-atoms/figcaption';
+

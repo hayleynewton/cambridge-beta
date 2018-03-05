@@ -1,12 +1,14 @@
 @import '../1-base/1.a-settings/color';
 
 nav {
+    align-items: center;
+    justify-items: center;
     position: absolute;
     right: 0;
     left: 0;
     bottom: 0;
     z-index: 10;
-    height: 10vh;
+    height: 80px;
     padding: 16px;
     box-sizing: border-box;
 
@@ -16,7 +18,7 @@ nav {
     
     @import '../3-molecules/nav-list';
 
-    .fixed-header {
+    &.fixed-header {
         position: fixed;
         top: 0;
     }

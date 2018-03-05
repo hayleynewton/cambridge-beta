@@ -135,12 +135,14 @@ footer[role="contact"] small {
 }
 
 nav {
+  align-items: center;
+  justify-items: center;
   position: absolute;
   right: 0;
   left: 0;
   bottom: 0;
   z-index: 10;
-  height: 10vh;
+  height: 80px;
   padding: 16px;
   box-sizing: border-box;
   color: #fff;
@@ -169,7 +171,7 @@ nav li a {
   color: #fff;
 }
 
-nav .fixed-header {
+nav.fixed-header {
   position: fixed;
   top: 0;
 }

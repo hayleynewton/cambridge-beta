@@ -9,28 +9,26 @@ ul[aria-label="filterable"] {
 
     li {
         width: 100%;
-        display: flex;
         height: auto;
     }
 
+    @import '../2-atoms/figure';
+
     figure {
-        margin: 0;
-        width: 100%;
-        display: flex;
+        @include medium-screen-all {
+            display: flex;
+        }
 
-        @import '../3-molecules/figure-nested';
+        @import '../3-molecules/fig-image';
+        @import '../3-molecules/fig-content';
     }
+    
+    // li:nth-of-type(2n+0) {
+    //     flex-direction: row-reverse;
+    // }
+    
 
-    figcaption {
-        width: 40%;
-        display: inline-block;
-    }
 }
 
-
-
-// li:nth-of-type(2n+0) {
-//     flex-direction: row-reverse;
-// }
 
 

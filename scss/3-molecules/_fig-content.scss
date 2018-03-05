@@ -1,0 +1,57 @@
+.fig-content {
+    display: inline-block;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
+    position: relative;
+
+    @include medium-screen-all  {
+        width: 40%;
+    }
+
+    h3, p {
+        padding: 0 16px;
+    }
+
+    h3 {
+        display: none;
+
+        @include medium-screen-all  {
+            display: block;
+        }
+    }
+
+    .more {
+        @include font($font-small, 25px, $color-action);
+        padding: 24px 16px;
+        text-decoration: none;
+        font-family: $font-family;
+        text-transform: uppercase;
+        font-weight: $font-bold;
+        display: inline-block;
+
+        &:hover {
+            color: $color-action-active;
+        }
+    }
+
+    .category {
+        @include font($font-small, 25px, $darkgray);
+        text-decoration: none;
+        font-family: $font-family;
+        text-transform: uppercase;
+        font-weight: $font-light;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        text-transform: uppercase;
+        padding: 24px 16px;
+        display: none;
+
+        span {
+            font-weight: $font-bold;
+        }
+
+        @include medium-screen-all {
+            display: inline-block;
+        }
+    }
+}

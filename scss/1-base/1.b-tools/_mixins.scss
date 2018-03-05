@@ -43,3 +43,9 @@
         @content;
     }
 }
+
+@mixin medium-screen-all {
+    @media (min-width: $mediumScreenMin) {
+        @content;
+    }
+}
