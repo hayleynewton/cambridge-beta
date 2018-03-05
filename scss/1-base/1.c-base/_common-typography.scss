@@ -12,13 +12,21 @@
     font-weight: $font-boldest;
 }
 
+%link-color {
+    color: $color-action;
+
+    &:hover {
+        color: $color-action-active;
+    }
+}
+
 %detail-nav-title {
     @extend %sans-black;
 
     @include font(24px, 32px);
 
     padding: 10px 0px;
-    border-bottom: solid 2px $link;
+    border-bottom: solid 2px $color-brand;
 
     @include small-screen {
         font-family: $font-family;
@@ -112,17 +120,13 @@
 }
 
 %button-text {
+    @extend %link-color;
+    
     font-family: $font-family;
     font-weight: $font-bold;
     text-transform: uppercase;
-    color: $link;
 
     @include font(16px, 24px);
-
-    &:hover {
-        // Placeholder value, to be updated later
-        color: lighten($link, 20%);
-    }
 }
 
 %copyright {
