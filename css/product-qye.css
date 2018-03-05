@@ -106,7 +106,8 @@ nav.nav-subpage h1 {
   }
 }
 
-.panel-view .panel .panel-body .detail-list {
+.panel-view .panel .panel-body p,
+.panel-view .panel .panel-body li {
   font-family: "Source Serif Pro", serif;
   font-weight: 300;
   font-size: 20px;
@@ -114,7 +115,8 @@ nav.nav-subpage h1 {
 }
 
 @media (max-width: 769px) {
-  .panel-view .panel .panel-body .detail-list {
+  .panel-view .panel .panel-body p,
+  .panel-view .panel .panel-body li {
     font-size: 16px;
     line-height: 24px;
   }
@@ -227,7 +229,9 @@ nav.nav-subpage .panel-view .panel .panel-body h3, .panel-view .panel .panel-bod
   }
 }
 
-nav.nav-subpage .panel-view .panel .panel-body .detail-list, .panel-view .panel .panel-body nav.nav-subpage .detail-list {
+nav.nav-subpage .panel-view .panel .panel-body p, .panel-view .panel .panel-body nav.nav-subpage p, nav.nav-subpage
+.panel-view .panel .panel-body li,
+.panel-view .panel .panel-body nav.nav-subpage li {
   font-family: "Source Serif Pro", serif;
   font-weight: 300;
   font-size: 20px;
@@ -235,7 +239,9 @@ nav.nav-subpage .panel-view .panel .panel-body .detail-list, .panel-view .panel 
 }
 
 @media (max-width: 769px) {
-  nav.nav-subpage .panel-view .panel .panel-body .detail-list, .panel-view .panel .panel-body nav.nav-subpage .detail-list {
+  nav.nav-subpage .panel-view .panel .panel-body p, .panel-view .panel .panel-body nav.nav-subpage p, nav.nav-subpage
+  .panel-view .panel .panel-body li,
+  .panel-view .panel .panel-body nav.nav-subpage li {
     font-size: 16px;
     line-height: 24px;
   }
@@ -363,7 +369,9 @@ footer[role="contact"] .panel-view .panel .panel-body h3, .panel-view .panel .pa
   }
 }
 
-footer[role="contact"] .panel-view .panel .panel-body .detail-list, .panel-view .panel .panel-body footer[role="contact"] .detail-list {
+footer[role="contact"] .panel-view .panel .panel-body p, .panel-view .panel .panel-body footer[role="contact"] p, footer[role="contact"]
+.panel-view .panel .panel-body li,
+.panel-view .panel .panel-body footer[role="contact"] li {
   font-family: "Source Serif Pro", serif;
   font-weight: 300;
   font-size: 20px;
@@ -371,7 +379,9 @@ footer[role="contact"] .panel-view .panel .panel-body .detail-list, .panel-view 
 }
 
 @media (max-width: 769px) {
-  footer[role="contact"] .panel-view .panel .panel-body .detail-list, .panel-view .panel .panel-body footer[role="contact"] .detail-list {
+  footer[role="contact"] .panel-view .panel .panel-body p, .panel-view .panel .panel-body footer[role="contact"] p, footer[role="contact"]
+  .panel-view .panel .panel-body li,
+  .panel-view .panel .panel-body footer[role="contact"] li {
     font-size: 16px;
     line-height: 24px;
   }
@@ -397,7 +407,7 @@ footer[role="contact"] small {
 
 .panel-view .panel {
   display: flex;
-  height: 80vh;
+  min-height: 80vh;
   width: 100%;
   box-sizing: border-box;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
@@ -407,7 +417,7 @@ footer[role="contact"] small {
 @media (max-width: 769px) {
   .panel-view .panel {
     flex-direction: column;
-    height: unset;
+    min-height: unset;
     overflow: unset;
     align-items: center;
   }
@@ -571,26 +581,29 @@ footer[role="contact"] small {
   display: inline;
 }
 
-.panel-view .panel > .panel-body {
-  width: 60vw;
+.panel-view .panel .panel-body {
+  min-width: 60vw;
   justify-content: center;
+  align-self: center;
 }
 
 @media (max-width: 769px) {
-  .panel-view .panel > .panel-body {
+  .panel-view .panel .panel-body {
     padding: 32px 16px 0px;
     width: 100%;
   }
 }
 
 .panel-view .panel .panel-image-holder {
-  width: 40vw;
+  min-width: 40vw;
   height: 100%;
+  align-self: flex-end;
 }
 
 @media (max-width: 769px) {
   .panel-view .panel .panel-image-holder {
     max-height: 50vh;
+    align-self: center;
   }
 }
 

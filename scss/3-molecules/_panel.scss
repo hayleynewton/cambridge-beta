@@ -6,7 +6,7 @@
 
 .panel {
     display: flex;
-    height: 80vh;
+    min-height: 80vh;
     width: 100%;
     box-sizing: border-box;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
@@ -16,7 +16,7 @@
     //     for small screens
     @include small-screen {
         flex-direction: column;
-        height: unset;
+        min-height: unset;
         overflow: unset;
         align-items: center;
     }
@@ -31,9 +31,10 @@
     @import 'panel-body';
     @import 'panel-image-holder';
 
-    >.panel-body {
-        width: 60vw;
+    .panel-body {
+        min-width: 60vw;
         justify-content: center;
+        align-self: center;
 
         @include small-screen {
             padding: 32px 16px 0px;
@@ -42,11 +43,13 @@
     }
 
     .panel-image-holder {
-        width: 40vw;
+        min-width: 40vw;
         height: 100%;
+        align-self: flex-end;
 
         @include small-screen {
             max-height: 50vh;
+            align-self: center;
         }
     }
 
