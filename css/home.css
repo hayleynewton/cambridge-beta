@@ -181,9 +181,6 @@ a {
 }
 
 .home nav {
-  display: flex;
-  align-items: center;
-  justify-items: center;
   position: absolute;
   right: 0;
   left: 0;
@@ -228,6 +225,9 @@ a {
 }
 
 .home nav.subpage {
+  display: flex;
+  align-items: center;
+  justify-items: center;
   position: fixed;
   bottom: unset;
   top: 0;

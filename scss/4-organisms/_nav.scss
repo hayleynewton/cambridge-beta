@@ -1,9 +1,6 @@
 @import '../1-base/1.a-settings/color';
 
 nav {
-    display: flex;
-    align-items: center;
-    justify-items: center;
     position: absolute;
     right: 0;
     left: 0;
@@ -29,6 +26,9 @@ nav {
     }
 
     &.subpage {
+        display: flex;
+        align-items: center;
+        justify-items: center;
         position: fixed;
         bottom: unset;
         top: 0;

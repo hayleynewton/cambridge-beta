@@ -128,9 +128,6 @@ footer[role="contact"] small {
 }
 
 nav {
-  display: flex;
-  align-items: center;
-  justify-items: center;
   position: absolute;
   right: 0;
   left: 0;
@@ -175,6 +172,9 @@ nav .logo {
 }
 
 nav.subpage {
+  display: flex;
+  align-items: center;
+  justify-items: center;
   position: fixed;
   bottom: unset;
   top: 0;
