@@ -22,10 +22,12 @@ html, body {
     padding: 0;
 }
 
+// Padding to make way for nav bar
 body {
     padding-top: 10vh;
 }
 
+// Typography styles
 .panel-view {
     .panel {
         .panel-body {
@@ -36,10 +38,16 @@ body {
             h3 {
                 @extend %product-subheading;
             }
+
+            p,
+            li {
+                @extend %article-body-text;
+            }
         }
     }
 }
 
+// Footer theming
 footer[role="contact"] {
     background: $darkgray;
 

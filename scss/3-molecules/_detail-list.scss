@@ -1,8 +1,6 @@
 .detail-list {
     padding: 0;
 
-    @extend %article-body-text;
-
     >li {
         &:not(:first-child) {
             margin-top: 16px;

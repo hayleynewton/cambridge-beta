@@ -12,6 +12,8 @@
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
     overflow: hidden;
 
+    // Switch to vertical arrangement (text, then image)
+    //     for small screens
     @include small-screen {
         flex-direction: column;
         height: unset;
