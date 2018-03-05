@@ -12,6 +12,11 @@
     font-weight: $font-boldest;
 }
 
+%list-normal {
+    padding-left: 1.25em;
+    list-style-type: disc;
+}
+
 %link-color {
     color: $color-action;
 

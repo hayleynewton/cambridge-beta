@@ -64,6 +64,11 @@ nav.nav-subpage h1, .panel-view .panel .panel-body h2, .panel-view .panel .panel
   font-weight: 900;
 }
 
+.panel-view .panel .panel-body .detail-list > li ul {
+  padding-left: 1.25em;
+  list-style-type: disc;
+}
+
 nav.nav-subpage h1 {
   font-size: 24px;
   line-height: 32px;
@@ -185,6 +190,11 @@ nav.nav-subpage {
 nav.nav-subpage h1, nav.nav-subpage .panel-view .panel .panel-body h2, .panel-view .panel .panel-body nav.nav-subpage h2, nav.nav-subpage .panel-view .panel .panel-body h3, .panel-view .panel .panel-body nav.nav-subpage h3, footer[role="contact"] nav.nav-subpage h1, nav.nav-subpage footer[role="contact"] h1 {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 900;
+}
+
+nav.nav-subpage .panel-view .panel .panel-body .detail-list > li ul, .panel-view .panel .panel-body .detail-list > li nav.nav-subpage ul {
+  padding-left: 1.25em;
+  list-style-type: disc;
 }
 
 nav.nav-subpage h1 {
@@ -325,6 +335,11 @@ footer[role="contact"] img {
 footer[role="contact"] nav.nav-subpage h1, nav.nav-subpage footer[role="contact"] h1, footer[role="contact"] .panel-view .panel .panel-body h2, .panel-view .panel .panel-body footer[role="contact"] h2, footer[role="contact"] .panel-view .panel .panel-body h3, .panel-view .panel .panel-body footer[role="contact"] h3 {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 900;
+}
+
+footer[role="contact"] .panel-view .panel .panel-body .detail-list > li ul, .panel-view .panel .panel-body .detail-list > li footer[role="contact"] ul {
+  padding-left: 1.25em;
+  list-style-type: disc;
 }
 
 footer[role="contact"] nav.nav-subpage h1, nav.nav-subpage footer[role="contact"] h1 {
@@ -513,11 +528,6 @@ footer[role="contact"] small {
   .panel-view .panel .panel-body .detail-list > li:not(:last-child) {
     margin-bottom: 8px;
   }
-}
-
-.panel-view .panel .panel-body .detail-list > li ul {
-  padding-left: 1.25em;
-  list-style-type: disc;
 }
 
 .panel-view .panel .panel-body h2 {
