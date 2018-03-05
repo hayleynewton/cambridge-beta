@@ -29,15 +29,17 @@
     @import 'panel-body';
     @import 'panel-image-holder';
 
-    >.body {
+    >.panel-body {
         width: 60vw;
+        justify-content: center;
 
         @include small-screen {
+            padding: 32px 16px 0px;
             width: 100%;
         }
     }
 
-    >.image-holder {
+    .panel-image-holder {
         width: 40vw;
         height: 100%;
 
@@ -47,15 +49,15 @@
     }
 
     &:nth-child(even) {
-        >.body {
+        >.panel-body {
             order: 1;
         }
-        >.image-holder {
+        .panel-image-holder {
             order: 0;
         }
 
         @include small-screen {
-            .body, .image-holder {
+            .panel-body, .panel-image-holder {
                 order: unset;
             }
         }

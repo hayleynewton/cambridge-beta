@@ -28,7 +28,7 @@ body {
 
 .panel-view {
     .panel {
-        .body {
+        .panel-body {
             h2 {
                 @extend %product-title;
             }
