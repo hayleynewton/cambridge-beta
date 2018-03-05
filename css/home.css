@@ -204,7 +204,7 @@ a {
   padding: 0;
 }
 
-.home nav ul nav li:first-of-type {
+.home nav ul li:first-of-type {
   margin-right: auto;
 }
 
