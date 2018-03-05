@@ -9,11 +9,11 @@
     }
 
     @include medium-screen {
-        padding: 0px 44px 0px;
+        padding: 48px 44px 0px;
     }
 
     @include big-screen {
-        padding: 0px 160px 0px;
+        padding: 160px 160px 0px;
     }
     
     @import '../3-molecules/app-store-list';

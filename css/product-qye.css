@@ -458,13 +458,13 @@ footer[role="contact"] small {
 
 @media (min-width: 768px) and (max-width: 1919px) {
   .panel-view .panel .panel-body {
-    padding: 0px 44px 0px;
+    padding: 48px 44px 0px;
   }
 }
 
 @media (min-width: 1920px) {
   .panel-view .panel .panel-body {
-    padding: 0px 160px 0px;
+    padding: 160px 160px 0px;
   }
 }
 
