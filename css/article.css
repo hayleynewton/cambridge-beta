@@ -79,12 +79,19 @@ a {
 }
 
 .article.detail section.content.heading p:first-of-type {
-  font-size: 2.4rem;
+  font-size: 2rem;
   line-height: 32px;
   color: #333333;
   font-weight: 100;
   max-width: 800px;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .article.detail section.content.heading p:first-of-type {
+    font-size: 2.4rem;
+    line-height: 36px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -95,16 +102,39 @@ a {
 
 .article.detail section.content.heading p:first-of-type::first-letter {
   font-size: 8rem;
-  line-height: 64px;
+  line-height: 0.8;
   color: #12B4BA;
   float: left;
   margin: 0 8px 0 0;
   vertical-align: text-top;
 }
 
+@media screen and (min-width: 768px) {
+  .article.detail section.content.heading p:first-of-type::first-letter {
+    font-size: 13rem;
+    line-height: 0.9;
+    margin: 0 16px -16px 0;
+  }
+}
+
 .article.detail section.content p {
+  font-size: 1.6rem;
+  line-height: 24px;
   max-width: 640px;
   margin: 0 auto 32px auto;
+}
+
+@media screen and (min-width: 768px) {
+  .article.detail section.content p {
+    font-size: 2rem;
+    line-height: 32px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 800px) {
+  .article.detail section.content p {
+    margin: 0 0 32px auto;
+  }
 }
 
 .article.detail section.content.copy {

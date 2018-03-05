@@ -1,25 +1,46 @@
 &.heading p {
+
     &:first-of-type {
-        @include font($font-heading,$bl-4,$color-text);
+        @include font($font-medium,$bl-4,$color-text);
         font-weight: $font-light;
         max-width: $line-max-heading;
         margin: 0 auto;
+
+        @media screen and (min-width: $bp-medium) {
+            @include font($font-heading,$bl-1*4.5);
+        }
 
         @media screen and (min-width: $bp-large) {
             transform: translateX(-(($line-max-heading - $line-max-copy) / 2));
         }
         
         &::first-letter {
-            @include font($font-block,$bl-8,$color-brand);
+            @include font($font-block,0.8,$color-brand);
             float: left;
             margin: 0 $bl-1 0 0;
             vertical-align: text-top;
+
+            @media screen and (min-width: $bp-medium) {
+                @include font(13rem,0.9);
+                margin: 0 $bl-2 -#{$bl-2} 0;
+            }
         }
     }
-
 }
 
+// TODO - a lot of this is layout - split out
+
 p {
+    @include font($font-small,$bl-3);
     max-width: $line-max-copy;
     margin: 0 auto $bl-4 auto;
+
+    @media screen and (min-width: $bp-medium) {
+        @include font($font-medium,$bl-4);
+    }
+
+    @media screen and (min-width: $bp-medium) and (max-width: 800px) {
+        margin: 0 0 $bl-4 auto;
+    }
+
 }
