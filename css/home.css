@@ -204,6 +204,10 @@ a {
   padding: 0;
 }
 
+.home nav ul nav li:first-of-type {
+  margin-right: auto;
+}
+
 .home nav li {
   display: inline-block;
   padding: 0 16px;
@@ -413,4 +417,13 @@ ul[aria-label="featured"] a {
   line-height: 24px;
   border-radius: 4px;
   font-weight: bold;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
 }

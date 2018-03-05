@@ -55,11 +55,15 @@ h3 {
   line-height: 40px;
 }
 
+<<<<<<< HEAD
 a {
   transition: all 0.25s ease-in-out;
 }
 
 nav.subpage h1, .panel-view .panel .body h2, .panel-view .panel .body h3, footer[role="contact"] nav.subpage h1, nav.subpage footer[role="contact"] h1 {
+=======
+nav[subpage] h1, h2, h3, footer[role="contact"] nav[subpage] h1, nav[subpage] footer[role="contact"] h1, footer[role="contact"] h2, footer[role="contact"] h3, nav[subpage] h2, nav[subpage] h3 {
+>>>>>>> Some merge conflicts, some more structure stuff
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 900;
 }
@@ -125,6 +129,114 @@ footer[role="contact"] small {
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
+<<<<<<< HEAD
+=======
+}
+
+footer[role="contact"] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  height: 10vh;
+  box-sizing: border-box;
+}
+
+footer[role="contact"] a.logo,
+footer[role="contact"] img {
+  display: inline-block;
+  height: 40px;
+}
+
+footer[role="contact"] nav[subpage] h1, nav[subpage] footer[role="contact"] h1, footer[role="contact"] h2, footer[role="contact"] h3, footer[role="contact"] nav[subpage] h2, nav[subpage] footer[role="contact"] h2, footer[role="contact"] nav[subpage] h3, nav[subpage] footer[role="contact"] h3 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 900;
+}
+
+footer[role="contact"] nav[subpage] h1, nav[subpage] footer[role="contact"] h1 {
+  font-size: 24px;
+  line-height: 32px;
+  padding: 10px 0px;
+  border-bottom: solid 2px #12B4BA;
+}
+
+@media (max-width: 769px) {
+  footer[role="contact"] nav[subpage] h1, nav[subpage] footer[role="contact"] h1 {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 6px 0px;
+    border-bottom-width: 1px;
+  }
+}
+
+footer[role="contact"] h2 {
+  font-size: 44px;
+  line-height: 48px;
+}
+
+@media (max-width: 769px) {
+  footer[role="contact"] h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+footer[role="contact"] h3 {
+  font-size: 32px;
+  line-height: 40px;
+}
+
+@media (max-width: 769px) {
+  footer[role="contact"] h3 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+footer[role="contact"] .detail-list {
+  font-family: "Source Serif Pro", serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+@media (max-width: 769px) {
+  footer[role="contact"] .detail-list {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+footer[role="contact"] small {
+  font-family: "Source Serif Pro", serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@media (max-width: 769px) {
+  footer[role="contact"] small {
+    display: none;
+  }
+}
+
+* {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-start: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+>>>>>>> Some merge conflicts, some more structure stuff
 }
 
 nav {
@@ -149,6 +261,13 @@ nav ul {
   align-items: center;
   margin: 0;
   padding: 0;
+<<<<<<< HEAD
+=======
+}
+
+nav ul nav li:first-of-type {
+  margin-right: auto;
+>>>>>>> Some merge conflicts, some more structure stuff
 }
 
 nav li {
@@ -176,7 +295,11 @@ nav.subpage {
   top: 0;
 }
 
+<<<<<<< HEAD
 nav.subpage h1, nav.subpage .panel-view .panel .body h2, .panel-view .panel .body nav.subpage h2, nav.subpage .panel-view .panel .body h3, .panel-view .panel .body nav.subpage h3, footer[role="contact"] nav.subpage h1, nav.subpage footer[role="contact"] h1 {
+=======
+nav[subpage] h1, footer[role="contact"] nav[subpage] h1, nav[subpage] footer[role="contact"] h1, nav[subpage] footer[role="contact"] h2, footer[role="contact"] nav[subpage] h2, nav[subpage] footer[role="contact"] h3, footer[role="contact"] nav[subpage] h3, nav[subpage] h2, nav[subpage] h3 {
+>>>>>>> Some merge conflicts, some more structure stuff
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 900;
 }
@@ -237,14 +360,22 @@ nav.subpage .panel-view .panel .body .detail-list, .panel-view .panel .body nav.
   }
 }
 
+<<<<<<< HEAD
 nav.subpage footer[role="contact"] small, footer[role="contact"] nav.subpage small {
+=======
+nav[subpage] footer[role="contact"] small, footer[role="contact"] nav[subpage] small {
+>>>>>>> Some merge conflicts, some more structure stuff
   font-family: "Source Serif Pro", serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
 }
 
+<<<<<<< HEAD
 nav.subpage .back {
+=======
+nav[subpage] .back {
+>>>>>>> Some merge conflicts, some more structure stuff
   display: flex;
   align-items: center;
   color: #fff;
@@ -622,6 +753,7 @@ footer[role="contact"] small {
   -webkit-padding-start: 0;
 }
 
+<<<<<<< HEAD
 html,
 body {
   height: 100%;
@@ -658,6 +790,12 @@ footer[role="contact"] {
   background: #333;
 }
 
+=======
+footer[role="contact"] {
+  background: #333;
+}
+
+>>>>>>> Some merge conflicts, some more structure stuff
 footer[role="contact"] small {
   color: #FFFFFF;
 }

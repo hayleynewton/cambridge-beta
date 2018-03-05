@@ -47,11 +47,15 @@ h3 {
   line-height: 40px;
 }
 
+<<<<<<< HEAD
 a {
   transition: all 0.25s ease-in-out;
 }
 
 .detail.article footer.content h2, .detail.article aside.profile h2, .detail.article section.comments h2, .detail.article footer[role="contact"] h2 {
+=======
+.detail.article footer[role="contact"] h2 {
+>>>>>>> Some merge conflicts, some more structure stuff
   position: absolute;
   left: -10000px;
   width: 1px;
@@ -348,6 +352,7 @@ a {
     display: none;
   }
 }
+<<<<<<< HEAD
 
 .detail.article a {
   color: #12B4BA;
@@ -364,6 +369,8 @@ a {
 .detail.article section.content {
   background: #FFFFFF;
 }
+=======
+>>>>>>> Some merge conflicts, some more structure stuff
 
 .detail.article li.tag a {
   background: #FAFAFA;
@@ -411,9 +418,12 @@ a {
 .detail.article footer[role="contact"] small {
   color: #FFFFFF;
 }
+<<<<<<< HEAD
 
 @media (max-width: 769px) {
   .detail.article footer[role="contact"] {
     margin-bottom: 56px;
   }
 }
+=======
+>>>>>>> Some merge conflicts, some more structure stuff

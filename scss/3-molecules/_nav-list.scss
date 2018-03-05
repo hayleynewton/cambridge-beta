@@ -3,6 +3,9 @@ ul {
     align-items: center;
     margin: 0;
     padding: 0;
+
+    li:first-of-type {
+        margin-right: auto; }
 }
 
 @import '../2-atoms/nav-item';
