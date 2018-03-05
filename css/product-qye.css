@@ -586,9 +586,9 @@ footer[role="contact"] small {
 }
 
 .panel-view .panel .panel-image-holder img {
-  max-height: 80vh;
-  min-width: 40vh;
-  display: inline;
+  max-height: 100%;
+  max-width: 100%;
+  display: block;
 }
 
 .panel-view .panel .panel-body {
