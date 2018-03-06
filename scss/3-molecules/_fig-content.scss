@@ -1,5 +1,6 @@
 .fig-content {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
     position: relative;
 
@@ -7,12 +8,17 @@
         width: 40%;
     }
 
-    h3, p {
-        padding: 0 16px;
+    p {
+        margin: 16px 24px;
+
+        @include medium-screen-all  {
+            margin: 4px 16px 24px;
+        }
     }
 
     h3 {
         display: none;
+        margin: 128px 16px 0;
 
         @include medium-screen-all  {
             display: block;
@@ -25,33 +31,48 @@
         text-decoration: none;
         font-family: $font-family;
         text-transform: uppercase;
-        font-weight: $font-bold;
-        display: inline-block;
+        font-weight: $font-bold;    
+        display: block;
+        margin-left: auto;
 
         &:hover {
             color: $color-action-active;
         }
     }
 
-    .category {
-        @include font($font-small, 25px, $color-text);
-        text-decoration: none;
-        font-family: $font-family;
-        text-transform: uppercase;
-        font-weight: $font-light;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        text-transform: uppercase;
-        padding: 24px 16px;
-        display: none;
+    // footer {
+    //     padding: 24px 0;
+    //     margin: auto 16px 24px;
+    //     border-bottom: solid 1px #BDBDBD;
+    //     position: relative;
+    //     margin-top: auto;
+    //     margin-bottom: 24px;
+    //     display: none;
 
-        span {
-            font-weight: $font-bold;
-        }
+    //     @include medium-screen-all  {
+    //         display: block;
+    //     }
+    // }
 
-        @include medium-screen-all {
-            display: inline-block;
-        }
-    }
+    // .category {
+    //     @include font($font-small, 25px, #bdbdbd);
+    //     text-decoration: none;
+    //     font-family: $font-family;
+    //     text-transform: uppercase;
+    //     font-weight: $font-bold;
+    //     display: none;
+
+    //     span {
+    //         color: $darkgray;
+    //     }
+
+    //     @include medium-screen-all {
+    //         position: absolute;
+    //         left: 0;
+    //         border-bottom: solid 1px $darkgray;
+    //         bottom: -1px;
+    //         padding-right: 16px;
+    //         display: block;
+    //     }
+    // }
 }

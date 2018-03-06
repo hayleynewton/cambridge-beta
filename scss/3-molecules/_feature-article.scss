@@ -1,4 +1,5 @@
 article {
+    display: none;
     padding-top: calc((100vh - 80px) - 75vh);
     padding-left: 12.5%;
     padding-right: 25%;
@@ -6,4 +7,5 @@ article {
     @include small-screen {
         padding-top: calc((100vh - 56px) - 75vh);
     }
+
 }

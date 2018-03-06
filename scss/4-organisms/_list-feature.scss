@@ -4,11 +4,9 @@ ul[aria-label="featured"] {
     padding-bottom: 80px;
 
     @include small-screen {
-        // Mobile nav size
         padding-bottom: 56px;
     }
 
-    @import '../3-molecules/feature-article';
     @import '../3-molecules/feature-image';
 
     li {

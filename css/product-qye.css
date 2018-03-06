@@ -681,6 +681,12 @@ body {
   padding-top: 80px;
 }
 
+@media (max-width: 769px) {
+  body {
+    padding-top: 56px;
+  }
+}
+
 footer[role="contact"] {
   background-color: #333;
 }
