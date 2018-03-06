@@ -343,6 +343,48 @@ a {
   color: #0E8682;
 }
 
+.home ul[aria-label="filterable"] figure .fig-content footer {
+  padding: 24px 0;
+  margin: auto 16px 24px;
+  border-bottom: solid 1px #BDBDBD;
+  position: relative;
+  margin-top: auto;
+  margin-bottom: 24px;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .home ul[aria-label="filterable"] figure .fig-content footer {
+    display: block;
+  }
+}
+
+.home ul[aria-label="filterable"] figure .fig-content .category {
+  font-size: 1.6rem;
+  line-height: 25px;
+  color: #bdbdbd;
+  text-decoration: none;
+  font-family: "Source Sans Pro", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: none;
+}
+
+.home ul[aria-label="filterable"] figure .fig-content .category span {
+  color: #333;
+}
+
+@media (min-width: 768px) {
+  .home ul[aria-label="filterable"] figure .fig-content .category {
+    position: absolute;
+    left: 0;
+    border-bottom: solid 1px #333;
+    bottom: -1px;
+    padding-right: 16px;
+    display: block;
+  }
+}
+
 .home nav {
   position: absolute;
   right: 0;
