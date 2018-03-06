@@ -1,6 +1,7 @@
 .fig-image{
     width: 100%;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     
     @include medium-screen-all {
         width: 60%;
