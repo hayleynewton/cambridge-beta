@@ -59,7 +59,7 @@ footer[role="contact"] h2 {
   overflow: hidden;
 }
 
-nav ul li:first-of-type *, nav .mobile .logo, * {
+nav ul li:first-of-type *, nav .logo, * {
   -webkit-margin-before: 0;
   -webkit-margin-after: 0;
   -webkit-margin-start: 0;
@@ -170,24 +170,20 @@ nav ul {
   padding: 0;
 }
 
+@media (max-width: 769px) {
+  nav ul {
+    flex-direction: column;
+  }
+  nav ul li:first-of-type {
+    display: none;
+  }
+  nav ul li {
+    margin: 8px 0px;
+  }
+}
+
 nav ul li:first-of-type {
   margin-right: auto;
-}
-
-@media (min-width: 768px) {
-  nav ul li.mobile {
-    display: none;
-  }
-}
-
-nav ul li.mobile:last-of-type {
-  margin-left: auto;
-}
-
-@media (max-width: 769px) {
-  nav ul li:not(.mobile):not(:first-child) {
-    display: none;
-  }
 }
 
 nav ul li {
@@ -210,38 +206,57 @@ nav ul {
   }
 }
 
-nav .mobile {
-  position: relative;
-  height: 100%;
+@media (max-width: 769px) {
+  nav #mobile-hamburger:checked ~ ul {
+    display: flex;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    height: unset;
+    padding: 16px 0px;
+    background-color: inherit;
+  }
 }
 
-nav .mobile .logo {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
+@media (max-width: 769px) {
+  nav.fixed-header #mobile-hamburger:checked ~ ul {
+    top: 100%;
+    bottom: unset;
+  }
 }
 
-nav .mobile .hamburger {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+@media (max-width: 769px) {
+  nav .logo {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+  }
+  nav .hamburger {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  nav .search {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+  }
 }
 
-nav .mobile .search {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
+nav #mobile-hamburger {
+  display: none;
 }
 
-nav .mobile .hamburger img, nav .mobile .search img {
+nav .hamburger img, nav .search img, nav .logo img {
   display: block;
 }
 
 @media (min-width: 768px) {
-  nav .mobile {
+  nav .hamburger, nav .search, nav .logo {
     display: none;
   }
 }

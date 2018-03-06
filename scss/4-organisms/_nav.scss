@@ -18,6 +18,9 @@ nav {
         height: 56px;
         padding: 4px 16px;
     }
+
+    $hamburger-input: '#mobile-hamburger';
+    $hamburger-label: '.hamburger';
     
     @import '../3-molecules/nav-list';
 
@@ -29,21 +32,42 @@ nav {
         }
     }
 
-    .mobile {
-        position: relative;
-        height: 100%;
+    @include small-screen {
+        #{$hamburger-input}:checked~ul {
+            display: flex;
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            right: 0;
+            height: unset; // Expand with content
+    
+            padding: 16px 0px;
+    
+            background-color: inherit;
+            // background-color: $color-background-darkest;
+        }
+    }
+
+    &.fixed-header {
+        @include small-screen {
+            #{$hamburger-input}:checked~ul {
+                top: 100%;
+                bottom: unset;
+            }
+        }
+    }
+
+    @include small-screen {
 
         .logo {
             position: absolute;
             top: 50%;
-            left: 0;
+            left: 16px;
 
             transform: translateY(-50%);
-
-            @extend %no-webkit-margin-padding;
         }
 
-        .hamburger {
+        #{$hamburger-label} {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -54,15 +78,23 @@ nav {
         .search {
             position: absolute;
             top: 50%;
-            right: 0;
+            right: 16px;
 
             transform: translateY(-50%);
         }
 
-        .hamburger, .search {
-            img {
-                display: block;
-            }
+    }
+    .logo {
+        @extend %no-webkit-margin-padding;
+    }
+
+    #{$hamburger-input} {
+        display: none; // Not rendered ever, label acts as input
+    }
+
+    #{$hamburger-label}, .search, .logo {
+        img {
+            display: block;
         }
 
         @include medium-screen-all {

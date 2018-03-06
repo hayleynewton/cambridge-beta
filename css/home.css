@@ -59,7 +59,7 @@ a {
   overflow: hidden;
 }
 
-.home nav ul li:first-of-type *, .home nav .mobile .logo {
+.home nav ul li:first-of-type *, .home nav .logo {
   -webkit-margin-before: 0;
   -webkit-margin-after: 0;
   -webkit-margin-start: 0;
@@ -131,7 +131,7 @@ a {
   overflow: hidden;
 }
 
-.home nav ul li:first-of-type *, .home nav .mobile .logo {
+.home nav ul li:first-of-type *, .home nav .logo {
   -webkit-margin-before: 0;
   -webkit-margin-after: 0;
   -webkit-margin-start: 0;
@@ -413,24 +413,20 @@ a {
   padding: 0;
 }
 
+@media (max-width: 769px) {
+  .home nav ul {
+    flex-direction: column;
+  }
+  .home nav ul li:first-of-type {
+    display: none;
+  }
+  .home nav ul li {
+    margin: 8px 0px;
+  }
+}
+
 .home nav ul li:first-of-type {
   margin-right: auto;
-}
-
-@media (min-width: 768px) {
-  .home nav ul li.mobile {
-    display: none;
-  }
-}
-
-.home nav ul li.mobile:last-of-type {
-  margin-left: auto;
-}
-
-@media (max-width: 769px) {
-  .home nav ul li:not(.mobile):not(:first-child) {
-    display: none;
-  }
 }
 
 .home nav ul li {
@@ -453,38 +449,57 @@ a {
   }
 }
 
-.home nav .mobile {
-  position: relative;
-  height: 100%;
+@media (max-width: 769px) {
+  .home nav #mobile-hamburger:checked ~ ul {
+    display: flex;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    height: unset;
+    padding: 16px 0px;
+    background-color: inherit;
+  }
 }
 
-.home nav .mobile .logo {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
+@media (max-width: 769px) {
+  .home nav.fixed-header #mobile-hamburger:checked ~ ul {
+    top: 100%;
+    bottom: unset;
+  }
 }
 
-.home nav .mobile .hamburger {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+@media (max-width: 769px) {
+  .home nav .logo {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+  }
+  .home nav .hamburger {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .home nav .search {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+  }
 }
 
-.home nav .mobile .search {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
+.home nav #mobile-hamburger {
+  display: none;
 }
 
-.home nav .mobile .hamburger img, .home nav .mobile .search img {
+.home nav .hamburger img, .home nav .search img, .home nav .logo img {
   display: block;
 }
 
 @media (min-width: 768px) {
-  .home nav .mobile {
+  .home nav .hamburger, .home nav .search, .home nav .logo {
     display: none;
   }
 }
