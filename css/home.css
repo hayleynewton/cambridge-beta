@@ -245,6 +245,12 @@ a {
   padding: 0;
 }
 
+.home ul[aria-label="filterable"] figure.video {
+  position: relative;
+  padding-bottom: 56.25%;
+  margin-bottom: 8px;
+}
+
 @media (min-width: 768px) {
   .home ul[aria-label="filterable"] figure {
     display: flex;
@@ -343,7 +349,7 @@ a {
 .home ul[aria-label="filterable"] figure .fig-content .category {
   font-size: 1.6rem;
   line-height: 25px;
-  color: #333;
+  color: #333333;
   text-decoration: none;
   font-family: "Source Sans Pro", sans-serif;
   text-transform: uppercase;
@@ -375,7 +381,7 @@ a {
   height: 80px;
   padding: 16px;
   box-sizing: border-box;
-  color: #fff;
+  color: #FFFFFF;
   background-color: #333;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
 }
@@ -514,11 +520,11 @@ a {
 .home nav.nav-subpage .back {
   display: flex;
   align-items: center;
-  color: #fff;
+  color: #FFFFFF;
 }
 
 .home nav.nav-subpage .back:hover {
-  color: #c1bfc1;
+  color: #9B9B9B;
 }
 
 .home nav.nav-subpage .back .label {
@@ -581,7 +587,7 @@ a {
 }
 
 .home nav li {
-  border-bottom: solid 2px #333;
+  border-bottom: solid 2px transparent;
 }
 
 .home nav li:hover {
@@ -589,7 +595,7 @@ a {
 }
 
 .home nav li:first-of-type:hover {
-  border-bottom-color: #333;
+  border-bottom-color: transparent;
 }
 
 :not(section) ul {

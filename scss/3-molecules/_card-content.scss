@@ -1,13 +1,24 @@
 
 li {
+    position: relative;
     display: block;
-    padding: $bl-2;
     width: 100%;
     margin: 0 0 $bl-2 0;
+
+    &:not(.video) {
+        padding: $bl-2;        
+    }
+
+    section {
+        padding: $bl-2 $bl-2 0 $bl-2;                
+    }
 
     @media screen and (min-width: $bp-medium) {
         &:not(:first-child) { margin: 0 0 $bl-2 $bl-4; }
     }
+
+    @import '../2-atoms/figure';
+    @import '../2-atoms/video';
     
     // These are all atoms / molecules
 
@@ -25,6 +36,10 @@ li {
     footer {
         display: flex;
         justify-content: space-between;
+
+        @at-root &:not(.video) {
+            padding: 0 $bl-2 $bl-2 $bl-2;
+        }
 
         a.more {
             font-family: $font-family;
