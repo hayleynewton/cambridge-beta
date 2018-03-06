@@ -20,8 +20,28 @@ body {
     background: $color-background;
 }
 
+// h1 {
+//     font-family: 'Source Serif Pro', serif;
+//     font-size: 2.4rem;
+//     line-height: 48px;
+//     font-weight: 400;
+//     margin: 0;
+// }
+
+// h2 {
+//     font-size: 2.4rem;
+//     line-height: 32px;
+//     font-weight: 900;
+// }
+
+// h3 {
+//     font-size: 1.6rem;
+//     font-weight: 900;
+//     line-height: 24px;
+// }
+
 h3 {
-    @include font($font-large, 40px, $fontColor:null);
+    @include font($font-large, 40px);
 }
 
 a {
