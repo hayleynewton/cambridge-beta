@@ -37,17 +37,17 @@ li {
         display: flex;
         justify-content: space-between;
 
-        @at-root &:not(.video) {
-            padding: 0 $bl-2 $bl-2 $bl-2;
-        }
-
         a.more {
             font-family: $font-family;
             text-transform: uppercase;
             font-weight: $font-bold;
             text-decoration: none;
         }
-
     }
+
+    &.video footer {
+        padding: 0 $bl-2 $bl-2 $bl-2;
+    }
+
 
 }
