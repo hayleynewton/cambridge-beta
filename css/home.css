@@ -189,10 +189,27 @@ a {
 }
 
 .home ul[aria-label="featured"] figcaption {
-  padding-top: calc((100vh - 80px) - 75vh);
-  padding-left: 12.5%;
-  padding-right: 25%;
+  padding: calc((100vh - 80px) - 75vh) 12.5% 0;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.home ul[aria-label="featured"] p {
+  width: 640px;
+  margin: 32px auto;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.home ul[aria-label="featured"] h3 {
+  font-size: 44px;
+}
+
+.home ul[aria-label="featured"] a {
+  padding: 16px 32px;
+  display: inline-block;
+  margin: 0 auto;
 }
 
 .home ul[aria-label="featured"] li {
