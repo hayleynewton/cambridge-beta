@@ -1,8 +1,6 @@
 @import '../1-base/1.a-settings/color';
 
 nav {
-    align-items: center;
-    justify-items: center;
     position: absolute;
     right: 0;
     left: 0;
@@ -15,8 +13,62 @@ nav {
     color: $white;
     background-color: $darkgray;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
+
+    @include small-screen {
+        height: 56px;
+        padding: 4px 16px;
+    }
     
     @import '../3-molecules/nav-list';
+
+    ul {
+        height: 100%;
+
+        @include small-screen {
+            display: none;
+        }
+    }
+
+    .mobile {
+        position: relative;
+        height: 100%;
+
+        .logo {
+            position: absolute;
+            top: 50%;
+            left: 0;
+
+            transform: translateY(-50%);
+
+            @extend %no-webkit-margin-padding;
+        }
+
+        .hamburger {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+        }
+
+        .search {
+            position: absolute;
+            top: 50%;
+            right: 0;
+
+            transform: translateY(-50%);
+        }
+
+        .hamburger, .search {
+            img {
+                display: block;
+            }
+        }
+
+        @include medium-screen-all {
+            display: none;
+        }
+    }
 
     &.fixed-header {
         position: fixed;

@@ -7,11 +7,7 @@
 
 // Resets
 * {
-    -webkit-margin-before: 0;
-    -webkit-margin-after: 0;
-    -webkit-margin-start: 0;
-    -webkit-margin-end: 0;
-    -webkit-padding-start: 0;
+    @extend %no-webkit-margin-padding;
 }
 
 // Not needed?

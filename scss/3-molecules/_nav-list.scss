@@ -5,7 +5,28 @@ ul {
     padding: 0;
 
     li:first-of-type {
-        margin-right: auto; }
+        * {
+            @extend %no-webkit-margin-padding;
+        }
+        margin-right: auto;
+    }
+
+    li.mobile {
+        @include medium-screen-all {
+            display: none;
+        }
+
+        &:last-of-type {
+            margin-left: auto;
+        }
+    }
+
+    li:not(.mobile):not(:first-child) {
+        @include small-screen {
+            display: none;
+        }
+    }
+
+    @import '../2-atoms/nav-item';
 }
 
-@import '../2-atoms/nav-item';

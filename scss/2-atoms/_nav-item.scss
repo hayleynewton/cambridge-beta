@@ -7,4 +7,10 @@ li {
         text-decoration: none;
         color: #fff;
     }
+
+    &.hamburger, &.search {
+        img {
+            display: block;
+        }
+    }
 }

@@ -8,8 +8,12 @@
 .home {
 
     > article { 
-        height: calc(100% - 80px);
         width: 100%;
+        height: calc(100% - 80px);
+
+        @include small-screen {
+            height: calc(100% - 56px);
+        }
     
         h2 { @extend %hide; }
     }
@@ -22,11 +26,7 @@
             border-bottom: solid 2px $darkgray;
 
             &:hover {
-                border-bottom: solid 2px #12B4BA;
-            }
-
-            &:first-of-type {
-                margin-right: auto;
+                border-bottom: solid 2px $color-action;
             }
 
             &:first-of-type:hover {
@@ -46,6 +46,11 @@ ul[aria-label="featured"] {
     width: 400%;
     height: 100%;
     padding-bottom: 80px;
+
+    @include small-screen {
+        // Mobile nav size
+        padding-bottom: 56px;
+    }
 
     li {
         display: inline-block;
@@ -89,6 +94,11 @@ ul[aria-label="featured"] {
 
     figcaption {
         padding-top: calc((100vh - 80px) - 75vh);
+
+        @include small-screen {
+            padding-top: calc((100vh - 56px) - 75vh);
+        }
+
         padding-left: 12.5%;
         padding-right: 25%;
         z-index: 2;
@@ -97,6 +107,11 @@ ul[aria-label="featured"] {
 
     article {
         padding-top: calc((100vh - 80px) - 75vh);
+
+        @include small-screen {
+            padding-top: calc((100vh - 56px) - 75vh);
+        }
+
         padding-left: 12.5%;
         padding-right: 25%;
     }

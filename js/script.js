@@ -1,13 +1,16 @@
-    // sticky navigation bar
-    window.addEventListener('scroll', () => {
+// sticky navigation bar
+function scrollListener() {
 
-        const windowHeight = window.innerHeight - 80;
-    
-        if(window.scrollY >= windowHeight) {
+    const windowHeight = window.innerHeight - 80;
 
-            document.querySelector('nav').classList = 'fixed-header';
-        } else {
-            document.querySelector('nav').classList = '';
-        }
-    });
+    console.log('scroll');
 
+    if(window.scrollY >= windowHeight) {
+        document.querySelector('nav').classList = 'fixed-header';
+    } else {
+        document.querySelector('nav').classList = '';
+    }
+}
+
+window.addEventListener('scroll', scrollListener);
+window.addEventListener('touchmove', scrollListener);

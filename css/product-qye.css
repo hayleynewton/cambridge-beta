@@ -59,6 +59,14 @@ footer[role="contact"] h2 {
   overflow: hidden;
 }
 
+nav ul li:first-of-type *, nav .mobile .logo, * {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-start: 0;
+}
+
 nav.nav-subpage h1, .panel-view .panel h2, .panel-view .panel h3, footer[role="contact"] nav.nav-subpage h1, nav.nav-subpage footer[role="contact"] h1 {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 900;
@@ -135,8 +143,6 @@ footer[role="contact"] small {
 }
 
 nav {
-  align-items: center;
-  justify-items: center;
   position: absolute;
   right: 0;
   left: 0;
@@ -150,6 +156,13 @@ nav {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
 }
 
+@media (max-width: 769px) {
+  nav {
+    height: 56px;
+    padding: 4px 16px;
+  }
+}
+
 nav ul {
   display: flex;
   align-items: center;
@@ -161,14 +174,80 @@ nav ul li:first-of-type {
   margin-right: auto;
 }
 
-nav li {
+@media (min-width: 768px) {
+  nav ul li.mobile {
+    display: none;
+  }
+}
+
+nav ul li.mobile:last-of-type {
+  margin-left: auto;
+}
+
+@media (max-width: 769px) {
+  nav ul li:not(.mobile):not(:first-child) {
+    display: none;
+  }
+}
+
+nav ul li {
   display: inline-block;
   padding: 0 16px;
 }
 
-nav li a {
+nav ul li a {
   text-decoration: none;
   color: #fff;
+}
+
+nav ul li.hamburger img, nav ul li.search img {
+  display: block;
+}
+
+nav ul {
+  height: 100%;
+}
+
+@media (max-width: 769px) {
+  nav ul {
+    display: none;
+  }
+}
+
+nav .mobile {
+  position: relative;
+  height: 100%;
+}
+
+nav .mobile .logo {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+nav .mobile .hamburger {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+nav .mobile .search {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+nav .mobile .hamburger img, nav .mobile .search img {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  nav .mobile {
+    display: none;
+  }
 }
 
 nav.fixed-header {
@@ -592,14 +671,6 @@ footer[role="contact"] small {
   .panel-view .panel:nth-child(even) .panel-body, .panel-view .panel:nth-child(even) .panel-image {
     order: unset;
   }
-}
-
-* {
-  -webkit-margin-before: 0;
-  -webkit-margin-after: 0;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
-  -webkit-padding-start: 0;
 }
 
 html,
