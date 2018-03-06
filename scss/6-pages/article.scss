@@ -26,8 +26,11 @@
     header { 
     
         h1 { @extend %hide; }
+        background-color: $color-background-light;
 
-        background-color: $color-background-light; 
+        &.video {
+            background-color: $color-background-darkest;
+        }
     }
 
     section.content { 
