@@ -80,7 +80,6 @@ a {
   margin: 0;
   position: relative;
   height: 0;
-  background: #333333;
 }
 
 @media screen and (min-width: 1024px) {
@@ -311,16 +310,43 @@ a {
 }
 
 .article.detail aside.related li {
+  position: relative;
   display: block;
-  padding: 16px;
   width: 100%;
   margin: 0 0 16px 0;
+}
+
+.article.detail aside.related li:not(.video) {
+  padding: 16px;
+}
+
+.article.detail aside.related li section {
+  padding: 16px 16px 0 16px;
 }
 
 @media screen and (min-width: 768px) {
   .article.detail aside.related li:not(:first-child) {
     margin: 0 0 16px 32px;
   }
+}
+
+.article.detail aside.related li figure {
+  margin: 0;
+  padding: 0;
+}
+
+.article.detail aside.related li figure.video {
+  position: relative;
+  padding-bottom: 56.25%;
+  margin-bottom: 8px;
+}
+
+.article.detail aside.related li iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
 .article.detail aside.related li h3 {
@@ -339,6 +365,10 @@ a {
 .article.detail aside.related li footer {
   display: flex;
   justify-content: space-between;
+}
+
+.article.detail aside.related li footer:not(.video) {
+  padding: 0 16px 16px 16px;
 }
 
 .article.detail aside.related li footer a.more {
@@ -412,6 +442,10 @@ a {
 
 .detail.article header {
   background-color: #FFFFFF;
+}
+
+.detail.article header.video {
+  background-color: #333;
 }
 
 .detail.article section.content {
