@@ -200,10 +200,6 @@ nav ul li a {
   color: #fff;
 }
 
-nav ul li.hamburger img, nav ul li.search img {
-  display: block;
-}
-
 nav ul {
   height: 100%;
 }

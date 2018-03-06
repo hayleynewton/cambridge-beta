@@ -1,0 +1,28 @@
+ul[aria-label="featured"] {
+    width: 400%;
+    height: 100%;
+    padding-bottom: 80px;
+
+    @include small-screen {
+        // Mobile nav size
+        padding-bottom: 56px;
+    }
+
+    @import '../3-molecules/feature-article';
+    @import '../3-molecules/feature-image';
+
+    li {
+        display: inline-block;
+        height: 100%;
+        width: 25%;
+
+        &:not(:target) article {
+            display: none;
+        }
+
+        &:target {
+            animation: slide-up 0.5s ease-in-out 0.25s both;
+        }            
+    }
+
+}
