@@ -10,6 +10,9 @@
 
 .detail.article {
 
+    .site { @extend %hide; }
+
+
     a {
         color: $color-action;
             
@@ -20,14 +23,26 @@
     
     }
 
-    header { background-color: $color-background-light; }
+    header { 
+    
+        h1 { @extend %hide; }
+        background-color: $color-background-light;
 
-    section.content { background: $color-background-light; }
+        &.video {
+            background-color: $color-background-darkest;
+        }
+    }
+
+    section.content { 
+        background: $color-background-light; 
+
+        h2 { @extend %hide; }
+    }
 
     li.tag a { 
         background: $color-background;
         border: 1px solid $color-border; 
-        box-shadow: 0 0 $bl-1/2 rgba(0,0,0,0.08);
+        box-shadow: 0 0 $bl-1/2 rgba(0,0,0,0.04);
 
         &:hover,
         &:focus {
@@ -60,7 +75,7 @@
         li {
             background: $color-background-light; 
             border: 1px solid $color-border; 
-            box-shadow: 0 0 $bl-1/2 rgba(0,0,0,0.08);                
+            box-shadow: 0 0 $bl-1 rgba(0,0,0,0.04);
         }
     }
 
@@ -71,7 +86,7 @@
         ol {
             background: $color-background-light; 
             border: 1px solid $color-border; 
-            box-shadow: 0 0 $bl-1/2 rgba(0,0,0,0.08);
+            box-shadow: 0 0 $bl-1 rgba(0,0,0,0.04);
         }
 
         .material-icons { line-height: 1.6; }
