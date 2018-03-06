@@ -21,6 +21,10 @@ html, body {
 body {
     // Padding to make way for nav bar
     padding-top: 80px;
+
+    @include small-screen {
+        padding-top: 56px;
+    }
 }
 
 // Typography styles
