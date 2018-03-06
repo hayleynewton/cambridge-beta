@@ -43,7 +43,7 @@ body {
 
 // Footer theming
 footer[role="contact"] {
-    background: $darkgray;
+    background-color: $color-background-darkest;
 
     h2 { @extend %hide; }
 

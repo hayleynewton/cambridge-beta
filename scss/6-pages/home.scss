@@ -20,17 +20,17 @@
 
     nav {
         color: white;
-        background-color: $darkgray;
+        background-color: $color-background-darkest;
 
         li {
-            border-bottom: solid 2px $darkgray;
+            border-bottom: solid 2px transparent;
 
             &:hover {
                 border-bottom: solid 2px $color-action;
             }
 
             &:first-of-type:hover {
-                border-bottom-color: $darkgray;
+                border-bottom-color: transparent;
             }
         }
     }

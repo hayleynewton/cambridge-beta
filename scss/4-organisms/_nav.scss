@@ -10,8 +10,8 @@ nav {
     padding: 16px;
     box-sizing: border-box;
 
-    color: $white;
-    background-color: $darkgray;
+    color: $color-text-inverse;
+    background-color: $color-background-darkest;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
 
     @include small-screen {

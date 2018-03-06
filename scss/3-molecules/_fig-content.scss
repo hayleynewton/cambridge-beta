@@ -34,7 +34,7 @@
     }
 
     .category {
-        @include font($font-small, 25px, $darkgray);
+        @include font($font-small, 25px, $color-text);
         text-decoration: none;
         font-family: $font-family;
         text-transform: uppercase;

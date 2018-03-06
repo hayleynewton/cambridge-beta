@@ -7,10 +7,10 @@
 .back {
     display: flex;
     align-items: center;
-    color: $white;
+    color: $color-text-inverse;
 
     &:hover {
-        color: $lightgray;
+        color: $color-text-light;
     }
 
     @import '../2-atoms/nav-back-label';
