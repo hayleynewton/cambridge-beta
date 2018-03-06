@@ -3,7 +3,7 @@
 
     @import '../2-atoms/app-store-button';
 
-    li {
+    .app-store-button {
         &:not(:last-child) {
             margin-right: 34px;
 

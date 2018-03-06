@@ -15,7 +15,12 @@
     $length: length($colorList);
 
     @for $i from 1 through $length {
-        &:nth-child(#{$length}n+#{$i}) {
+        $equation: #{$length}n+#{$i};
+        @if $i == $length {
+            $equation: #{$length}n;
+        }
+
+        &:nth-child(#{$equation}) {
             background-color: nth($colorList, $i);
         }
     }
@@ -44,6 +49,7 @@
     }
 }
 
+// Do a block on medium screens or above
 @mixin medium-screen-all {
     @media (min-width: $mediumScreenMin) {
         @content;

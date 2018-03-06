@@ -5,64 +5,132 @@
 //       on alternating sides.
 
 .panel {
-    display: flex;
     min-height: 80vh;
     width: 100%;
-    box-sizing: border-box;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
+
+    display: block;
+    position: relative;
+
     overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
+    box-sizing: border-box;
 
-    // Switch to vertical arrangement (text, then image)
-    //     for small screens
-    @include small-screen {
-        flex-direction: column;
-        min-height: unset;
-        overflow: unset;
-        align-items: center;
-    }
+    @mixin alternating-padding($vertical-padding, $horizontal-padding) {
+        padding-top: $vertical-padding;
+        padding-bottom: $vertical-padding;
 
-    >* {
-        display: flex;
-        height: 100%;
-        vertical-align: top;
-        box-sizing: border-box;
-    }
+        $larger-padding: calc(#{$vertical-padding} + 40vw);
 
-    @import 'panel-body';
-    @import 'panel-image-holder';
+        &:nth-child(odd) {
+            padding-left: $horizontal-padding;
+            padding-right: $larger-padding;
+        }
 
-    .panel-body {
-        min-width: 60vw;
-        justify-content: center;
-        align-self: center;
-
-        @include small-screen {
-            padding: 32px 16px 0px;
-            width: 100%;
+        &:nth-child(even) {
+            padding-left: $larger-padding;
+            padding-right: $horizontal-padding;
         }
     }
 
-    .panel-image-holder {
-        min-width: 40vw;
-        height: 100%;
-        align-self: flex-end;
+    @include small-screen {
+        min-height: unset;
+        overflow: unset;
+
+        // Must have 0-bottom to make image sit on edge
+        padding: 32px 16px 0px;
+    }
+
+    @include medium-screen {
+        @include alternating-padding(48px, 44px);
+        // padding: 48px 44px;
+    }
+
+    @include big-screen {
+        @include alternating-padding(80px, 160px);
+        // padding: 80px 160px;
+    }
+    
+    @import '../3-molecules/app-store-list';
+
+    h2 {
+        margin: 0px 0px 16px;
 
         @include small-screen {
-            max-height: 50vh;
-            align-self: center;
+            margin: 0px 0px 8px;
+        }
+    }
+
+    h3 {
+        margin: 16px 0px;
+
+        @include small-screen {
+            margin: 8px 0px;
+        }
+    }
+
+    p {
+        margin-top: 16px;
+        margin-bottom: 16px;
+
+        @include small-screen {
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+
+        &:first-of-type {
+            margin-top: 0px;
+        }
+
+        &:last-of-type {
+            margin-bottom: 0px;
+        }
+    }
+
+    ul {
+        @extend %list-normal;
+    }
+
+    .app-stores {
+        margin: 36px 52px;
+    
+        @include small-screen {
+            margin: 16px 32px;
+            justify-content: center;
+        }
+
+        @include big-screen {
+            margin: 36px 0px;
+        }
+    }
+
+    .panel-image {
+        display: block;
+        max-width: 100%;
+        max-height: 50vh;
+
+        // Keep the image horizontally centered
+        margin: auto;
+
+        @include medium-screen-all {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+
+            width: 40vw;
+            max-height: 100%;
+
+            margin:0;
         }
     }
 
     &:nth-child(even) {
-        >.panel-body {
-            order: 1;
-        }
-        .panel-image-holder {
-            order: 0;
+        .panel-image {
+            right: unset;
+            left: 0;
         }
 
         @include small-screen {
-            .panel-body, .panel-image-holder {
+            .panel-body, .panel-image {
                 order: unset;
             }
         }

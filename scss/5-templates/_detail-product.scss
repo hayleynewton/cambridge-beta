@@ -22,27 +22,25 @@ html, body {
     padding: 0;
 }
 
-// Padding to make way for nav bar
 body {
-    padding-top: 10vh;
+    // Padding to make way for nav bar
+    padding-top: 80px;
 }
 
 // Typography styles
 .panel-view {
     .panel {
-        .panel-body {
-            h2 {
-                @extend %product-title;
-            }
+        h2 {
+            @extend %product-title;
+        }
 
-            h3 {
-                @extend %product-subheading;
-            }
+        h3 {
+            @extend %product-subheading;
+        }
 
-            p,
-            li {
-                @extend %article-body-text;
-            }
+        p,
+        li {
+            @extend %article-body-text;
         }
     }
 }

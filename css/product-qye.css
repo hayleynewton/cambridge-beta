@@ -59,12 +59,12 @@ footer[role="contact"] h2 {
   overflow: hidden;
 }
 
-nav.nav-subpage h1, .panel-view .panel .panel-body h2, .panel-view .panel .panel-body h3, footer[role="contact"] nav.nav-subpage h1, nav.nav-subpage footer[role="contact"] h1 {
+nav.nav-subpage h1, .panel-view .panel h2, .panel-view .panel h3, footer[role="contact"] nav.nav-subpage h1, nav.nav-subpage footer[role="contact"] h1 {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 900;
 }
 
-.panel-view .panel .panel-body .detail-list > li ul {
+.panel-view .panel ul {
   padding-left: 1.25em;
   list-style-type: disc;
 }
@@ -87,32 +87,32 @@ nav.nav-subpage h1 {
   }
 }
 
-.panel-view .panel .panel-body h2 {
+.panel-view .panel h2 {
   font-size: 44px;
   line-height: 48px;
 }
 
 @media (max-width: 769px) {
-  .panel-view .panel .panel-body h2 {
+  .panel-view .panel h2 {
     font-size: 24px;
     line-height: 32px;
   }
 }
 
-.panel-view .panel .panel-body h3 {
+.panel-view .panel h3 {
   font-size: 32px;
   line-height: 40px;
 }
 
 @media (max-width: 769px) {
-  .panel-view .panel .panel-body h3 {
+  .panel-view .panel h3 {
     font-size: 16px;
     line-height: 24px;
   }
 }
 
-.panel-view .panel .panel-body p,
-.panel-view .panel .panel-body li {
+.panel-view .panel p,
+.panel-view .panel li {
   font-family: "Source Serif Pro", serif;
   font-weight: 300;
   font-size: 20px;
@@ -120,8 +120,8 @@ nav.nav-subpage h1 {
 }
 
 @media (max-width: 769px) {
-  .panel-view .panel .panel-body p,
-  .panel-view .panel .panel-body li {
+  .panel-view .panel p,
+  .panel-view .panel li {
     font-size: 16px;
     line-height: 24px;
   }
@@ -189,12 +189,12 @@ nav.nav-subpage {
   top: 0;
 }
 
-nav.nav-subpage h1, nav.nav-subpage .panel-view .panel .panel-body h2, .panel-view .panel .panel-body nav.nav-subpage h2, nav.nav-subpage .panel-view .panel .panel-body h3, .panel-view .panel .panel-body nav.nav-subpage h3, footer[role="contact"] nav.nav-subpage h1, nav.nav-subpage footer[role="contact"] h1 {
+nav.nav-subpage h1, nav.nav-subpage .panel-view .panel h2, .panel-view .panel nav.nav-subpage h2, nav.nav-subpage .panel-view .panel h3, .panel-view .panel nav.nav-subpage h3, footer[role="contact"] nav.nav-subpage h1, nav.nav-subpage footer[role="contact"] h1 {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 900;
 }
 
-nav.nav-subpage .panel-view .panel .panel-body .detail-list > li ul, .panel-view .panel .panel-body .detail-list > li nav.nav-subpage ul {
+nav.nav-subpage .panel-view .panel ul, .panel-view .panel nav.nav-subpage ul {
   padding-left: 1.25em;
   list-style-type: disc;
 }
@@ -217,33 +217,33 @@ nav.nav-subpage h1 {
   }
 }
 
-nav.nav-subpage .panel-view .panel .panel-body h2, .panel-view .panel .panel-body nav.nav-subpage h2 {
+nav.nav-subpage .panel-view .panel h2, .panel-view .panel nav.nav-subpage h2 {
   font-size: 44px;
   line-height: 48px;
 }
 
 @media (max-width: 769px) {
-  nav.nav-subpage .panel-view .panel .panel-body h2, .panel-view .panel .panel-body nav.nav-subpage h2 {
+  nav.nav-subpage .panel-view .panel h2, .panel-view .panel nav.nav-subpage h2 {
     font-size: 24px;
     line-height: 32px;
   }
 }
 
-nav.nav-subpage .panel-view .panel .panel-body h3, .panel-view .panel .panel-body nav.nav-subpage h3 {
+nav.nav-subpage .panel-view .panel h3, .panel-view .panel nav.nav-subpage h3 {
   font-size: 32px;
   line-height: 40px;
 }
 
 @media (max-width: 769px) {
-  nav.nav-subpage .panel-view .panel .panel-body h3, .panel-view .panel .panel-body nav.nav-subpage h3 {
+  nav.nav-subpage .panel-view .panel h3, .panel-view .panel nav.nav-subpage h3 {
     font-size: 16px;
     line-height: 24px;
   }
 }
 
-nav.nav-subpage .panel-view .panel .panel-body p, .panel-view .panel .panel-body nav.nav-subpage p, nav.nav-subpage
-.panel-view .panel .panel-body li,
-.panel-view .panel .panel-body nav.nav-subpage li {
+nav.nav-subpage .panel-view .panel p, .panel-view .panel nav.nav-subpage p, nav.nav-subpage
+.panel-view .panel li,
+.panel-view .panel nav.nav-subpage li {
   font-family: "Source Serif Pro", serif;
   font-weight: 300;
   font-size: 20px;
@@ -251,9 +251,9 @@ nav.nav-subpage .panel-view .panel .panel-body p, .panel-view .panel .panel-body
 }
 
 @media (max-width: 769px) {
-  nav.nav-subpage .panel-view .panel .panel-body p, .panel-view .panel .panel-body nav.nav-subpage p, nav.nav-subpage
-  .panel-view .panel .panel-body li,
-  .panel-view .panel .panel-body nav.nav-subpage li {
+  nav.nav-subpage .panel-view .panel p, .panel-view .panel nav.nav-subpage p, nav.nav-subpage
+  .panel-view .panel li,
+  .panel-view .panel nav.nav-subpage li {
     font-size: 16px;
     line-height: 24px;
   }
@@ -334,12 +334,12 @@ footer[role="contact"] img {
   height: 40px;
 }
 
-footer[role="contact"] nav.nav-subpage h1, nav.nav-subpage footer[role="contact"] h1, footer[role="contact"] .panel-view .panel .panel-body h2, .panel-view .panel .panel-body footer[role="contact"] h2, footer[role="contact"] .panel-view .panel .panel-body h3, .panel-view .panel .panel-body footer[role="contact"] h3 {
+footer[role="contact"] nav.nav-subpage h1, nav.nav-subpage footer[role="contact"] h1, footer[role="contact"] .panel-view .panel h2, .panel-view .panel footer[role="contact"] h2, footer[role="contact"] .panel-view .panel h3, .panel-view .panel footer[role="contact"] h3 {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 900;
 }
 
-footer[role="contact"] .panel-view .panel .panel-body .detail-list > li ul, .panel-view .panel .panel-body .detail-list > li footer[role="contact"] ul {
+footer[role="contact"] .panel-view .panel ul, .panel-view .panel footer[role="contact"] ul {
   padding-left: 1.25em;
   list-style-type: disc;
 }
@@ -362,33 +362,33 @@ footer[role="contact"] nav.nav-subpage h1, nav.nav-subpage footer[role="contact"
   }
 }
 
-footer[role="contact"] .panel-view .panel .panel-body h2, .panel-view .panel .panel-body footer[role="contact"] h2 {
+footer[role="contact"] .panel-view .panel h2, .panel-view .panel footer[role="contact"] h2 {
   font-size: 44px;
   line-height: 48px;
 }
 
 @media (max-width: 769px) {
-  footer[role="contact"] .panel-view .panel .panel-body h2, .panel-view .panel .panel-body footer[role="contact"] h2 {
+  footer[role="contact"] .panel-view .panel h2, .panel-view .panel footer[role="contact"] h2 {
     font-size: 24px;
     line-height: 32px;
   }
 }
 
-footer[role="contact"] .panel-view .panel .panel-body h3, .panel-view .panel .panel-body footer[role="contact"] h3 {
+footer[role="contact"] .panel-view .panel h3, .panel-view .panel footer[role="contact"] h3 {
   font-size: 32px;
   line-height: 40px;
 }
 
 @media (max-width: 769px) {
-  footer[role="contact"] .panel-view .panel .panel-body h3, .panel-view .panel .panel-body footer[role="contact"] h3 {
+  footer[role="contact"] .panel-view .panel h3, .panel-view .panel footer[role="contact"] h3 {
     font-size: 16px;
     line-height: 24px;
   }
 }
 
-footer[role="contact"] .panel-view .panel .panel-body p, .panel-view .panel .panel-body footer[role="contact"] p, footer[role="contact"]
-.panel-view .panel .panel-body li,
-.panel-view .panel .panel-body footer[role="contact"] li {
+footer[role="contact"] .panel-view .panel p, .panel-view .panel footer[role="contact"] p, footer[role="contact"]
+.panel-view .panel li,
+.panel-view .panel footer[role="contact"] li {
   font-family: "Source Serif Pro", serif;
   font-weight: 300;
   font-size: 20px;
@@ -396,9 +396,9 @@ footer[role="contact"] .panel-view .panel .panel-body p, .panel-view .panel .pan
 }
 
 @media (max-width: 769px) {
-  footer[role="contact"] .panel-view .panel .panel-body p, .panel-view .panel .panel-body footer[role="contact"] p, footer[role="contact"]
-  .panel-view .panel .panel-body li,
-  .panel-view .panel .panel-body footer[role="contact"] li {
+  footer[role="contact"] .panel-view .panel p, .panel-view .panel footer[role="contact"] p, footer[role="contact"]
+  .panel-view .panel li,
+  .panel-view .panel footer[role="contact"] li {
     font-size: 16px;
     line-height: 24px;
   }
@@ -423,212 +423,173 @@ footer[role="contact"] small {
 }
 
 .panel-view .panel {
-  display: flex;
   min-height: 80vh;
   width: 100%;
-  box-sizing: border-box;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
+  display: block;
+  position: relative;
   overflow: hidden;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
+  box-sizing: border-box;
 }
 
 @media (max-width: 769px) {
   .panel-view .panel {
-    flex-direction: column;
     min-height: unset;
     overflow: unset;
-    align-items: center;
-  }
-}
-
-.panel-view .panel > * {
-  display: flex;
-  height: 100%;
-  vertical-align: top;
-  box-sizing: border-box;
-}
-
-.panel-view .panel .panel-body {
-  flex-direction: column;
-  justify-content: center;
-}
-
-@media (max-width: 769px) {
-  .panel-view .panel .panel-body {
     padding: 32px 16px 0px;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1919px) {
-  .panel-view .panel .panel-body {
-    padding: 48px 44px;
+  .panel-view .panel {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  .panel-view .panel:nth-child(odd) {
+    padding-left: 44px;
+    padding-right: calc(48px + 40vw);
+  }
+  .panel-view .panel:nth-child(even) {
+    padding-left: calc(48px + 40vw);
+    padding-right: 44px;
   }
 }
 
 @media (min-width: 1920px) {
-  .panel-view .panel .panel-body {
-    padding: 80px 160px;
+  .panel-view .panel {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .panel-view .panel:nth-child(odd) {
+    padding-left: 160px;
+    padding-right: calc(80px + 40vw);
+  }
+  .panel-view .panel:nth-child(even) {
+    padding-left: calc(80px + 40vw);
+    padding-right: 160px;
   }
 }
 
-.panel-view .panel .panel-body .app-stores {
+.panel-view .panel .app-stores {
   display: flex;
 }
 
-.panel-view .panel .panel-body .app-stores li {
+.panel-view .panel .app-stores .app-store-button {
   background: black;
   border-radius: 8px;
   overflow: hidden;
   display: inline-flex;
 }
 
-.panel-view .panel .panel-body .app-stores li img {
+.panel-view .panel .app-stores .app-store-button img {
   display: block;
   height: 44px;
 }
 
 @media (max-width: 769px) {
-  .panel-view .panel .panel-body .app-stores li img {
+  .panel-view .panel .app-stores .app-store-button img {
     height: 32px;
   }
 }
 
-.panel-view .panel .panel-body .app-stores li:not(:last-child) {
+.panel-view .panel .app-stores .app-store-button:not(:last-child) {
   margin-right: 34px;
 }
 
 @media (max-width: 769px) {
-  .panel-view .panel .panel-body .app-stores li:not(:last-child) {
+  .panel-view .panel .app-stores .app-store-button:not(:last-child) {
     margin-right: 24px;
   }
 }
 
 @media (min-width: 1920px) {
-  .panel-view .panel .panel-body .app-stores li:not(:last-child) {
+  .panel-view .panel .app-stores .app-store-button:not(:last-child) {
     margin-right: 44px;
   }
 }
 
-.panel-view .panel .panel-body .detail-list {
-  padding: 0;
-}
-
-.panel-view .panel .panel-body .detail-list > li:not(:first-child) {
-  margin-top: 16px;
-}
-
-@media (max-width: 769px) {
-  .panel-view .panel .panel-body .detail-list > li:not(:first-child) {
-    margin-top: 8px;
-  }
-}
-
-.panel-view .panel .panel-body .detail-list > li:not(:last-child) {
-  margin-bottom: 16px;
-}
-
-@media (max-width: 769px) {
-  .panel-view .panel .panel-body .detail-list > li:not(:last-child) {
-    margin-bottom: 8px;
-  }
-}
-
-.panel-view .panel .panel-body h2 {
+.panel-view .panel h2 {
   margin: 0px 0px 16px;
 }
 
 @media (max-width: 769px) {
-  .panel-view .panel .panel-body h2 {
+  .panel-view .panel h2 {
     margin: 0px 0px 8px;
   }
 }
 
-.panel-view .panel .panel-body h3 {
+.panel-view .panel h3 {
   margin: 16px 0px;
 }
 
 @media (max-width: 769px) {
-  .panel-view .panel .panel-body h3 {
+  .panel-view .panel h3 {
     margin: 8px 0px;
   }
 }
 
-.panel-view .panel .panel-body .app-stores {
+.panel-view .panel p {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 769px) {
+  .panel-view .panel p {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+}
+
+.panel-view .panel p:first-of-type {
+  margin-top: 0px;
+}
+
+.panel-view .panel p:last-of-type {
+  margin-bottom: 0px;
+}
+
+.panel-view .panel .app-stores {
   margin: 36px 52px;
 }
 
 @media (max-width: 769px) {
-  .panel-view .panel .panel-body .app-stores {
+  .panel-view .panel .app-stores {
     margin: 16px 32px;
     justify-content: center;
   }
 }
 
 @media (min-width: 1920px) {
-  .panel-view .panel .panel-body .app-stores {
+  .panel-view .panel .app-stores {
     margin: 36px 0px;
   }
 }
 
-@media (max-width: 769px) {
-  .panel-view .panel .panel-body .detail-list {
-    margin-top: 8px;
-  }
-}
-
-.panel-view .panel .panel-image-holder {
-  overflow: hidden;
-  justify-content: center;
-  align-items: flex-end;
-}
-
-@media (max-width: 769px) {
-  .panel-view .panel .panel-image-holder {
-    align-items: flex-start;
-  }
-}
-
-.panel-view .panel .panel-image-holder img {
-  max-height: 100%;
-  max-width: 100%;
+.panel-view .panel .panel-image {
   display: block;
+  max-width: 100%;
+  max-height: 50vh;
+  margin: auto;
 }
 
-.panel-view .panel .panel-body {
-  min-width: 60vw;
-  justify-content: center;
-  align-self: center;
-}
-
-@media (max-width: 769px) {
-  .panel-view .panel .panel-body {
-    padding: 32px 16px 0px;
-    width: 100%;
+@media (min-width: 768px) {
+  .panel-view .panel .panel-image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 40vw;
+    max-height: 100%;
+    margin: 0;
   }
 }
 
-.panel-view .panel .panel-image-holder {
-  min-width: 40vw;
-  height: 100%;
-  align-self: flex-end;
+.panel-view .panel:nth-child(even) .panel-image {
+  right: unset;
+  left: 0;
 }
 
 @media (max-width: 769px) {
-  .panel-view .panel .panel-image-holder {
-    max-height: 50vh;
-    align-self: center;
-  }
-}
-
-.panel-view .panel:nth-child(even) > .panel-body {
-  order: 1;
-}
-
-.panel-view .panel:nth-child(even) .panel-image-holder {
-  order: 0;
-}
-
-@media (max-width: 769px) {
-  .panel-view .panel:nth-child(even) .panel-body, .panel-view .panel:nth-child(even) .panel-image-holder {
+  .panel-view .panel:nth-child(even) .panel-body, .panel-view .panel:nth-child(even) .panel-image {
     order: unset;
   }
 }
@@ -650,7 +611,7 @@ body {
 }
 
 body {
-  padding-top: 10vh;
+  padding-top: 80px;
 }
 
 footer[role="contact"] {
@@ -677,6 +638,6 @@ footer[role="contact"] small {
   background-color: #0E8682;
 }
 
-.qye-product-theme > *:nth-child(4n+4) {
+.qye-product-theme > *:nth-child(4n) {
   background-color: #D62879;
 }
