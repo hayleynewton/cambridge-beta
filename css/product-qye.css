@@ -59,7 +59,7 @@ footer[role="contact"] h2 {
   overflow: hidden;
 }
 
-nav ul li:first-of-type *, nav .logo, * {
+nav .logo, * {
   -webkit-margin-before: 0;
   -webkit-margin-after: 0;
   -webkit-margin-start: 0;
@@ -67,7 +67,7 @@ nav ul li:first-of-type *, nav .logo, * {
   -webkit-padding-start: 0;
 }
 
-nav.nav-subpage h1, .panel-view .panel h2, .panel-view .panel h3, footer[role="contact"] nav.nav-subpage h1, nav.nav-subpage footer[role="contact"] h1 {
+nav.nav-subpage h1:not(.logo), .panel-view .panel h2, .panel-view .panel h3 {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 900;
 }
@@ -77,7 +77,7 @@ nav.nav-subpage h1, .panel-view .panel h2, .panel-view .panel h3, footer[role="c
   list-style-type: disc;
 }
 
-nav.nav-subpage h1 {
+nav.nav-subpage h1:not(.logo) {
   font-size: 24px;
   line-height: 32px;
   padding: 10px 0px;
@@ -85,7 +85,7 @@ nav.nav-subpage h1 {
 }
 
 @media (max-width: 769px) {
-  nav.nav-subpage h1 {
+  nav.nav-subpage h1:not(.logo) {
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 300;
     font-size: 12px;
@@ -166,6 +166,7 @@ nav {
 nav ul {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   margin: 0;
   padding: 0;
 }
@@ -174,16 +175,9 @@ nav ul {
   nav ul {
     flex-direction: column;
   }
-  nav ul li:first-of-type {
-    display: none;
-  }
   nav ul li {
     margin: 8px 0px;
   }
-}
-
-nav ul li:first-of-type {
-  margin-right: auto;
 }
 
 nav ul li {
@@ -196,17 +190,10 @@ nav ul li a {
   color: #fff;
 }
 
-nav ul {
-  height: 100%;
-}
-
 @media (max-width: 769px) {
   nav ul {
     display: none;
   }
-}
-
-@media (max-width: 769px) {
   nav #mobile-hamburger:checked ~ ul {
     display: flex;
     position: absolute;
@@ -219,6 +206,10 @@ nav ul {
   }
 }
 
+nav ul {
+  height: 100%;
+}
+
 @media (max-width: 769px) {
   nav.fixed-header #mobile-hamburger:checked ~ ul {
     top: 100%;
@@ -226,12 +217,23 @@ nav ul {
   }
 }
 
-@media (max-width: 769px) {
+nav .logo {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+}
+
+@media (min-width: 768px) {
   nav .logo {
-    position: absolute;
-    top: 50%;
-    left: 16px;
-    transform: translateY(-50%);
+    left: 32px;
+  }
+}
+
+@media (max-width: 769px) {
+  nav.nav-subpage .logo {
+    left: unset;
+    right: 16px;
   }
   nav .hamburger {
     position: absolute;
@@ -251,12 +253,12 @@ nav #mobile-hamburger {
   display: none;
 }
 
-nav .hamburger img, nav .search img, nav .logo img {
+nav .hamburger img, nav .search img {
   display: block;
 }
 
 @media (min-width: 768px) {
-  nav .hamburger, nav .search, nav .logo {
+  nav .hamburger, nav .search {
     display: none;
   }
 }
@@ -264,10 +266,6 @@ nav .hamburger img, nav .search img, nav .logo img {
 nav.fixed-header {
   position: fixed;
   top: 0;
-}
-
-nav .logo {
-  margin-right: auto;
 }
 
 nav.nav-subpage {
@@ -279,7 +277,7 @@ nav.nav-subpage {
   top: 0;
 }
 
-nav.nav-subpage h1, nav.nav-subpage .panel-view .panel h2, .panel-view .panel nav.nav-subpage h2, nav.nav-subpage .panel-view .panel h3, .panel-view .panel nav.nav-subpage h3, footer[role="contact"] nav.nav-subpage h1, nav.nav-subpage footer[role="contact"] h1 {
+nav.nav-subpage h1:not(.logo), nav.nav-subpage .panel-view .panel h2, .panel-view .panel nav.nav-subpage h2, nav.nav-subpage .panel-view .panel h3, .panel-view .panel nav.nav-subpage h3 {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 900;
 }
@@ -289,7 +287,7 @@ nav.nav-subpage .panel-view .panel ul, .panel-view .panel nav.nav-subpage ul {
   list-style-type: disc;
 }
 
-nav.nav-subpage h1 {
+nav.nav-subpage h1:not(.logo) {
   font-size: 24px;
   line-height: 32px;
   padding: 10px 0px;
@@ -297,7 +295,7 @@ nav.nav-subpage h1 {
 }
 
 @media (max-width: 769px) {
-  nav.nav-subpage h1 {
+  nav.nav-subpage h1:not(.logo) {
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 300;
     font-size: 12px;
@@ -405,8 +403,14 @@ nav.nav-subpage .back {
 }
 
 nav.nav-subpage .logo {
-  margin-left: auto;
-  margin-right: unset;
+  left: unset;
+  right: 16px;
+}
+
+@media (min-width: 768px) {
+  nav.nav-subpage .logo {
+    right: 32px;
+  }
 }
 
 footer[role="contact"] {
@@ -424,7 +428,7 @@ footer[role="contact"] img {
   height: 40px;
 }
 
-footer[role="contact"] nav.nav-subpage h1, nav.nav-subpage footer[role="contact"] h1, footer[role="contact"] .panel-view .panel h2, .panel-view .panel footer[role="contact"] h2, footer[role="contact"] .panel-view .panel h3, .panel-view .panel footer[role="contact"] h3 {
+footer[role="contact"] nav.nav-subpage h1:not(.logo), nav.nav-subpage footer[role="contact"] h1:not(.logo), footer[role="contact"] .panel-view .panel h2, .panel-view .panel footer[role="contact"] h2, footer[role="contact"] .panel-view .panel h3, .panel-view .panel footer[role="contact"] h3 {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 900;
 }
@@ -434,7 +438,7 @@ footer[role="contact"] .panel-view .panel ul, .panel-view .panel footer[role="co
   list-style-type: disc;
 }
 
-footer[role="contact"] nav.nav-subpage h1, nav.nav-subpage footer[role="contact"] h1 {
+footer[role="contact"] nav.nav-subpage h1:not(.logo), nav.nav-subpage footer[role="contact"] h1:not(.logo) {
   font-size: 24px;
   line-height: 32px;
   padding: 10px 0px;
@@ -442,7 +446,7 @@ footer[role="contact"] nav.nav-subpage h1, nav.nav-subpage footer[role="contact"
 }
 
 @media (max-width: 769px) {
-  footer[role="contact"] nav.nav-subpage h1, nav.nav-subpage footer[role="contact"] h1 {
+  footer[role="contact"] nav.nav-subpage h1:not(.logo), nav.nav-subpage footer[role="contact"] h1:not(.logo) {
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 300;
     font-size: 12px;

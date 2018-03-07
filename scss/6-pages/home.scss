@@ -28,10 +28,6 @@
             &:hover {
                 border-bottom: solid 2px $color-action;
             }
-
-            &:first-of-type:hover {
-                border-bottom-color: transparent;
-            }
         }
     }
 }

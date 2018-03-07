@@ -24,28 +24,10 @@ nav {
     
     @import '../3-molecules/nav-list';
 
+    @include nav-list-hamburger-style($hamburger-input);
+
     ul {
         height: 100%;
-
-        @include small-screen {
-            display: none;
-        }
-    }
-
-    @include small-screen {
-        #{$hamburger-input}:checked~ul {
-            display: flex;
-            position: absolute;
-            bottom: 100%;
-            left: 0;
-            right: 0;
-            height: unset; // Expand with content
-    
-            padding: 16px 0px;
-    
-            background-color: inherit;
-            // background-color: $color-background-darkest;
-        }
     }
 
     &.fixed-header {
@@ -57,14 +39,23 @@ nav {
         }
     }
 
+    .logo {
+        position: absolute;
+        top: 50%;
+        left: 16px;
+
+        transform: translateY(-50%);
+
+        @include medium-screen-all {
+            left: 32px;
+        }
+    }
     @include small-screen {
 
-        .logo {
-            position: absolute;
-            top: 50%;
-            left: 16px;
 
-            transform: translateY(-50%);
+        &.nav-subpage .logo {
+            left: unset;
+            right: 16px;
         }
 
         #{$hamburger-label} {
@@ -92,7 +83,7 @@ nav {
         display: none; // Not rendered ever, label acts as input
     }
 
-    #{$hamburger-label}, .search, .logo {
+    #{$hamburger-label}, .search {
         img {
             display: block;
         }
@@ -105,10 +96,6 @@ nav {
     &.fixed-header {
         position: fixed;
         top: 0;
-    }
-
-    .logo {
-        margin-right: auto;
     }
 
     &.nav-subpage {
@@ -135,8 +122,12 @@ nav {
         }
 
         .logo {
-            margin-left: auto;
-            margin-right: unset;
+            left: unset;
+            right: 16px;
+
+            @include medium-screen-all {
+                right: 32px;
+            }
         }
     }
 }

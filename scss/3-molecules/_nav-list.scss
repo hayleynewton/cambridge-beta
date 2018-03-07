@@ -1,28 +1,39 @@
 ul {
     display: flex;
     align-items: center;
+    justify-content: flex-end; // Align right
     margin: 0;
     padding: 0;
 
     @include small-screen {
         flex-direction: column;
 
-        li:first-of-type {
-            display: none;
-        }
-
         li {
             margin: 8px 0px;
         }
     }
 
-    li:first-of-type {
-        * {
-            @extend %no-webkit-margin-padding;
-        }
-        margin-right: auto;
-    }
-
     @import '../2-atoms/nav-item';
 }
 
+@mixin nav-list-hamburger-style($hamburger-selector) {
+    @include small-screen {
+        ul {
+            display: none;
+        }
+
+        #{$hamburger-selector}:checked~ul {
+            display: flex;
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            right: 0;
+            height: unset; // Expand with content
+    
+            padding: 16px 0px;
+    
+            background-color: inherit;
+            // background-color: $color-background-darkest;
+        }
+    }
+}
