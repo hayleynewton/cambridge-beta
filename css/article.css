@@ -48,7 +48,9 @@ h3 {
 }
 
 a {
-  transition: all 0.25s ease-in-out;
+  transition-property: color, text-decoration-color, fill;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in-out;
 }
 
 .detail.article .site, .detail.article header h1, .detail.article section.content h2, .detail.article footer.content h2, .detail.article aside.profile h2, .detail.article section.comments h2, .detail.article footer[role="contact"] h2 {

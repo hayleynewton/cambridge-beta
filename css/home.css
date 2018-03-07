@@ -48,7 +48,9 @@ h3 {
 }
 
 a {
-  transition: all 0.25s ease-in-out;
+  transition-property: color, text-decoration-color, fill;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in-out;
 }
 
 .home > article h2 {
@@ -120,7 +122,9 @@ a {
 }
 
 .home a {
-  transition: all 0.25s ease-in-out;
+  transition-property: color, text-decoration-color, fill;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in-out;
 }
 
 .home > article h2 {

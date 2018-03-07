@@ -45,5 +45,10 @@ h3 {
 }
 
 a {
-    transition: all 0.25s ease-in-out;
+    // Specific list to cover text color, underline, svg icon
+    // Not set to 'all' as this can cause unintended behaviour
+    //     in some non-text elements.
+    transition-property: color, text-decoration-color, fill;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-in-out;
 }
