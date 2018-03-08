@@ -181,6 +181,7 @@ nav ul {
 @media (max-width: 769px) {
   nav ul {
     flex-direction: column;
+    align-items: flex-start;
   }
   nav ul li {
     margin: 8px 0px;
@@ -191,11 +192,22 @@ nav ul li {
   display: inline-block;
   padding: 0 16px;
   white-space: nowrap;
-  transition-property: width,max-width,padding,margin;
-  transition-duration: 0.5s;
-  transition-timing-function: ease;
   max-width: 150px;
   overflow: hidden;
+}
+
+@media (max-width: 769px) {
+  nav ul li {
+    padding-left: 0px;
+  }
+}
+
+@media (min-width: 768px) {
+  nav ul li {
+    transition-property: width,max-width,padding,margin;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+  }
 }
 
 nav ul li a {
@@ -228,9 +240,14 @@ nav .search-box {
   align-items: center;
   max-width: 450px;
   overflow: hidden;
-  transition-property: width,max-width,padding,margin;
-  transition-duration: 0.5s;
-  transition-timing-function: ease;
+}
+
+@media (min-width: 768px) {
+  nav .search-box {
+    transition-property: width,max-width,padding,margin;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+  }
 }
 
 nav .search-box input#search-input, nav .search-box label[for='search-input'] {
@@ -284,18 +301,8 @@ nav .search-box .search-clear img {
 }
 
 @media (max-width: 769px) {
-  nav ul {
+  nav .menu {
     display: none;
-  }
-  nav #mobile-hamburger:checked ~ ul {
-    display: flex;
-    position: absolute;
-    bottom: 100%;
-    left: 0;
-    right: 0;
-    height: unset;
-    padding: 16px 0px;
-    background-color: inherit;
   }
 }
 
@@ -303,24 +310,54 @@ nav ul {
   order: 0;
 }
 
-nav input#search-button:checked ~ #mobile-hamburger:checked ~ ul {
-  bottom: 200%;
+nav .menu {
+  display: flex;
+  flex-direction: row;
 }
 
 @media (max-width: 769px) {
-  nav.fixed-header .search-box {
+  nav .menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    bottom: 100%;
+    left: 40%;
+    right: 0;
+    height: unset;
+    padding: 16px 0px;
+    padding-left: 16px;
+    background-color: #333;
+  }
+}
+
+@media (max-width: 480px) {
+  nav .menu {
+    left: 0;
+  }
+}
+
+@media (max-width: 769px) {
+  nav #mobile-hamburger:checked ~ .menu {
+    display: flex;
+  }
+}
+
+@media (max-width: 769px) {
+  nav.fixed-header .menu {
     top: 100%;
     bottom: unset;
   }
 }
 
-nav.fixed-header input#search-button:checked ~ #mobile-hamburger:checked ~ ul {
-  top: 200%;
-  bottom: unset;
-}
-
 nav label[for='search-button'] {
   order: 1;
+}
+
+@media (max-width: 769px) {
+  nav label[for='search-button'] {
+    display: none;
+  }
 }
 
 nav .search-box {
@@ -332,35 +369,39 @@ nav .search-box .search-clear {
 }
 
 @media (max-width: 769px) {
-  nav .search-box {
-    position: absolute;
-    right: 0;
-    bottom: 100%;
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-    justify-content: flex-end;
-    padding: 0px 16px;
-    background-color: #333;
+  nav .search-box .search-clear {
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 }
 
 @media (min-width: 768px) {
-  nav input#search-button:checked ~ ul li:not(.active) {
+  nav #search-button:checked ~ ul li:not(.active) {
+    transition-duration: 0.2s;
+    transition-delay: 0s;
     max-width: 0;
     padding-left: 0;
     padding-right: 0;
     margin-left: 0;
     margin-right: 0;
   }
-}
-
-nav input#search-button:not(:checked) ~ .search-box {
-  max-width: 0;
-  padding-left: 0;
-  padding-right: 0;
-  margin-left: 0;
-  margin-right: 0;
+  nav #search-button:checked ~ .search-box {
+    transition-duration: 0.3s;
+    transition-delay: 0.2s;
+  }
+  nav #search-button:not(:checked) ~ ul li:not(.active) {
+    transition-duration: 0.3s;
+    transition-delay: 0.2s;
+  }
+  nav #search-button:not(:checked) ~ .search-box {
+    transition-duration: 0.2s;
+    transition-delay: 0s;
+    max-width: 0;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 @media (max-width: 769px) {
@@ -370,19 +411,10 @@ nav input#search-button:not(:checked) ~ .search-box {
   }
 }
 
-nav .logo {
-  margin-right: auto;
-}
-
 @media (min-width: 768px) {
   nav .logo {
     margin-left: 16px;
-  }
-}
-
-@media (max-width: 769px) {
-  nav .logo {
-    margin-right: 0;
+    margin-right: auto;
   }
 }
 
@@ -390,8 +422,20 @@ nav #mobile-hamburger {
   display: none;
 }
 
+nav #mobile-hamburger:checked ~ .hamburger .unchecked {
+  display: none;
+}
+
+nav #mobile-hamburger:not(:checked) ~ .hamburger .checked {
+  display: none;
+}
+
 nav .hamburger img, nav .search img {
   display: block;
+}
+
+nav .hamburger .material-icons, nav .search .material-icons {
+  vertical-align: middle;
 }
 
 @media (min-width: 768px) {

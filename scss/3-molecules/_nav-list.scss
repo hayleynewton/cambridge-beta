@@ -7,6 +7,7 @@ ul {
 
     @include small-screen {
         flex-direction: column;
+        align-items: flex-start;
 
         li {
             margin: 8px 0px;
@@ -14,26 +15,4 @@ ul {
     }
 
     @import '../2-atoms/nav-item';
-}
-
-@mixin nav-list-hamburger-style($hamburger-selector) {
-    @include small-screen {
-        ul {
-            display: none;
-        }
-
-        #{$hamburger-selector}:checked~ul {
-            display: flex;
-            position: absolute;
-            bottom: 100%;
-            left: 0;
-            right: 0;
-            height: unset; // Expand with content
-    
-            padding: 16px 0px;
-    
-            background-color: inherit;
-            // background-color: $color-background-darkest;
-        }
-    }
 }

@@ -10,6 +10,7 @@
         <!-- fonts -->
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:200,400,600,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!-- styling -->
         
         <link rel="stylesheet" href="css/home.css">
@@ -19,26 +20,31 @@
         <!-- main nav -->
         <nav role="banner">
             <h1 class="logo">BETA</h1>
-            <input type="checkbox" id="search-button">
-            <label for="search-button">
-                <img src="http://via.placeholder.com/36x36">
-            </label>
             <input type="checkbox" id="mobile-hamburger">
             <label for="mobile-hamburger" class="hamburger">
-                <img src="http://via.placeholder.com/36x36">
+                    MENU
+                    <i class="material-icons unchecked">keyboard_arrow_down</i>
+                    <i class="material-icons checked">keyboard_arrow_up</i>
             </label>
-            <ul>
-                <li class="active"><a href="#">Top Picks</a></li>
-                <li><a href="#">All</a></li>
-                <li><a href="#perspectives">Perspectives</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#products">Products</a></li>
-            </ul>
-            <div class="search-box">
-                <input type="text" id="search-input" placeholder="search">
-                <a class="search-clear">
+            <div class="menu">
+                <input type="checkbox" id="search-button">
+                <label for="search-button">
                     <img src="http://via.placeholder.com/36x36">
-                </a>
+                </label>
+                <ul>
+                    <li class="active"><a href="#">Top Picks</a></li>
+                    <li><a href="#">All</a></li>
+                    <li><a href="#perspectives">Perspectives</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#products">Products</a></li>
+                </ul>
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="search">
+                    <a class="search-clear">
+                        <img src="http://via.placeholder.com/36x36">
+                    </a>
+                </div>
+
             </div>
         </nav>
         <!-- article list -->

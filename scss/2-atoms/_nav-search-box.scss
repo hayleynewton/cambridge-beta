@@ -6,9 +6,11 @@
     max-width: 450px;
     overflow: hidden;
 
-    transition-property: width,max-width,padding,margin;
-    transition-duration: 0.5s;
-    transition-timing-function: ease;
+    @include medium-screen-all {
+        transition-property: width,max-width,padding,margin;
+        transition-duration: 0.5s;
+        transition-timing-function: ease;
+    }
     
     input#search-input, label[for='search-input'] {
         @include font(16px, 20px);

@@ -27,37 +27,70 @@ nav {
 
     $hamburger-input: '#mobile-hamburger';
     $hamburger-label: '.hamburger';
+    $search-toggle-input: '#search-button';
+    $search-toggle-label: "label[for='search-button']";
     
     @import '../3-molecules/nav-logo';
     @import '../3-molecules/nav-list';
     @import '../3-molecules/nav-search';
-
-    @include nav-list-hamburger-style($hamburger-input);
+    
+    @include small-screen {
+        .menu {
+            display: none;
+        }
+    }
 
     ul {
         order: 0;
     }
 
-    input#search-button:checked~#{$hamburger-input}:checked~ul {
-        bottom: 200%;
+    .menu {
+        display: flex;
+        flex-direction: row;
+
+        @include small-screen {
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+
+            position: absolute;
+            bottom: 100%;
+            left: 40%;
+            right: 0;
+            height: unset; // Expand with content
+    
+            padding: 16px 0px;
+            padding-left: 16px;
+    
+            background-color: $color-background-darkest;
+        }
+
+        @media (max-width: 480px) {
+            left: 0;
+        }
+    }
+
+    @include small-screen {
+        #{$hamburger-input}:checked~.menu {
+            display: flex;
+        }
     }
 
     &.fixed-header {
         @include small-screen {
-            .search-box {
+            .menu {
                 top: 100%;
                 bottom: unset;
             }
         }
-
-        input#search-button:checked~#{$hamburger-input}:checked~ul {
-            top: 200%;
-            bottom: unset;
-        }
     }
 
-    label[for='search-button'] {
+    #{$search-toggle-label} {
         order: 1;
+
+        @include small-screen {
+            display: none;
+        }
     }
 
     .search-box {
@@ -66,50 +99,54 @@ nav {
         .search-clear {
             // Nav has padding, don't need this when on the end
             padding-right: 0px;
-        }
 
-        @include small-screen {
-            position: absolute;
-            // left: 0;
-            right: 0;
-            bottom: 100%;
-            width: 100%;
-            max-width: 100%;
-            height: 100%;
-
-            justify-content: flex-end;
-            padding: 0px 16px;
-
-            background-color: $color-background-darkest;
+            @include small-screen {
+                // Padding makes unnecessary space in stacked view
+                padding-top: 0px;
+                padding-bottom: 0px;
+            }
         }
     }
 
-    input#search-button {
-        &:checked {
-            ~ul {
-                @include medium-screen-all {
-                    li:not(.active) {
-                        max-width: 0;
-                        padding-left: 0;
-                        padding-right: 0;
-                        margin-left: 0;
-                        margin-right: 0;
-                    }
+    #{$search-toggle-input} {
+        @include medium-screen-all {
+            &:checked {
+                ~ ul li:not(.active) {
+                    transition-duration: 0.2s;
+                    transition-delay: 0s;
+
+                    max-width: 0;
+                    padding-left: 0;
+                    padding-right: 0;
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+
+                ~.search-box {
+                    transition-duration: 0.3s;
+                    transition-delay: 0.2s;
+                }
+            }
+            
+            &:not(:checked) {
+                ~ ul li:not(.active) {
+                    transition-duration: 0.3s;
+                    transition-delay: 0.2s;
+                }
+                ~.search-box {
+                    transition-duration: 0.2s;
+                    transition-delay: 0s;
+
+                    max-width: 0;
+                    padding-left: 0;
+                    padding-right: 0;
+                    margin-left: 0;
+                    margin-right: 0;
                 }
             }
         }
-
-        &:not(:checked) {
-            ~.search-box {
-                max-width: 0;
-                padding-left: 0;
-                padding-right: 0;
-                margin-left: 0;
-                margin-right: 0;
-            }
-        }
     }
-
+        
     &.fixed-header {
         @include small-screen {
             #{$hamburger-input}:checked~ul {
@@ -120,48 +157,39 @@ nav {
     }
 
     .logo {
-        margin-right: auto;
-
         @include medium-screen-all {
             margin-left: 16px;
+            margin-right: auto;
         }
-    }
-
-    @include small-screen {
-        .logo {
-            margin-right: 0;
-        }
-
-        #{$hamburger-label} {
-            // position: absolute;
-            // top: 50%;
-            // left: 50%;
-
-            // transform: translate(-50%, -50%);
-        }
-
-        .search {
-            // position: absolute;
-            // top: 50%;
-            // right: 16px;
-
-            // transform: translateY(-50%);
-
-            // margin-left: auto;
-        }
-
-    }
-    .logo {
-        @extend %no-webkit-margin-padding;
     }
 
     #{$hamburger-input} {
         display: none; // Not rendered ever, label acts as input
+
+        &:checked {
+            ~#{$hamburger-label} {
+                .unchecked {
+                    display: none;
+                }
+            }
+        }
+
+        &:not(:checked) {
+            ~#{$hamburger-label} {
+                .checked {
+                    display: none;
+                }
+            }
+        }
     }
 
     #{$hamburger-label}, .search {
         img {
             display: block;
+        }
+
+        .material-icons {
+            vertical-align: middle;
         }
 
         @include medium-screen-all {
