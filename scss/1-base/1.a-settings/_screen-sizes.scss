@@ -5,5 +5,5 @@
 $mediumScreenMin: $bp-medium;
 $bigScreenMin: $bp-ultra-wide;
 
-$smallScreenMax: $mediumScreenMin + 1px;
+$smallScreenMax: $mediumScreenMin - 1px;
 $mediumScreenMax: $bigScreenMin - 1px;
