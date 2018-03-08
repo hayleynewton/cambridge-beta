@@ -1,8 +1,8 @@
-input#search-button {
+#{$search-toggle-input} {
     display: none; // Not rendered ever, label acts as input
 
     &:checked {
-        ~label[for='search-button'] {
+        ~#{$search-toggle-label} {
             @include medium-screen-all {
                 padding-right: 16px;
             }
@@ -10,10 +10,13 @@ input#search-button {
     }
 }
 
-label[for='search-button'] {
+#{$search-toggle-label} {
     display: block;
     padding: 22px 16px;
     padding-right: 0;
+
+    cursor: pointer;
+    user-select: none;
 
     .material-icons {
         vertical-align: middle;

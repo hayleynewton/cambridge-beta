@@ -8,6 +8,7 @@ li {
         left: 0px;
     }
     white-space: nowrap;
+    user-select: none;
 
     @include medium-screen-all {
         padding-left: 16px;

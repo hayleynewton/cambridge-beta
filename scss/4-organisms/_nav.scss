@@ -24,16 +24,11 @@ nav {
         padding: 4px 16px;
         justify-content: space-between;
     }
-
-    $mobile-menu-input: '#mobile-menu-toggle';
-    $mobile-menu-label: "label[for='mobile-menu-toggle']";
-    $search-toggle-input: '#search-button';
-    $search-toggle-label: "label[for='search-button']";
     
     @import '../2-atoms/nav-logo';
+    @import '../2-atoms/nav-menu-button';
     @import '../3-molecules/nav-list';
     @import '../3-molecules/nav-search';
-    @import '../3-molecules/nav-menu-button';
 
     .logo {
         @include medium-screen-all {
