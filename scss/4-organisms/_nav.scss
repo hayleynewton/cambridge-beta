@@ -33,6 +33,7 @@ nav {
     @import '../2-atoms/nav-logo';
     @import '../3-molecules/nav-list';
     @import '../3-molecules/nav-search';
+    @import '../3-molecules/nav-menu-button';
 
     .logo {
         @include medium-screen-all {
@@ -75,10 +76,11 @@ nav {
     }
 
     #{$search-toggle-label} {
-        display: none;
+        @include small-screen {
+            display: none; // As search is permanently in mobile menu
+        }
         
         @include medium-screen-all {
-            display: block;
             order: 1;
         }
     }
@@ -155,14 +157,7 @@ nav {
     }
 
     #{$mobile-menu-input} {
-        display: none; // Not rendered ever, label acts as input
-
         &:checked {
-            ~#{$mobile-menu-label} {
-                .unchecked {
-                    display: none;
-                }
-            }
 
             @include small-screen {
                 ~.menu {
@@ -170,25 +165,9 @@ nav {
                 }
             }
         }
-
-        &:not(:checked) {
-            ~#{$mobile-menu-label} {
-                .checked {
-                    display: none;
-                }
-            }
-        }
-    }
-
-    #{$mobile-menu-label}, .search {
-        img {
-            display: block;
         }
 
-        .material-icons {
-            vertical-align: middle;
-        }
-
+    #{$mobile-menu-label} {
         @include medium-screen-all {
             display: none;
         }

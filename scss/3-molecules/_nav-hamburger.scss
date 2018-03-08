@@ -1,9 +1,0 @@
-input#mobile-menu-toggle {
-    display: none; // Not rendered ever, label acts as input    
-}
-
-label[for='mobile-menu-toggle'] {
-    img {
-        display: block;
-    }
-}

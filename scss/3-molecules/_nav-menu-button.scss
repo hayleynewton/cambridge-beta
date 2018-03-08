@@ -1,0 +1,30 @@
+input#mobile-menu-toggle {
+    display: none; // Not rendered ever, label acts as input
+
+    &:checked {
+        ~label[for='mobile-menu-toggle'] {
+            .material-icons {
+                transform: rotateZ(180deg);
+            }
+        }
+    }
+
+    &:not(:checked) {
+        ~label[for='mobile-menu-toggle'] {
+            .material-icons {
+                transform: rotateZ(0deg);
+            }
+        }
+    }
+}
+
+label[for='mobile-menu-toggle'] {
+    img {
+        display: block;
+    }
+
+    .material-icons {
+        vertical-align: middle;
+        transition: transform 0.2s ease;
+    }
+}

@@ -224,6 +224,7 @@ nav input#search-button {
 }
 
 nav label[for='search-button'] {
+  display: block;
   padding: 22px 16px;
   padding-right: 0;
   transition: padding-right 0.5s ease;
@@ -306,6 +307,27 @@ nav .search-box .search-clear img {
   display: block;
 }
 
+nav input#mobile-menu-toggle {
+  display: none;
+}
+
+nav input#mobile-menu-toggle:checked ~ label[for='mobile-menu-toggle'] .material-icons {
+  transform: rotateZ(180deg);
+}
+
+nav input#mobile-menu-toggle:not(:checked) ~ label[for='mobile-menu-toggle'] .material-icons {
+  transform: rotateZ(0deg);
+}
+
+nav label[for='mobile-menu-toggle'] img {
+  display: block;
+}
+
+nav label[for='mobile-menu-toggle'] .material-icons {
+  vertical-align: middle;
+  transition: transform 0.2s ease;
+}
+
 @media (min-width: 768px) {
   nav .logo {
     margin-left: 16px;
@@ -316,6 +338,9 @@ nav .search-box .search-clear img {
 nav .menu {
   display: flex;
   flex-direction: row;
+  transition-property: height, max-height, top, bottom, padding;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
 }
 
 @media (max-width: 767px) {
@@ -328,6 +353,7 @@ nav .menu {
     left: 40%;
     right: 0;
     height: unset;
+    max-height: 90vh;
     padding: 16px 0px;
     padding-left: 16px;
     background-color: #333;
@@ -344,13 +370,14 @@ nav .menu ul {
   order: 0;
 }
 
-nav label[for='search-button'] {
-  display: none;
+@media (max-width: 767px) {
+  nav label[for='search-button'] {
+    display: none;
+  }
 }
 
 @media (min-width: 768px) {
   nav label[for='search-button'] {
-    display: block;
     order: 1;
   }
 }
@@ -415,34 +442,14 @@ nav.fixed-header {
   }
 }
 
-nav #mobile-menu-toggle {
-  display: none;
-}
-
-nav #mobile-menu-toggle:checked ~ label[for='mobile-menu-toggle'] .unchecked {
-  display: none;
-}
-
 @media (max-width: 767px) {
   nav #mobile-menu-toggle:checked ~ .menu {
     display: flex;
   }
 }
 
-nav #mobile-menu-toggle:not(:checked) ~ label[for='mobile-menu-toggle'] .checked {
-  display: none;
-}
-
-nav label[for='mobile-menu-toggle'] img, nav .search img {
-  display: block;
-}
-
-nav label[for='mobile-menu-toggle'] .material-icons, nav .search .material-icons {
-  vertical-align: middle;
-}
-
 @media (min-width: 768px) {
-  nav label[for='mobile-menu-toggle'], nav .search {
+  nav label[for='mobile-menu-toggle'] {
     display: none;
   }
 }

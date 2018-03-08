@@ -540,6 +540,7 @@ a {
 }
 
 .home nav label[for='search-button'] {
+  display: block;
   padding: 22px 16px;
   padding-right: 0;
   transition: padding-right 0.5s ease;
@@ -622,6 +623,27 @@ a {
   display: block;
 }
 
+.home nav input#mobile-menu-toggle {
+  display: none;
+}
+
+.home nav input#mobile-menu-toggle:checked ~ label[for='mobile-menu-toggle'] .material-icons {
+  transform: rotateZ(180deg);
+}
+
+.home nav input#mobile-menu-toggle:not(:checked) ~ label[for='mobile-menu-toggle'] .material-icons {
+  transform: rotateZ(0deg);
+}
+
+.home nav label[for='mobile-menu-toggle'] img {
+  display: block;
+}
+
+.home nav label[for='mobile-menu-toggle'] .material-icons {
+  vertical-align: middle;
+  transition: transform 0.2s ease;
+}
+
 @media (min-width: 768px) {
   .home nav .logo {
     margin-left: 16px;
@@ -632,6 +654,9 @@ a {
 .home nav .menu {
   display: flex;
   flex-direction: row;
+  transition-property: height, max-height, top, bottom, padding;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
 }
 
 @media (max-width: 767px) {
@@ -644,6 +669,7 @@ a {
     left: 40%;
     right: 0;
     height: unset;
+    max-height: 90vh;
     padding: 16px 0px;
     padding-left: 16px;
     background-color: #333;
@@ -660,13 +686,14 @@ a {
   order: 0;
 }
 
-.home nav label[for='search-button'] {
-  display: none;
+@media (max-width: 767px) {
+  .home nav label[for='search-button'] {
+    display: none;
+  }
 }
 
 @media (min-width: 768px) {
   .home nav label[for='search-button'] {
-    display: block;
     order: 1;
   }
 }
@@ -731,34 +758,14 @@ a {
   }
 }
 
-.home nav #mobile-menu-toggle {
-  display: none;
-}
-
-.home nav #mobile-menu-toggle:checked ~ label[for='mobile-menu-toggle'] .unchecked {
-  display: none;
-}
-
 @media (max-width: 767px) {
   .home nav #mobile-menu-toggle:checked ~ .menu {
     display: flex;
   }
 }
 
-.home nav #mobile-menu-toggle:not(:checked) ~ label[for='mobile-menu-toggle'] .checked {
-  display: none;
-}
-
-.home nav label[for='mobile-menu-toggle'] img, .home nav .search img {
-  display: block;
-}
-
-.home nav label[for='mobile-menu-toggle'] .material-icons, .home nav .search .material-icons {
-  vertical-align: middle;
-}
-
 @media (min-width: 768px) {
-  .home nav label[for='mobile-menu-toggle'], .home nav .search {
+  .home nav label[for='mobile-menu-toggle'] {
     display: none;
   }
 }
