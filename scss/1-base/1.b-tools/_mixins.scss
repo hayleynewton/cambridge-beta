@@ -55,3 +55,18 @@
         @content;
     }
 }
+
+@mixin placeholder {
+    &::placeholder {
+        @content;
+        opacity: 1;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+
+    &::-ms-input-placeholder {
+        @content;
+    }
+}

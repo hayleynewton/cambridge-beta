@@ -10,6 +10,11 @@ nav {
     padding: 16px;
     box-sizing: border-box;
 
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
     color: $color-text-inverse;
     background-color: $color-background-darkest;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
@@ -17,17 +22,92 @@ nav {
     @include small-screen {
         height: 56px;
         padding: 4px 16px;
+        justify-content: space-between;
     }
 
     $hamburger-input: '#mobile-hamburger';
     $hamburger-label: '.hamburger';
     
+    @import '../3-molecules/nav-logo';
     @import '../3-molecules/nav-list';
+    @import '../3-molecules/nav-search';
 
     @include nav-list-hamburger-style($hamburger-input);
 
     ul {
-        height: 100%;
+        order: 0;
+    }
+
+    input#search-button:checked~#{$hamburger-input}:checked~ul {
+        bottom: 200%;
+    }
+
+    &.fixed-header {
+        @include small-screen {
+            .search-box {
+                top: 100%;
+                bottom: unset;
+            }
+        }
+
+        input#search-button:checked~#{$hamburger-input}:checked~ul {
+            top: 200%;
+            bottom: unset;
+        }
+    }
+
+    label[for='search-button'] {
+        order: 1;
+    }
+
+    .search-box {
+        order: 2;
+
+        .search-clear {
+            // Nav has padding, don't need this when on the end
+            padding-right: 0px;
+        }
+
+        @include small-screen {
+            position: absolute;
+            // left: 0;
+            right: 0;
+            bottom: 100%;
+            width: 100%;
+            max-width: 100%;
+            height: 100%;
+
+            justify-content: flex-end;
+            padding: 0px 16px;
+
+            background-color: $color-background-darkest;
+        }
+    }
+
+    input#search-button {
+        &:checked {
+            ~ul {
+                @include medium-screen-all {
+                    li:not(.active) {
+                        max-width: 0;
+                        padding-left: 0;
+                        padding-right: 0;
+                        margin-left: 0;
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+
+        &:not(:checked) {
+            ~.search-box {
+                max-width: 0;
+                padding-left: 0;
+                padding-right: 0;
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
     }
 
     &.fixed-header {
@@ -40,38 +120,34 @@ nav {
     }
 
     .logo {
-        position: absolute;
-        top: 50%;
-        left: 16px;
-
-        transform: translateY(-50%);
+        margin-right: auto;
 
         @include medium-screen-all {
-            left: 32px;
+            margin-left: 16px;
         }
     }
+
     @include small-screen {
-
-
-        &.nav-subpage .logo {
-            left: unset;
-            right: 16px;
+        .logo {
+            margin-right: 0;
         }
 
         #{$hamburger-label} {
-            position: absolute;
-            top: 50%;
-            left: 50%;
+            // position: absolute;
+            // top: 50%;
+            // left: 50%;
 
-            transform: translate(-50%, -50%);
+            // transform: translate(-50%, -50%);
         }
 
         .search {
-            position: absolute;
-            top: 50%;
-            right: 16px;
+            // position: absolute;
+            // top: 50%;
+            // right: 16px;
 
-            transform: translateY(-50%);
+            // transform: translateY(-50%);
+
+            // margin-left: auto;
         }
 
     }
@@ -122,12 +198,8 @@ nav {
         }
 
         .logo {
-            left: unset;
-            right: 16px;
-
-            @include medium-screen-all {
-                right: 32px;
-            }
+            margin-left: auto;
+            margin-right: unset;
         }
     }
 }

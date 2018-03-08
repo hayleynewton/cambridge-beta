@@ -19,20 +19,27 @@
         <!-- main nav -->
         <nav role="banner">
             <h1 class="logo">BETA</h1>
+            <input type="checkbox" id="search-button">
+            <label for="search-button">
+                <img src="http://via.placeholder.com/36x36">
+            </label>
             <input type="checkbox" id="mobile-hamburger">
             <label for="mobile-hamburger" class="hamburger">
                 <img src="http://via.placeholder.com/36x36">
             </label>
-            <a class="search">
-                <img src="http://via.placeholder.com/36x36">
-            </a>
             <ul>
-                <li><a href="#">Top Picks</a></li>
+                <li class="active"><a href="#">Top Picks</a></li>
                 <li><a href="#">All</a></li>
                 <li><a href="#perspectives">Perspectives</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#products">Products</a></li>
             </ul>
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="search">
+                <a class="search-clear">
+                    <img src="http://via.placeholder.com/36x36">
+                </a>
+            </div>
         </nav>
         <!-- article list -->
         <article>

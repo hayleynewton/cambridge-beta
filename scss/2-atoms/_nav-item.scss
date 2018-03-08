@@ -2,6 +2,15 @@ li {
 
     display: inline-block;
     padding: 0 16px;
+    white-space: nowrap;
+
+    transition-property: width,max-width,padding,margin;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    
+    // For animation
+    max-width: 150px;
+    overflow: hidden;
 
     a {
         text-decoration: none;

@@ -153,6 +153,10 @@ nav {
   height: 80px;
   padding: 16px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
   color: #FFFFFF;
   background-color: #333;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
@@ -162,6 +166,7 @@ nav {
   nav {
     height: 56px;
     padding: 4px 16px;
+    justify-content: space-between;
   }
 }
 
@@ -185,11 +190,97 @@ nav ul {
 nav ul li {
   display: inline-block;
   padding: 0 16px;
+  white-space: nowrap;
+  transition-property: width,max-width,padding,margin;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  max-width: 150px;
+  overflow: hidden;
 }
 
 nav ul li a {
   text-decoration: none;
   color: #fff;
+}
+
+nav input#search-button {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  nav input#search-button:checked ~ label[for='search-button'] {
+    padding-right: 16px;
+  }
+}
+
+nav label[for='search-button'] {
+  padding: 22px 16px;
+  padding-right: 0;
+  transition: padding-right 0.5s ease;
+}
+
+nav label[for='search-button'] img {
+  display: block;
+}
+
+nav .search-box {
+  display: flex;
+  align-items: center;
+  max-width: 450px;
+  overflow: hidden;
+  transition-property: width,max-width,padding,margin;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+}
+
+nav .search-box input#search-input, nav .search-box label[for='search-input'] {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Roboto", "Source Sans Pro", sans-serif;
+  color: #FFFFFF;
+}
+
+nav .search-box input#search-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  height: 36px;
+  border-bottom: solid 2px #fff;
+}
+
+nav .search-box input#search-input::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+nav .search-box input#search-input:-ms-input-placeholder {
+  color: white;
+}
+
+nav .search-box input#search-input::-ms-input-placeholder {
+  color: white;
+}
+
+nav .search-box input#search-input:focus::placeholder {
+  color: transparent;
+  opacity: 1;
+}
+
+nav .search-box input#search-input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+nav .search-box input#search-input:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+nav .search-box .search-clear {
+  display: block;
+  padding: 22px 16px;
+}
+
+nav .search-box .search-clear img {
+  display: block;
 }
 
 @media (max-width: 769px) {
@@ -209,7 +300,67 @@ nav ul li a {
 }
 
 nav ul {
-  height: 100%;
+  order: 0;
+}
+
+nav input#search-button:checked ~ #mobile-hamburger:checked ~ ul {
+  bottom: 200%;
+}
+
+@media (max-width: 769px) {
+  nav.fixed-header .search-box {
+    top: 100%;
+    bottom: unset;
+  }
+}
+
+nav.fixed-header input#search-button:checked ~ #mobile-hamburger:checked ~ ul {
+  top: 200%;
+  bottom: unset;
+}
+
+nav label[for='search-button'] {
+  order: 1;
+}
+
+nav .search-box {
+  order: 2;
+}
+
+nav .search-box .search-clear {
+  padding-right: 0px;
+}
+
+@media (max-width: 769px) {
+  nav .search-box {
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    justify-content: flex-end;
+    padding: 0px 16px;
+    background-color: #333;
+  }
+}
+
+@media (min-width: 768px) {
+  nav input#search-button:checked ~ ul li:not(.active) {
+    max-width: 0;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+nav input#search-button:not(:checked) ~ .search-box {
+  max-width: 0;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 @media (max-width: 769px) {
@@ -220,34 +371,18 @@ nav ul {
 }
 
 nav .logo {
-  position: absolute;
-  top: 50%;
-  left: 16px;
-  transform: translateY(-50%);
+  margin-right: auto;
 }
 
 @media (min-width: 768px) {
   nav .logo {
-    left: 32px;
+    margin-left: 16px;
   }
 }
 
 @media (max-width: 769px) {
-  nav.nav-subpage .logo {
-    left: unset;
-    right: 16px;
-  }
-  nav .hamburger {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  nav .search {
-    position: absolute;
-    top: 50%;
-    right: 16px;
-    transform: translateY(-50%);
+  nav .logo {
+    margin-right: 0;
   }
 }
 
@@ -405,14 +540,8 @@ nav.nav-subpage .back {
 }
 
 nav.nav-subpage .logo {
-  left: unset;
-  right: 16px;
-}
-
-@media (min-width: 768px) {
-  nav.nav-subpage .logo {
-    right: 32px;
-  }
+  margin-left: auto;
+  margin-right: unset;
 }
 
 footer[role="contact"] {

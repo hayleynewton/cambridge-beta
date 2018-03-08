@@ -1,0 +1,9 @@
+input#mobile-hamburger {
+    display: none; // Not rendered ever, label acts as input    
+}
+
+label[for='mobile-hamburger'] {
+    img {
+        display: block;
+    }
+}

@@ -1,0 +1,50 @@
+.search-box {
+    display: flex;
+    align-items: center;
+
+    // Required for animation
+    max-width: 450px;
+    overflow: hidden;
+
+    transition-property: width,max-width,padding,margin;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    
+    input#search-input, label[for='search-input'] {
+        @include font(16px, 20px);
+
+        font-family: 'Roboto', $font-family;
+        color: $color-text-inverse;
+    }
+
+    input#search-input {
+        // Resets
+        background: transparent;
+        border: none;
+        outline: none;
+
+        height: 36px;
+
+        border-bottom: solid 2px #fff;
+
+        @include placeholder {
+            color: white;
+        }
+
+        &:focus {
+            @include placeholder {
+                color: transparent;
+            }
+        }
+    }
+
+    .search-clear {
+        display: block;
+
+        padding: 22px 16px;
+
+        img {
+            display: block;
+        }
+    }
+}
