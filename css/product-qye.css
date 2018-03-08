@@ -366,7 +366,6 @@ nav .menu {
 
 @media (max-width: 767px) {
   nav .menu {
-    display: none;
     flex-direction: column;
     align-items: flex-start;
     position: absolute;
@@ -374,8 +373,12 @@ nav .menu {
     left: 40%;
     right: 0;
     height: unset;
+    transition-property: max-height, padding-top, padding-bottom, background-color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
     padding: 16px 0px;
     padding-left: 16px;
+    overflow: hidden;
     background-color: #333;
   }
 }
@@ -464,7 +467,12 @@ nav.fixed-header {
 
 @media (max-width: 767px) {
   nav #mobile-menu-toggle:checked ~ .menu {
-    display: flex;
+    max-height: 90vh;
+  }
+  nav #mobile-menu-toggle:not(:checked) ~ .menu {
+    max-height: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 }
 
