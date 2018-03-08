@@ -565,6 +565,10 @@ nav.nav-subpage .back .arrow {
   padding: 4px;
 }
 
+nav.nav-subpage .back .material-icons {
+  vertical-align: middle;
+}
+
 nav.nav-subpage .back .label {
   margin-left: 16px;
 }

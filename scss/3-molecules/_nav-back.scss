@@ -16,6 +16,10 @@
     @import '../2-atoms/nav-back-label';
     @import '../2-atoms/nav-back-arrow';
 
+    .material-icons {
+        vertical-align: middle;
+    }
+
     .label {
         margin-left: 16px;
     }

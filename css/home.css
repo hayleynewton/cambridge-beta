@@ -827,6 +827,10 @@ a {
   padding: 4px;
 }
 
+.home nav.nav-subpage .back .material-icons {
+  vertical-align: middle;
+}
+
 .home nav.nav-subpage .back .label {
   margin-left: 16px;
 }
