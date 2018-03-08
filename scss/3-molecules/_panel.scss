@@ -15,6 +15,7 @@
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
     box-sizing: border-box;
 
+    // For arranging body around absoluted large image
     @mixin alternating-padding($vertical-padding, $horizontal-padding) {
         padding-top: $vertical-padding;
         padding-bottom: $vertical-padding;
@@ -38,6 +39,10 @@
 
         // Must have 0-bottom to make image sit on edge
         padding: 32px 16px 0px;
+
+        > :not(.panel-image) {
+            max-width: 440px;
+        }
     }
 
     @include medium-screen {

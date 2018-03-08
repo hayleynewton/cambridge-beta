@@ -25,31 +25,29 @@ nav {
         justify-content: space-between;
     }
 
-    $hamburger-input: '#mobile-hamburger';
-    $hamburger-label: '.hamburger';
+    $mobile-menu-input: '#mobile-menu-toggle';
+    $mobile-menu-label: "label[for='mobile-menu-toggle']";
     $search-toggle-input: '#search-button';
     $search-toggle-label: "label[for='search-button']";
     
-    @import '../3-molecules/nav-logo';
+    @import '../2-atoms/nav-logo';
     @import '../3-molecules/nav-list';
     @import '../3-molecules/nav-search';
-    
-    @include small-screen {
-        .menu {
-            display: none;
+
+    .logo {
+        @include medium-screen-all {
+            margin-left: 16px;
+            margin-right: auto;
         }
     }
-
-    ul {
-        order: 0;
-    }
-
+    
     .menu {
         display: flex;
         flex-direction: row;
 
         @include small-screen {
-            display: none;
+            display: none; // While toggle not checked
+
             flex-direction: column;
             align-items: flex-start;
 
@@ -65,31 +63,23 @@ nav {
             background-color: $color-background-darkest;
         }
 
+        // Make menu full-width for small mobiles,
+        //     or search box overflows
         @media (max-width: 480px) {
             left: 0;
         }
-    }
 
-    @include small-screen {
-        #{$hamburger-input}:checked~.menu {
-            display: flex;
-        }
-    }
-
-    &.fixed-header {
-        @include small-screen {
-            .menu {
-                top: 100%;
-                bottom: unset;
-            }
+        ul {
+            order: 0;
         }
     }
 
     #{$search-toggle-label} {
-        order: 1;
-
-        @include small-screen {
-            display: none;
+        display: none;
+        
+        @include medium-screen-all {
+            display: block;
+            order: 1;
         }
     }
 
@@ -104,6 +94,23 @@ nav {
                 // Padding makes unnecessary space in stacked view
                 padding-top: 0px;
                 padding-bottom: 0px;
+            }
+        }
+    }
+
+    &.fixed-header {
+        position: fixed;
+        top: 0;
+
+        @include small-screen {
+            .menu {
+                top: 100%;
+                bottom: unset;
+            }
+
+            #{$mobile-menu-input}:checked~ul {
+                top: 100%;
+                bottom: unset;
             }
         }
     }
@@ -146,36 +153,26 @@ nav {
             }
         }
     }
-        
-    &.fixed-header {
-        @include small-screen {
-            #{$hamburger-input}:checked~ul {
-                top: 100%;
-                bottom: unset;
-            }
-        }
-    }
 
-    .logo {
-        @include medium-screen-all {
-            margin-left: 16px;
-            margin-right: auto;
-        }
-    }
-
-    #{$hamburger-input} {
+    #{$mobile-menu-input} {
         display: none; // Not rendered ever, label acts as input
 
         &:checked {
-            ~#{$hamburger-label} {
+            ~#{$mobile-menu-label} {
                 .unchecked {
                     display: none;
+                }
+            }
+
+            @include small-screen {
+                ~.menu {
+                    display: flex;
                 }
             }
         }
 
         &:not(:checked) {
-            ~#{$hamburger-label} {
+            ~#{$mobile-menu-label} {
                 .checked {
                     display: none;
                 }
@@ -183,7 +180,7 @@ nav {
         }
     }
 
-    #{$hamburger-label}, .search {
+    #{$mobile-menu-label}, .search {
         img {
             display: block;
         }
@@ -195,11 +192,6 @@ nav {
         @include medium-screen-all {
             display: none;
         }
-    }
-
-    &.fixed-header {
-        position: fixed;
-        top: 0;
     }
 
     &.nav-subpage {
@@ -214,10 +206,10 @@ nav {
         @import '../3-molecules/nav-back';
 
         .back {
-            margin-right: 64px;
-
-            @include small-screen {
-                margin-right: 24px;
+            margin-right: 24px;
+            
+            @include medium-screen {
+                margin-right: 64px;
             }
 
             @include big-screen {

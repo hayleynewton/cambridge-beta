@@ -1,22 +1,27 @@
 li {
 
     display: inline-block;
-    padding: 0 16px;
+    padding: {
+        top: 0px;
+        bottom: 0px;
+        right: 16px;
+        left: 0px;
+    }
     white-space: nowrap;
 
-    @include small-screen {
-        padding-left: 0px;
-    }
-
     @include medium-screen-all {
-        transition-property: width,max-width,padding,margin;
-        transition-duration: 0.5s;
-        transition-timing-function: ease;
+        padding-left: 16px;
+
+        // For animation
+        max-width: 150px;
+        overflow: hidden;
+
+        transition: {
+            property: width,max-width,padding,margin;
+            duration: 0.5s;
+            timing-function: ease;
+        }
     }
-    
-    // For animation
-    max-width: 150px;
-    overflow: hidden;
 
     a {
         text-decoration: none;
