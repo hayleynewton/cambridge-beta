@@ -72,6 +72,7 @@ a {
 .home {
   /* RESETS */
   /* BASE */
+  /* Animation */
 }
 
 .home article, .home aside, .home details, .home figcaption, .home figure,
@@ -143,19 +144,28 @@ a {
   -webkit-padding-start: 0;
 }
 
-.home ul[aria-label="featured"] {
-  width: 400%;
+.home header {
+  width: 100%;
   height: 100%;
   padding-bottom: 80px;
+  overflow-x: hidden;
+}
+
+.home header ul[aria-label="featured"] {
+  width: 200%;
+  height: 100%;
+  -webkit-animation: slide 30s infinite;
+  -moz-animation: slide 30s infinite;
+  animation: slide 30s infinite;
 }
 
 @media (max-width: 769px) {
-  .home ul[aria-label="featured"] {
+  .home header ul[aria-label="featured"] {
     padding-bottom: 56px;
   }
 }
 
-.home ul[aria-label="featured"] figure {
+.home header ul[aria-label="featured"] figure {
   margin: 0;
   height: 100%;
   position: relative;
@@ -166,7 +176,7 @@ a {
   z-index: 0;
 }
 
-.home ul[aria-label="featured"] img {
+.home header ul[aria-label="featured"] img {
   position: absolute;
   height: auto;
   top: 0;
@@ -180,31 +190,53 @@ a {
   opacity: 0.7;
 }
 
-.home ul[aria-label="featured"] figcaption {
+.home header ul[aria-label="featured"] figcaption {
   padding: calc((100vh - 80px) - 75vh) 12.5% 0;
   z-index: 2;
   display: flex;
   flex-direction: column;
 }
 
-.home ul[aria-label="featured"] p {
-  width: 640px;
+.home header ul[aria-label="featured"] p {
   margin: 32px auto;
   font-size: 24px;
   line-height: 36px;
 }
 
-.home ul[aria-label="featured"] h3 {
-  font-size: 44px;
+@media (min-width: 768px) {
+  .home header ul[aria-label="featured"] p {
+    width: 640px;
+  }
 }
 
-.home ul[aria-label="featured"] [role="button"] {
+.home header ul[aria-label="featured"] h3 {
+  font-size: 44px;
+  font-family: 'Source Sans Pro', serif;
+}
+
+@media (min-width: 768px) {
+  .home header ul[aria-label="featured"] h3 {
+    margin: 44px 0;
+  }
+}
+
+.home header ul[aria-label="featured"] [role="button"] {
   padding: 16px 32px;
   display: inline-block;
   margin: 0 auto;
+  text-transform: uppercase;
+  padding: 16px 32px;
+  background: #12B4BA;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  font-family: 'Source Sans Pro', serif;
+  font-weight: 600;
+  border-radius: 5px;
 }
 
-.home ul[aria-label="featured"] header {
+.home header ul[aria-label="featured"] header {
   padding: 24px 0;
   border-bottom: solid 1px #9B9B9B;
   position: relative;
@@ -214,25 +246,25 @@ a {
 }
 
 @media (min-width: 768px) {
-  .home ul[aria-label="featured"] header {
+  .home header ul[aria-label="featured"] header {
     display: block;
+    width: 272px;
   }
 }
 
-.home ul[aria-label="featured"] .category {
+.home header ul[aria-label="featured"] .category {
   font-size: 1.6rem;
   line-height: 25px;
   color: #FFFFFF;
   text-decoration: none;
   font-family: "Source Sans Pro", sans-serif;
-  text-transform: uppercase;
   font-weight: 600;
   display: none;
   color: #FFFFFF;
 }
 
 @media (min-width: 768px) {
-  .home ul[aria-label="featured"] .category {
+  .home header ul[aria-label="featured"] .category {
     position: absolute;
     left: 0;
     border-bottom: solid 1px #FFFFFF;
@@ -242,21 +274,21 @@ a {
   }
 }
 
-.home ul[aria-label="featured"] li {
+.home header ul[aria-label="featured"] li {
   display: inline-block;
   height: 100%;
-  width: 25%;
+  width: 50%;
 }
 
-.home ul[aria-label="featured"] li:not(:target) article {
+.home header ul[aria-label="featured"] li:not(:target) article {
   display: none;
 }
 
-.home ul[aria-label="featured"] li:target {
+.home header ul[aria-label="featured"] li:target {
   animation: slide-up 0.5s ease-in-out 0.25s both;
 }
 
-.home ul[aria-label="filterable"] {
+@-webkit-keyframes slide {}.home ul[aria-label="filterable"] {
   margin: 0;
   padding: 0;
 }
@@ -360,6 +392,7 @@ a {
 .home ul[aria-label="filterable"] figure .fig-content h3 {
   display: none;
   margin: 128px 16px 0;
+  font-family: 'Source Sans Pro', serif;
 }
 
 @media (min-width: 768px) {

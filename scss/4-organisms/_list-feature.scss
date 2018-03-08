@@ -1,26 +1,42 @@
-ul[aria-label="featured"] {
-    width: 400%;
+header {
+    width: 100%;
     height: 100%;
     padding-bottom: 80px;
+    overflow-x: hidden;
 
-    @include small-screen {
-        padding-bottom: 56px;
-    }
+    ul[aria-label="featured"] {
 
-    @import '../3-molecules/feature-image';
-
-    li {
-        display: inline-block;
+        width: 200%;
         height: 100%;
-        width: 25%;
+        -webkit-animation:slide 30s infinite;
+        -moz-animation:slide 30s infinite;
+        animation:slide 30s infinite;
 
-        &:not(:target) article {
-            display: none;
+        @include small-screen {
+            padding-bottom: 56px;
         }
 
-        &:target {
-            animation: slide-up 0.5s ease-in-out 0.25s both;
-        }            
-    }
+        @import '../3-molecules/feature-image';
 
+        li {
+            display: inline-block;
+            height: 100%;
+            width: 50%;
+
+            &:not(:target) article {
+                display: none;
+            }
+
+            &:target {
+                animation: slide-up 0.5s ease-in-out 0.25s both;
+            }            
+        }
+    }
 }
+
+
+/* Animation */
+@-webkit-keyframes slide{
+
+
+  }
