@@ -547,6 +547,10 @@ a {
   transition: padding-right 0.5s ease;
 }
 
+.home nav label[for='search-button'] .material-icons {
+  vertical-align: middle;
+}
+
 .home nav label[for='search-button'] img {
   display: block;
 }
@@ -610,6 +614,10 @@ a {
 .home nav .search-box .search-clear {
   display: block;
   padding: 22px 16px;
+}
+
+.home nav .search-box .search-clear .material-icons {
+  vertical-align: middle;
 }
 
 .home nav .search-box .search-clear img {

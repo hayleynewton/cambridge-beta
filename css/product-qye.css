@@ -231,6 +231,10 @@ nav label[for='search-button'] {
   transition: padding-right 0.5s ease;
 }
 
+nav label[for='search-button'] .material-icons {
+  vertical-align: middle;
+}
+
 nav label[for='search-button'] img {
   display: block;
 }
@@ -294,6 +298,10 @@ nav .search-box input#search-input:focus::-ms-input-placeholder {
 nav .search-box .search-clear {
   display: block;
   padding: 22px 16px;
+}
+
+nav .search-box .search-clear .material-icons {
+  vertical-align: middle;
 }
 
 nav .search-box .search-clear img {
