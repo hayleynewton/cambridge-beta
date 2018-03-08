@@ -3,17 +3,18 @@
 @import '../1-base/1.b-tools/mixins';
 
 .app-store-button {
-    background: black;
-    border-radius: 8px;
+    // background: black;
+    // border-radius: 8px;
     overflow: hidden;
     display: inline-flex;
+    height: 44px;
+
+    @include small-screen {
+        height: 32px;
+    }
 
     img {
         display: block;
-        height: 44px;
-
-        @include small-screen {
-            height: 32px;
-        }
+        height: 100%;
     }
 }
