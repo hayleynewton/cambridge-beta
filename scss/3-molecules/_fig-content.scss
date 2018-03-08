@@ -19,6 +19,7 @@
     h3 {
         display: none;
         margin: 128px 16px 0;
+        font-family: 'Source Sans Pro', serif;
 
         @include medium-screen-all  {
             display: block;
