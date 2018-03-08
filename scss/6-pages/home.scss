@@ -23,11 +23,14 @@
         background-color: $color-background-darkest;
 
         li {
-            border-bottom: solid 2px transparent;
             font-weight: $font-bold;
+            
+            a {
+                border-bottom: solid 2px transparent;
 
-            &:hover {
-                border-bottom: solid 2px $color-action;
+                &:hover {
+                    border-bottom: solid 2px $color-action;
+                }
             }
 
             &.active {

@@ -532,10 +532,6 @@ a {
 
 .home nav ul li {
   display: inline-block;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-right: 16px;
-  padding-left: 0px;
   white-space: nowrap;
   user-select: none;
   text-transform: uppercase;
@@ -550,7 +546,6 @@ a {
 
 @media (min-width: 768px) {
   .home nav ul li {
-    padding-left: 16px;
     max-width: 150px;
     overflow: hidden;
     transition-property: width,max-width,padding,margin;
@@ -560,11 +555,19 @@ a {
 }
 
 .home nav ul li a {
+  display: block;
+  padding: 0px 16px;
   text-decoration: none;
   color: #fff;
   transition-property: font-size, font-weight;
   transition-duration: 0.2s;
   transition-timing-function: linear;
+}
+
+@media (max-width: 767px) {
+  .home nav ul li a {
+    padding-left: 0;
+  }
 }
 
 .home nav #search-button {
@@ -900,11 +903,14 @@ a {
 }
 
 .home nav li {
-  border-bottom: solid 2px transparent;
   font-weight: 600;
 }
 
-.home nav li:hover {
+.home nav li a {
+  border-bottom: solid 2px transparent;
+}
+
+.home nav li a:hover {
   border-bottom: solid 2px #12B4BA;
 }
 

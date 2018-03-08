@@ -1,12 +1,6 @@
 li {
 
     display: inline-block;
-    padding: {
-        top: 0px;
-        bottom: 0px;
-        right: 16px;
-        left: 0px;
-    }
     white-space: nowrap;
     user-select: none;
     text-transform: uppercase;
@@ -18,8 +12,6 @@ li {
     }
 
     @include medium-screen-all {
-        padding-left: 16px;
-
         // For animation
         max-width: 150px;
         overflow: hidden;
@@ -32,6 +24,13 @@ li {
     }
 
     a {
+        display: block;
+        padding: 0px 16px;
+
+        @include small-screen {
+            padding-left: 0;
+        }
+
         text-decoration: none;
         color: #fff;
 
