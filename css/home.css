@@ -159,7 +159,7 @@ a {
   animation: slide 30s infinite;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   .home > article > header ul[aria-label="featured"] {
     padding-bottom: 56px;
   }
@@ -478,7 +478,7 @@ a {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   .home nav {
     height: 56px;
     padding: 4px 16px;
@@ -494,7 +494,7 @@ a {
   padding: 0;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   .home nav ul {
     flex-direction: column;
     align-items: flex-start;
@@ -634,7 +634,7 @@ a {
   flex-direction: row;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   .home nav .menu {
     display: none;
     flex-direction: column;
@@ -679,7 +679,7 @@ a {
   padding-right: 0px;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   .home nav .search-box .search-clear {
     padding-top: 0px;
     padding-bottom: 0px;
@@ -691,7 +691,7 @@ a {
   top: 0;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   .home nav.fixed-header .menu {
     top: 100%;
     bottom: unset;
@@ -739,7 +739,7 @@ a {
   display: none;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   .home nav #mobile-menu-toggle:checked ~ .menu {
     display: flex;
   }
@@ -784,7 +784,7 @@ a {
   border-bottom: solid 2px #12B4BA;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   .home nav.nav-subpage h1:not(.logo) {
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 300;
@@ -825,7 +825,7 @@ a {
   margin-left: 16px;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   .home nav.nav-subpage .back .label {
     display: none;
   }
@@ -862,7 +862,7 @@ a {
   height: calc(100% - 80px);
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   .home > article {
     height: calc(100% - 56px);
   }

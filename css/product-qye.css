@@ -86,7 +86,7 @@ nav.nav-subpage h1:not(.logo) {
   border-bottom: solid 2px #12B4BA;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   nav.nav-subpage h1:not(.logo) {
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 300;
@@ -102,7 +102,7 @@ nav.nav-subpage h1:not(.logo) {
   line-height: 48px;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   .panel-view .panel h2 {
     font-size: 24px;
     line-height: 32px;
@@ -114,7 +114,7 @@ nav.nav-subpage h1:not(.logo) {
   line-height: 40px;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   .panel-view .panel h3 {
     font-size: 16px;
     line-height: 24px;
@@ -129,7 +129,7 @@ nav.nav-subpage h1:not(.logo) {
   line-height: 30px;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   .panel-view .panel p,
   .panel-view .panel li {
     font-size: 16px;
@@ -162,7 +162,7 @@ nav {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   nav {
     height: 56px;
     padding: 4px 16px;
@@ -178,7 +178,7 @@ nav ul {
   padding: 0;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   nav ul {
     flex-direction: column;
     align-items: flex-start;
@@ -318,7 +318,7 @@ nav .menu {
   flex-direction: row;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   nav .menu {
     display: none;
     flex-direction: column;
@@ -363,7 +363,7 @@ nav .search-box .search-clear {
   padding-right: 0px;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   nav .search-box .search-clear {
     padding-top: 0px;
     padding-bottom: 0px;
@@ -375,7 +375,7 @@ nav.fixed-header {
   top: 0;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   nav.fixed-header .menu {
     top: 100%;
     bottom: unset;
@@ -423,7 +423,7 @@ nav #mobile-menu-toggle:checked ~ label[for='mobile-menu-toggle'] .unchecked {
   display: none;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   nav #mobile-menu-toggle:checked ~ .menu {
     display: flex;
   }
@@ -473,7 +473,7 @@ nav.nav-subpage h1:not(.logo) {
   border-bottom: solid 2px #12B4BA;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   nav.nav-subpage h1:not(.logo) {
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 300;
@@ -489,7 +489,7 @@ nav.nav-subpage .panel-view .panel h2, .panel-view .panel nav.nav-subpage h2 {
   line-height: 48px;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   nav.nav-subpage .panel-view .panel h2, .panel-view .panel nav.nav-subpage h2 {
     font-size: 24px;
     line-height: 32px;
@@ -501,7 +501,7 @@ nav.nav-subpage .panel-view .panel h3, .panel-view .panel nav.nav-subpage h3 {
   line-height: 40px;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   nav.nav-subpage .panel-view .panel h3, .panel-view .panel nav.nav-subpage h3 {
     font-size: 16px;
     line-height: 24px;
@@ -517,7 +517,7 @@ nav.nav-subpage .panel-view .panel p, .panel-view .panel nav.nav-subpage p, nav.
   line-height: 30px;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   nav.nav-subpage .panel-view .panel p, .panel-view .panel nav.nav-subpage p, nav.nav-subpage
   .panel-view .panel li,
   .panel-view .panel nav.nav-subpage li {
@@ -563,7 +563,7 @@ nav.nav-subpage .back .label {
   margin-left: 16px;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   nav.nav-subpage .back .label {
     display: none;
   }
@@ -622,7 +622,7 @@ footer[role="contact"] nav.nav-subpage h1:not(.logo), nav.nav-subpage footer[rol
   border-bottom: solid 2px #12B4BA;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   footer[role="contact"] nav.nav-subpage h1:not(.logo), nav.nav-subpage footer[role="contact"] h1:not(.logo) {
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 300;
@@ -638,7 +638,7 @@ footer[role="contact"] .panel-view .panel h2, .panel-view .panel footer[role="co
   line-height: 48px;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   footer[role="contact"] .panel-view .panel h2, .panel-view .panel footer[role="contact"] h2 {
     font-size: 24px;
     line-height: 32px;
@@ -650,7 +650,7 @@ footer[role="contact"] .panel-view .panel h3, .panel-view .panel footer[role="co
   line-height: 40px;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   footer[role="contact"] .panel-view .panel h3, .panel-view .panel footer[role="contact"] h3 {
     font-size: 16px;
     line-height: 24px;
@@ -666,7 +666,7 @@ footer[role="contact"] .panel-view .panel p, .panel-view .panel footer[role="con
   line-height: 30px;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   footer[role="contact"] .panel-view .panel p, .panel-view .panel footer[role="contact"] p, footer[role="contact"]
   .panel-view .panel li,
   .panel-view .panel footer[role="contact"] li {
@@ -682,7 +682,7 @@ footer[role="contact"] small {
   line-height: 24px;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   footer[role="contact"] small {
     display: none;
   }
@@ -703,7 +703,7 @@ footer[role="contact"] small {
   box-sizing: border-box;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   .panel-view .panel {
     min-height: unset;
     overflow: unset;
@@ -750,11 +750,11 @@ footer[role="contact"] small {
 
 .panel-view .panel .app-stores .app-store-button {
   overflow: hidden;
-  display: inline-flex;
+  display: inline-block;
   height: 44px;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   .panel-view .panel .app-stores .app-store-button {
     height: 32px;
   }
@@ -769,7 +769,7 @@ footer[role="contact"] small {
   margin-right: 34px;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   .panel-view .panel .app-stores .app-store-button:not(:last-child) {
     margin-right: 24px;
   }
@@ -785,7 +785,7 @@ footer[role="contact"] small {
   margin: 0px 0px 16px;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   .panel-view .panel h2 {
     margin: 0px 0px 8px;
   }
@@ -795,7 +795,7 @@ footer[role="contact"] small {
   margin: 16px 0px;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   .panel-view .panel h3 {
     margin: 8px 0px;
   }
@@ -806,7 +806,7 @@ footer[role="contact"] small {
   margin-bottom: 16px;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   .panel-view .panel p {
     margin-top: 8px;
     margin-bottom: 8px;
@@ -822,12 +822,18 @@ footer[role="contact"] small {
 }
 
 .panel-view .panel .app-stores {
-  margin: 36px 52px;
+  margin-top: 36px;
+  margin-bottom: 36px;
+  margin-left: 52px;
+  margin-right: 0px;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   .panel-view .panel .app-stores {
-    margin: 16px 32px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 32px;
+    margin-right: 0px;
     justify-content: center;
   }
 }
@@ -861,7 +867,7 @@ footer[role="contact"] small {
   left: 0;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   .panel-view .panel:nth-child(even) .panel-body, .panel-view .panel:nth-child(even) .panel-image {
     order: unset;
   }
@@ -879,7 +885,7 @@ body {
   padding-top: 80px;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
   body {
     padding-top: 56px;
   }

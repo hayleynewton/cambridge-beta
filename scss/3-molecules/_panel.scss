@@ -96,10 +96,21 @@
     }
 
     .app-stores {
-        margin: 36px 52px;
-    
+        margin: {
+            top: 36px;
+            bottom: 36px;
+            left: 52px;
+            right: 0px
+        }
+
         @include small-screen {
-            margin: 16px 32px;
+            margin: {
+                top: 16px;
+                bottom: 16px;
+                left: 32px;
+                right: 0px;
+            }
+            
             justify-content: center;
         }
 
