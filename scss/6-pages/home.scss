@@ -24,9 +24,14 @@
 
         li {
             border-bottom: solid 2px transparent;
+            font-weight: $font-bold;
 
             &:hover {
                 border-bottom: solid 2px $color-action;
+            }
+
+            &.active {
+                font-weight: $font-boldest;
             }
         }
     }

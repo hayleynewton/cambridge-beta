@@ -9,6 +9,13 @@ li {
     }
     white-space: nowrap;
     user-select: none;
+    text-transform: uppercase;
+
+    @include font(16px, 24px);
+
+    &.active {
+        @include font(24px, 32px);
+    }
 
     @include medium-screen-all {
         padding-left: 16px;
@@ -27,5 +34,11 @@ li {
     a {
         text-decoration: none;
         color: #fff;
+
+        transition: {
+            property: font-size, font-weight;
+            duration: 0.2s;
+            timing-function: linear;
+        }
     }
 }

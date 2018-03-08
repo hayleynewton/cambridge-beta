@@ -222,6 +222,14 @@ nav ul li {
   padding-left: 0px;
   white-space: nowrap;
   user-select: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+nav ul li.active {
+  font-size: 24px;
+  line-height: 32px;
 }
 
 @media (min-width: 768px) {
@@ -238,6 +246,9 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: #fff;
+  transition-property: font-size, font-weight;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
 }
 
 nav #search-button {
