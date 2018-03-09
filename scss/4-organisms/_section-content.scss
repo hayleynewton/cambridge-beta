@@ -20,7 +20,7 @@ section.content {
             @include font($font-medium,$bl-4);
         }
 
-        @media screen and (min-width: $bp-medium) and (max-width: 800px) {
+        @media screen and (min-width: $bp-medium) and (max-width: 844px) {
             margin: 0 0 $bl-4 auto;
         }
 

@@ -6,16 +6,7 @@ aside.social {
     top: 0;
     left: 0;
 
-    // @include medium-screen {
-    //     margin-left: -($line-max-heading / 2);        
-    // }
-
-    // @media screen and (min-width: 768px) and (max-width: 832px) {
-    //     left: $bl-2;
-    //     margin-left: 0;
-    // }
-
-    @media screen and (max-width: $bp-large - 1) {
+    @media screen and (min-width: $mediumScreenMin) and (max-width: $bp-large - 1) {
         transform: translateX($bl-2 + ($line-max-copy - $line-max-heading) / 2)
     }
 
