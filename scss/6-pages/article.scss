@@ -35,7 +35,7 @@
     section.content { 
         background: $color-background-light; 
 
-        &:not(.toggle) h2 { @extend %hide; }
+        &.heading h2 { @extend %hide; }
 
         .toggle label {
             font-family: $font-family;

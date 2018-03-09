@@ -53,7 +53,7 @@ a {
   transition-timing-function: ease-in-out;
 }
 
-.detail.article .site, .detail.article header h1, .detail.article section.content:not(.toggle) h2, .detail.article footer.content h2, .detail.article aside.profile h2, .detail.article section.comments h2, .detail.article footer[role="contact"] h2 {
+.detail.article .site, .detail.article header h1, .detail.article section.content.heading h2, .detail.article footer.content h2, .detail.article aside.profile h2, .detail.article section.comments h2, .detail.article footer[role="contact"] h2 {
   position: absolute;
   left: -10000px;
   width: 1px;
@@ -585,7 +585,9 @@ a {
   }
 }
 
-.article.detail section.content p {
+.article.detail section.content p,
+.article.detail section.content h2,
+.article.detail section.content h3 {
   font-size: 1.6rem;
   line-height: 24px;
   max-width: 640px;
@@ -593,15 +595,45 @@ a {
 }
 
 @media screen and (min-width: 768px) {
-  .article.detail section.content p {
+  .article.detail section.content p,
+  .article.detail section.content h2,
+  .article.detail section.content h3 {
     font-size: 2rem;
     line-height: 32px;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 800px) {
-  .article.detail section.content p {
+  .article.detail section.content p,
+  .article.detail section.content h2,
+  .article.detail section.content h3 {
     margin: 0 0 32px auto;
+  }
+}
+
+.article.detail section.content ul,
+.article.detail section.content ol {
+  font-size: 1.6rem;
+  line-height: 24px;
+  max-width: 640px;
+  margin: 0 auto 32px auto;
+  padding-left: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .article.detail section.content ul,
+  .article.detail section.content ol {
+    font-size: 2rem;
+    line-height: 32px;
+    padding-left: 48px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 800px) {
+  .article.detail section.content ul,
+  .article.detail section.content ol {
+    margin: 0 0 32px auto;
+    padding-left: 48px;
   }
 }
 
