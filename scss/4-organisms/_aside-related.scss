@@ -1,5 +1,5 @@
 aside.related {
-    padding: $bl-4 $bl-2;
+    padding: $bl-2 $bl-2;
 
     ul {
         display: flex;
@@ -7,6 +7,7 @@ aside.related {
         flex-wrap: wrap;
         max-width: $bp-medium;
         margin: 0 auto;
+        padding: 0;
 
         @media screen and (min-width: $bp-medium) {
             flex-wrap: nowrap;

@@ -20,10 +20,14 @@ aside.social {
     }
 
     h2 {
-        @include font($font-small,$bl-4);
+        // Importance as section.content.copy h2 counts as more specific
+        @include font(16px !important, 24px !important);
         font-family: $font-family;
+        font-weight: $font-boldest !important;
         text-align: center;
+        margin-top: 0;
         margin-bottom: 0;
+        text-transform: uppercase;
     }
 
     a {

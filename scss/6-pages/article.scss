@@ -1,7 +1,7 @@
-@import '../5-templates/global-imports'; 
+@import '../5-templates/global-imports';
 
 .article {
-    // Add the layout template for details.articles 
+    // Add the layout template for details.articles
     @import '../5-templates/detail-article';
 
 }
@@ -15,15 +15,15 @@
 
     a {
         color: $color-action;
-            
+
         &:hover,
         &:focus {
-            color: $color-action-active;                
+            color: $color-action-active;
         }
     }
 
-    header { 
-    
+    header {
+
         h1 { @extend %hide; }
         background-color: $color-background-light;
 
@@ -32,20 +32,20 @@
         }
     }
 
-    section.content { 
-        background: $color-background-light; 
+    section.content {
+        background: $color-background-light;
 
-        &:not(.toggle) h2 { @extend %hide; }
+        h2.hidden { @extend %hide; }
 
         .toggle label {
             font-family: $font-family;
-            
+
         }
     }
 
-    li.tag a { 
+    li.tag a {
         background: $color-background;
-        border: 1px solid $color-border; 
+        border: 1px solid $color-border;
         box-shadow: 0 0 $bl-1/2 rgba(0,0,0,0.04);
 
         &:hover,
@@ -69,16 +69,16 @@
     aside.social {
 
         @include small-screen {
-            background: $color-background-light; 
-            border-top: 1px solid $color-border; 
+            background: $color-background-light;
+            border-top: 1px solid $color-border;
         }
     }
- 
+
     aside.related {
 
         li {
-            background: $color-background-light; 
-            border: 1px solid $color-border; 
+            background: $color-background-light;
+            border: 1px solid $color-border;
             box-shadow: 0 0 $bl-1 rgba(0,0,0,0.04);
         }
     }
@@ -88,16 +88,16 @@
         h2 { @extend %hide; }
 
         ol {
-            background: $color-background-light; 
-            border: 1px solid $color-border; 
+            background: $color-background-light;
+            border: 1px solid $color-border;
             box-shadow: 0 0 $bl-1 rgba(0,0,0,0.04);
         }
 
         .material-icons { line-height: 1.6; }
-    } 
+    }
 
     footer[role="contact"] {
-        
+
         background: $color-text;
 
         h2 { @extend %hide; }
@@ -105,9 +105,9 @@
         small { color: $color-text-inverse; }
 
         @include small-screen {
-            margin-bottom: $bl-7; 
+            margin-bottom: $bl-7;
         }
 
-    } 
+    }
 
-} 
+}

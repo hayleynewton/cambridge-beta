@@ -2,6 +2,11 @@ footer.content {
     display: flex;
     max-width: $line-max-copy;
     margin: 0 auto $bl-4 auto;
-}
 
-@import '../3-molecules/list-tag';
+    // Tags
+    ul {
+        margin: 0;
+        padding: 0;
+        @import '../3-molecules/list-tag';
+    }
+}

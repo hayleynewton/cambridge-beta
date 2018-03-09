@@ -1,6 +1,10 @@
 // Build up the details.article template
 &.detail {
 
+    .hide-me {
+        @extend %hide;
+    }
+
     // 1. Add the banner
     @import '../4-organisms/header-banner';
     // 2. Add the content section
