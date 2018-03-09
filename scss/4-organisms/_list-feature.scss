@@ -58,6 +58,12 @@ ul[aria-label="featured"] {
     background: #fff;
     border-radius: 20px;
     cursor: pointer;
+    outline: none;
+
+    @include medium-screen-all  {
+        width: 16px;
+        height: 16px;
+    }
 }
 
 .dot:checked {

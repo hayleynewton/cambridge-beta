@@ -309,6 +309,14 @@ a {
   background: #fff;
   border-radius: 20px;
   cursor: pointer;
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .home .dot {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .home .dot:checked {
