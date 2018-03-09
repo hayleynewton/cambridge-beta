@@ -69,6 +69,16 @@ a {
   -webkit-padding-start: 0;
 }
 
+body {
+  padding-top: 80px;
+}
+
+@media (max-width: 767px) {
+  body {
+    padding-top: 56px;
+  }
+}
+
 .article.detail nav {
   position: absolute;
   right: 0;

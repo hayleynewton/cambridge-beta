@@ -1,4 +1,13 @@
-@import '../5-templates/global-imports'; 
+@import '../5-templates/global-imports';
+
+// Padding to make way for nav bar
+body {
+    padding-top: 80px;
+    
+    @include small-screen {
+        padding-top: 56px;
+    }
+}
 
 .article {
     // Add the layout template for details.articles 
