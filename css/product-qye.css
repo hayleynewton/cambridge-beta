@@ -144,6 +144,15 @@ footer[role="contact"] small {
   line-height: 24px;
 }
 
+nav.nav-subpage a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+nav.nav-subpage a:hover, nav.nav-subpage a:focus {
+  color: #0E8682;
+}
+
 nav {
   position: absolute;
   right: 0;
