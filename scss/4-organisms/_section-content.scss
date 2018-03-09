@@ -5,6 +5,73 @@ section.content {
 
     &.copy {
         position: relative;
+
+        .toggle {
+            display: block;
+            padding: 0;
+            margin: 0;
+            max-width: 640px;
+            margin: 0 auto 32px auto;
+
+            li { 
+                display: inline-block;
+                width: 50%;
+                text-align: center;
+
+                + li + li {
+                    width: 100%;
+                    text-align: left;
+                    margin-top: $bl-4;
+                    height: ($bl-10 * 2);
+                    overflow: auto;
+                }
+            }
+
+            input[type="radio"] {
+                display: none;
+
+                &:not(:checked) ~ li[class] { display: none; } 
+
+                &#about:checked {
+
+                    ~ li  {
+                        
+                        [for="about"] { 
+                            font-weight: bold;
+                            padding-bottom: $bl-1 / 2;
+                            border-bottom: ($bl-1 / 4) solid $color-brand; 
+                        }
+
+                        &.about { display: block; }
+                    }
+                }
+
+                &#transcript:checked {
+
+                    ~ li  {
+                        
+                        [for="transcript"] { 
+                            font-weight: bold;
+                            padding-bottom: $bl-1 / 2;
+                            border-bottom: ($bl-1 / 4) solid $color-brand; 
+                        }
+
+                        &.transcript { display: block; }
+                    }
+                }
+            }
+        }
     }
     
+}
+
+@keyframes left {
+
+    0% { }
+
+    100% {
+        position: absolute;
+        left: -100%;
+    }
+
 }

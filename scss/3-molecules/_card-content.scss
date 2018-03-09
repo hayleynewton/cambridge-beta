@@ -1,9 +1,10 @@
-
 li {
     position: relative;
     display: block;
     width: 100%;
     margin: 0 0 $bl-2 0;
+
+    // TODO - tidy me up
 
     &:not(.video) {
         padding: $bl-2;        
@@ -48,6 +49,5 @@ li {
     &.video footer {
         padding: 0 $bl-2 $bl-2 $bl-2;
     }
-
 
 }
