@@ -180,17 +180,23 @@ a {
 }
 
 .article.detail section.content.copy p {
-  margin-top: 0;
-  margin-bottom: 32px;
+  margin: 0;
 }
 
 .article.detail section.content.copy ul {
   padding: 0;
-  margin-top: 0;
 }
 
 .article.detail section.content.copy ul li {
   margin-left: 1em;
+}
+
+.article.detail section.content.copy h2 + p, .article.detail section.content.copy h2 + h2, .article.detail section.content.copy p + p, .article.detail section.content.copy p + h2, .article.detail section.content.copy ul + p, .article.detail section.content.copy ul + h2, .article.detail section.content.copy ol + p, .article.detail section.content.copy ol + h2 {
+  margin-top: 32px;
+}
+
+.article.detail section.content.copy p + ul {
+  margin-top: 0;
 }
 
 .article.detail section.content.copy .toggle {
