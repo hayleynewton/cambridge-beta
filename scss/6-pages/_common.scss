@@ -1,0 +1,14 @@
+// Sub page nav
+
+nav.nav-subpage {
+
+    a { 
+        color: $color-text-inverse;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            color: $color-action-active;
+        }
+    }
+}

@@ -510,7 +510,7 @@ a {
   bottom: 0;
   z-index: 10;
   height: 80px;
-  padding: 16px;
+  padding: 0px 16px;
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
@@ -557,6 +557,7 @@ a {
 
 .home nav ul {
   display: flex;
+  height: 100%;
   align-items: center;
   justify-content: flex-end;
   margin: 0;
@@ -570,6 +571,16 @@ a {
   }
   .home nav ul li {
     margin: 8px 0px;
+  }
+}
+
+@media (min-width: 768px) {
+  .home nav ul li {
+    height: 100%;
+  }
+  .home nav ul li a {
+    height: 100%;
+    box-sizing: border-box;
   }
 }
 
@@ -591,24 +602,28 @@ a {
   .home nav ul li {
     max-width: 150px;
     overflow: hidden;
-    transition-property: width,max-width,padding,margin;
+    transition-property: width, max-width, padding, margin;
     transition-duration: 0.5s;
     transition-timing-function: ease;
   }
 }
 
 .home nav ul li a {
-  display: block;
-  padding: 0px 16px;
+  display: flex;
+  align-items: center;
   text-decoration: none;
   color: #fff;
-  transition-property: font-size, font-weight;
+  transition-property: font-size, font-weight, line-height, height, padding;
   transition-duration: 0.2s;
   transition-timing-function: linear;
 }
 
+.home nav ul li a span {
+  padding: 2px 16px;
+}
+
 @media (max-width: 767px) {
-  .home nav ul li a {
+  .home nav ul li a span {
     padding-left: 0;
   }
 }
@@ -721,6 +736,7 @@ a {
 .home nav .menu {
   display: flex;
   flex-direction: row;
+  height: 100%;
 }
 
 @media (max-width: 767px) {
@@ -848,6 +864,7 @@ a {
   position: fixed;
   bottom: unset;
   top: 0;
+  padding-left: 0;
 }
 
 .home nav.nav-subpage h1:not(.logo) {
@@ -876,13 +893,10 @@ a {
 .home nav.nav-subpage .back {
   display: flex;
   align-items: center;
+  padding: 0px 24px;
   color: #FFFFFF;
   cursor: pointer;
   user-select: none;
-}
-
-.home nav.nav-subpage .back:hover {
-  color: #9B9B9B;
 }
 
 .home nav.nav-subpage .back .label {
@@ -906,24 +920,28 @@ a {
 }
 
 @media (max-width: 767px) {
+  .home nav.nav-subpage .back {
+    padding: 0px 12px;
+  }
   .home nav.nav-subpage .back .label {
     display: none;
   }
 }
 
 .home nav.nav-subpage .back {
-  margin-right: 24px;
+  margin-right: calc(24px - 12px);
+  height: 100%;
 }
 
 @media (min-width: 768px) and (max-width: 1919px) {
   .home nav.nav-subpage .back {
-    margin-right: 64px;
+    margin-right: calc(64px - 24px);
   }
 }
 
 @media (min-width: 1920px) {
   .home nav.nav-subpage .back {
-    margin-right: 72px;
+    margin-right: calc(72px - 24px);
   }
 }
 
@@ -954,19 +972,24 @@ a {
 }
 
 .home nav li {
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
 }
 
-.home nav li a {
+.home nav li a span {
   border-bottom: solid 2px transparent;
 }
 
-.home nav li a:hover {
+.home nav li a:hover span {
   border-bottom: solid 2px #12B4BA;
 }
 
 .home nav li.active {
   font-weight: 900;
+}
+
+.home nav #search-button, .home nav label[for='search-button'], .home nav .search-box {
+  display: none !important;
 }
 
 :not(section) ul {

@@ -1,5 +1,7 @@
 @import 'global-imports';
 @import '../1-base/1.c-base/common-typography';
+// 10. Add common page elements
+@import '../6-pages/common'; 
 
 // Overrides normal mixin
 @mixin medium-screen {
