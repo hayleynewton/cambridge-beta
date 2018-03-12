@@ -70,6 +70,7 @@ a {
 }
 
 body {
+  background-color: #FFFFFF;
   padding-top: 80px;
 }
 
@@ -1100,10 +1101,6 @@ body {
   background-color: #333;
 }
 
-.detail.article section.content {
-  background: #FFFFFF;
-}
-
 .detail.article section.content .toggle label {
   font-family: "Source Sans Pro", sans-serif;
   cursor: pointer;
@@ -1130,6 +1127,11 @@ body {
     background: #FFFFFF;
     border-top: 1px solid #E8E8E8;
   }
+}
+
+.detail.article aside.related,
+.detail.article aside.comments {
+  background: #FAFAFA;
 }
 
 .detail.article aside.related li {

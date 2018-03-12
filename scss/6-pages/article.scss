@@ -2,6 +2,7 @@
 
 // Padding to make way for nav bar
 body {
+    background-color: $color-background-light;
     padding-top: 80px;
     
     @include small-screen {
@@ -42,8 +43,6 @@ body {
     }
 
     section.content {
-        background: $color-background-light;
-
         &.heading h2 { @extend %hide; }
 
         .toggle label {
@@ -83,8 +82,12 @@ body {
         }
     }
 
-    aside.related {
+    aside.related,
+    aside.comments {
+        background: $color-background;
+    }
 
+    aside.related {
         li {
             background: $color-background-light;
             border: 1px solid $color-border;
