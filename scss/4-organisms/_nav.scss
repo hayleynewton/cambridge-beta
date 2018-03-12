@@ -191,19 +191,22 @@ nav {
         bottom: unset;
         top: 0;
 
+        padding-left: 0;
+
         @import '../3-molecules/nav-subpage-title';
         @import '../3-molecules/nav-back';
 
         .back {
-            margin-right: 24px;
+            // Calculate margin excl. padding
+            margin-right: calc(24px - 12px);
             height: 100%;
             
             @include medium-screen {
-                margin-right: 64px;
+                margin-right: calc(64px - 24px);
             }
 
             @include big-screen {
-                margin-right: 72px;
+                margin-right: calc(72px - 24px);
             }
         }
 

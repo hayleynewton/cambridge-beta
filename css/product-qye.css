@@ -514,6 +514,7 @@ nav.nav-subpage {
   position: fixed;
   bottom: unset;
   top: 0;
+  padding-left: 0;
 }
 
 nav.nav-subpage h1:not(.logo), nav.nav-subpage .panel-view .panel h2, .panel-view .panel nav.nav-subpage h2, nav.nav-subpage .panel-view .panel h3, .panel-view .panel nav.nav-subpage h3 {
@@ -596,13 +597,10 @@ nav.nav-subpage footer[role="contact"] small, footer[role="contact"] nav.nav-sub
 nav.nav-subpage .back {
   display: flex;
   align-items: center;
+  padding: 0px 24px;
   color: #FFFFFF;
   cursor: pointer;
   user-select: none;
-}
-
-nav.nav-subpage .back:hover {
-  color: #9B9B9B;
 }
 
 nav.nav-subpage .back .label {
@@ -626,25 +624,28 @@ nav.nav-subpage .back .label {
 }
 
 @media (max-width: 767px) {
+  nav.nav-subpage .back {
+    padding: 0px 12px;
+  }
   nav.nav-subpage .back .label {
     display: none;
   }
 }
 
 nav.nav-subpage .back {
-  margin-right: 24px;
+  margin-right: calc(24px - 12px);
   height: 100%;
 }
 
 @media (min-width: 768px) and (max-width: 1919px) {
   nav.nav-subpage .back {
-    margin-right: 64px;
+    margin-right: calc(64px - 24px);
   }
 }
 
 @media (min-width: 1920px) {
   nav.nav-subpage .back {
-    margin-right: 72px;
+    margin-right: calc(72px - 24px);
   }
 }
 

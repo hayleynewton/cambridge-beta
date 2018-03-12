@@ -864,6 +864,7 @@ a {
   position: fixed;
   bottom: unset;
   top: 0;
+  padding-left: 0;
 }
 
 .home nav.nav-subpage h1:not(.logo) {
@@ -892,13 +893,10 @@ a {
 .home nav.nav-subpage .back {
   display: flex;
   align-items: center;
+  padding: 0px 24px;
   color: #FFFFFF;
   cursor: pointer;
   user-select: none;
-}
-
-.home nav.nav-subpage .back:hover {
-  color: #9B9B9B;
 }
 
 .home nav.nav-subpage .back .label {
@@ -922,25 +920,28 @@ a {
 }
 
 @media (max-width: 767px) {
+  .home nav.nav-subpage .back {
+    padding: 0px 12px;
+  }
   .home nav.nav-subpage .back .label {
     display: none;
   }
 }
 
 .home nav.nav-subpage .back {
-  margin-right: 24px;
+  margin-right: calc(24px - 12px);
   height: 100%;
 }
 
 @media (min-width: 768px) and (max-width: 1919px) {
   .home nav.nav-subpage .back {
-    margin-right: 64px;
+    margin-right: calc(64px - 24px);
   }
 }
 
 @media (min-width: 1920px) {
   .home nav.nav-subpage .back {
-    margin-right: 72px;
+    margin-right: calc(72px - 24px);
   }
 }
 
