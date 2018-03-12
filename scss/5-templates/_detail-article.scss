@@ -27,7 +27,13 @@
     footer.content .like,
     footer.content .bookmark,
     aside.related .like {
+        // Using hidden instead so layout isn't messed up
         visibility: hidden !important;
+    }
+
+    // Disable tags
+    footer.content {
+        display: none !important;
     }
 
     // Disable comments
@@ -37,6 +43,10 @@
 
     footer.content {
         margin-top: 16px;
+    }
+
+    aside.profile {
+        margin-top: 32px;
     }
 
     aside.related {

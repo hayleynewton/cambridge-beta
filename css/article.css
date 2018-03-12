@@ -1053,12 +1053,20 @@ body {
   visibility: hidden !important;
 }
 
+.article.detail footer.content {
+  display: none !important;
+}
+
 .article.detail section.comments {
   display: none !important;
 }
 
 .article.detail footer.content {
   margin-top: 16px;
+}
+
+.article.detail aside.profile {
+  margin-top: 32px;
 }
 
 .article.detail aside.related {
