@@ -1,22 +1,79 @@
 section.content {
-    padding: $bl-2;
+    // padding: $bl-2;
+    margin-top: $bl-2;
+    padding: 0 $bl-2;
 
     @import '../2-atoms/copy';
+    
 
     &.copy {
         position: relative;
+        max-width: $line-max-copy;
+        margin: {
+            bottom: 0;
+            right: auto;
+            left: auto;
+        }
+        @include font($font-small,$bl-3);
+    
+        @include medium-screen-all {
+            @include font($font-medium,$bl-4);
+        }
+
+        @media screen and (min-width: $bp-medium) and (max-width: 844px) {
+            margin: 0 0 $bl-4 auto;
+        }
+
+        h2 {
+            
+            @include font(24px, 36px);
+            font-weight: $font-regular;
+
+            @include small-screen {
+                @include font(20px, 30px);
+            }
+        }
+
+        p {
+            margin: 0;
+        }
+
+        ul {
+            padding: 0;
+
+            li {
+                margin-left: 1em;
+            }
+        }
+
+        h2, p, ul, ol {
+            +p, +h2 {
+                margin-top: $bl-4;
+            }
+        }
+
+        p+ul {
+            margin-top: 0;
+        }
 
         .toggle {
             display: block;
             padding: 0;
             margin: 0;
             max-width: 640px;
-            margin: 0 auto 32px auto;
+            margin: {
+                top: 0;
+                bottom: 32px;
+                right: auto;
+                left: auto;
+            }
 
-            li { 
+            li {
                 display: inline-block;
                 width: 50%;
                 text-align: center;
+
+                margin-left: 0;
 
                 + li + li {
                     width: 100%;
@@ -30,16 +87,16 @@ section.content {
             input[type="radio"] {
                 display: none;
 
-                &:not(:checked) ~ li[class] { display: none; } 
+                &:not(:checked) ~ li[class] { display: none; }
 
                 &#about:checked {
 
                     ~ li  {
-                        
-                        [for="about"] { 
+
+                        [for="about"] {
                             font-weight: bold;
                             padding-bottom: $bl-1 / 2;
-                            border-bottom: ($bl-1 / 4) solid $color-brand; 
+                            border-bottom: ($bl-1 / 4) solid $color-brand;
                         }
 
                         &.about { display: block; }
@@ -49,11 +106,11 @@ section.content {
                 &#transcript:checked {
 
                     ~ li  {
-                        
-                        [for="transcript"] { 
+
+                        [for="transcript"] {
                             font-weight: bold;
                             padding-bottom: $bl-1 / 2;
-                            border-bottom: ($bl-1 / 4) solid $color-brand; 
+                            border-bottom: ($bl-1 / 4) solid $color-brand;
                         }
 
                         &.transcript { display: block; }
@@ -62,7 +119,7 @@ section.content {
             }
         }
     }
-    
+
 }
 
 @keyframes left {
