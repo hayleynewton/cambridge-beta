@@ -38,9 +38,10 @@ li {
         text-decoration: none;
         color: #fff;
 
+        // Active/inactive transition
         transition: {
             property: font-size, font-weight, line-height, height, padding;
-            duration: 0.2s;
+            duration: 0.1s;
             timing-function: linear;
         }
     }
