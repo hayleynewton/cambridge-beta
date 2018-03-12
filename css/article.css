@@ -105,6 +105,17 @@ body {
   }
 }
 
+.article.detail nav .logo {
+  font-family: "Source Serif Pro", serif;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.article.detail nav .logo:hover {
+  color: #FFFFFF !important;
+  text-decoration: none;
+}
+
 .article.detail nav #mobile-menu-toggle {
   display: none;
 }
@@ -443,12 +454,12 @@ body {
   padding-left: 0;
 }
 
-.article.detail nav.nav-subpage h1:not(.logo) {
+.article.detail nav.nav-subpage > h1:first-of-type, .article.detail footer[role="contact"] nav.nav-subpage > h1:first-of-type {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 900;
 }
 
-.article.detail nav.nav-subpage h1:not(.logo) {
+.article.detail nav.nav-subpage > h1:first-of-type {
   font-size: 24px;
   line-height: 32px;
   padding: 10px 0px;
@@ -456,7 +467,7 @@ body {
 }
 
 @media (max-width: 767px) {
-  .article.detail nav.nav-subpage h1:not(.logo) {
+  .article.detail nav.nav-subpage > h1:first-of-type {
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 300;
     font-size: 12px;
@@ -1001,12 +1012,12 @@ body {
   height: 40px;
 }
 
-.article.detail footer[role="contact"] nav.nav-subpage h1:not(.logo), .article.detail nav.nav-subpage footer[role="contact"] h1:not(.logo) {
+.article.detail footer[role="contact"] nav.nav-subpage > h1:first-of-type {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 900;
 }
 
-.article.detail footer[role="contact"] nav.nav-subpage h1:not(.logo), .article.detail nav.nav-subpage footer[role="contact"] h1:not(.logo) {
+.article.detail footer[role="contact"] nav.nav-subpage > h1:first-of-type {
   font-size: 24px;
   line-height: 32px;
   padding: 10px 0px;
@@ -1014,7 +1025,7 @@ body {
 }
 
 @media (max-width: 767px) {
-  .article.detail footer[role="contact"] nav.nav-subpage h1:not(.logo), .article.detail nav.nav-subpage footer[role="contact"] h1:not(.logo) {
+  .article.detail footer[role="contact"] nav.nav-subpage > h1:first-of-type {
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 300;
     font-size: 12px;

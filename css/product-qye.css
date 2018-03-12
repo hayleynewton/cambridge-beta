@@ -69,7 +69,7 @@ nav .logo, * {
   -webkit-padding-start: 0;
 }
 
-nav.nav-subpage h1:not(.logo), .panel-view .panel h2, .panel-view .panel h3 {
+nav.nav-subpage > h1:first-of-type, .panel-view .panel h2, .panel-view .panel h3, footer[role="contact"] nav.nav-subpage > h1:first-of-type {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 900;
 }
@@ -79,7 +79,7 @@ nav.nav-subpage h1:not(.logo), .panel-view .panel h2, .panel-view .panel h3 {
   list-style-type: disc;
 }
 
-nav.nav-subpage h1:not(.logo) {
+nav.nav-subpage > h1:first-of-type {
   font-size: 24px;
   line-height: 32px;
   padding: 10px 0px;
@@ -87,7 +87,7 @@ nav.nav-subpage h1:not(.logo) {
 }
 
 @media (max-width: 767px) {
-  nav.nav-subpage h1:not(.logo) {
+  nav.nav-subpage > h1:first-of-type {
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 300;
     font-size: 12px;
@@ -177,6 +177,17 @@ nav {
     padding: 4px 16px;
     justify-content: space-between;
   }
+}
+
+nav .logo {
+  font-family: "Source Serif Pro", serif;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+nav .logo:hover {
+  color: #FFFFFF !important;
+  text-decoration: none;
 }
 
 nav #mobile-menu-toggle {
@@ -517,7 +528,7 @@ nav.nav-subpage {
   padding-left: 0;
 }
 
-nav.nav-subpage h1:not(.logo), nav.nav-subpage .panel-view .panel h2, .panel-view .panel nav.nav-subpage h2, nav.nav-subpage .panel-view .panel h3, .panel-view .panel nav.nav-subpage h3 {
+nav.nav-subpage > h1:first-of-type, nav.nav-subpage .panel-view .panel h2, .panel-view .panel nav.nav-subpage h2, nav.nav-subpage .panel-view .panel h3, .panel-view .panel nav.nav-subpage h3, footer[role="contact"] nav.nav-subpage > h1:first-of-type {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 900;
 }
@@ -527,7 +538,7 @@ nav.nav-subpage .panel-view .panel ul, .panel-view .panel nav.nav-subpage ul {
   list-style-type: disc;
 }
 
-nav.nav-subpage h1:not(.logo) {
+nav.nav-subpage > h1:first-of-type {
   font-size: 24px;
   line-height: 32px;
   padding: 10px 0px;
@@ -535,7 +546,7 @@ nav.nav-subpage h1:not(.logo) {
 }
 
 @media (max-width: 767px) {
-  nav.nav-subpage h1:not(.logo) {
+  nav.nav-subpage > h1:first-of-type {
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 300;
     font-size: 12px;
@@ -669,7 +680,7 @@ footer[role="contact"] img {
   height: 40px;
 }
 
-footer[role="contact"] nav.nav-subpage h1:not(.logo), nav.nav-subpage footer[role="contact"] h1:not(.logo), footer[role="contact"] .panel-view .panel h2, .panel-view .panel footer[role="contact"] h2, footer[role="contact"] .panel-view .panel h3, .panel-view .panel footer[role="contact"] h3 {
+footer[role="contact"] nav.nav-subpage > h1:first-of-type, footer[role="contact"] .panel-view .panel h2, .panel-view .panel footer[role="contact"] h2, footer[role="contact"] .panel-view .panel h3, .panel-view .panel footer[role="contact"] h3 {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 900;
 }
@@ -679,7 +690,7 @@ footer[role="contact"] .panel-view .panel ul, .panel-view .panel footer[role="co
   list-style-type: disc;
 }
 
-footer[role="contact"] nav.nav-subpage h1:not(.logo), nav.nav-subpage footer[role="contact"] h1:not(.logo) {
+footer[role="contact"] nav.nav-subpage > h1:first-of-type {
   font-size: 24px;
   line-height: 32px;
   padding: 10px 0px;
@@ -687,7 +698,7 @@ footer[role="contact"] nav.nav-subpage h1:not(.logo), nav.nav-subpage footer[rol
 }
 
 @media (max-width: 767px) {
-  footer[role="contact"] nav.nav-subpage h1:not(.logo), nav.nav-subpage footer[role="contact"] h1:not(.logo) {
+  footer[role="contact"] nav.nav-subpage > h1:first-of-type {
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 300;
     font-size: 12px;

@@ -1,3 +1,12 @@
 .logo {
     @extend %no-webkit-margin-padding;
+
+    font-family: $font-family-serif;
+    color: $color-text-inverse;
+    text-decoration: none;
+
+    &:hover {
+        color: $color-text-inverse !important;
+        text-decoration: none;
+    }
 }
