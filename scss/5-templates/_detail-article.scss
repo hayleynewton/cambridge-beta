@@ -36,6 +36,11 @@
         display: none !important;
     }
 
+    // Disable related content
+    aside.related {
+        display: none !important;
+    }
+
     // Disable comments
     section.comments {
         display: none !important;
@@ -47,6 +52,7 @@
 
     aside.profile {
         margin-top: 32px;
+        margin-bottom: 64px;
     }
 
     aside.related {

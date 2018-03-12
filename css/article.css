@@ -1075,6 +1075,10 @@ body {
   display: none !important;
 }
 
+.article.detail aside.related {
+  display: none !important;
+}
+
 .article.detail section.comments {
   display: none !important;
 }
@@ -1085,6 +1089,7 @@ body {
 
 .article.detail aside.profile {
   margin-top: 32px;
+  margin-bottom: 64px;
 }
 
 .article.detail aside.related {
