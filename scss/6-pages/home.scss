@@ -38,6 +38,11 @@
                 font-weight: $font-boldest;
             }
         }
+
+        // Disable search
+        #{$search-toggle-input}, #{$search-toggle-label}, .search-box {
+            display: none !important;
+        }
     }
 }
 
