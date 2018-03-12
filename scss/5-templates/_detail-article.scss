@@ -20,6 +20,12 @@
     // 9. Add the client / brand footer
     @import '../4-organisms/footer-brand';
     // 10. Add common page elements
-    @import '../6-pages/common'; 
+    @import '../6-pages/common';
 
+    aside.social,
+    footer.content .like,
+    footer.content .bookmark,
+    aside.related .like {
+        visibility: hidden !important;
+    }
 }

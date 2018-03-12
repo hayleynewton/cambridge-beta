@@ -1046,6 +1046,13 @@ body {
   color: #0E8682;
 }
 
+.article.detail aside.social,
+.article.detail footer.content .like,
+.article.detail footer.content .bookmark,
+.article.detail aside.related .like {
+  visibility: hidden !important;
+}
+
 .detail.article a {
   color: #12B4BA;
 }
