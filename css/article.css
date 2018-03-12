@@ -1057,6 +1057,14 @@ body {
   display: none !important;
 }
 
+.article.detail footer.content {
+  margin-top: 16px;
+}
+
+.article.detail aside.related {
+  margin-top: 64px;
+}
+
 .detail.article a {
   color: #12B4BA;
 }
