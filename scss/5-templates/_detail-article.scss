@@ -22,10 +22,16 @@
     // 10. Add common page elements
     @import '../6-pages/common';
 
+    // Disable share
     aside.social,
     footer.content .like,
     footer.content .bookmark,
     aside.related .like {
         visibility: hidden !important;
+    }
+
+    // Disable comments
+    section.comments {
+        display: none !important;
     }
 }

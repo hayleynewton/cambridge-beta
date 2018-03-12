@@ -1053,6 +1053,10 @@ body {
   visibility: hidden !important;
 }
 
+.article.detail section.comments {
+  display: none !important;
+}
+
 .detail.article a {
   color: #12B4BA;
 }
