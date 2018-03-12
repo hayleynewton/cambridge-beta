@@ -27,9 +27,11 @@
             font-weight: $font-bold;
             
             a {
-                border-bottom: solid 2px transparent;
+                span {
+                    border-bottom: solid 2px transparent;
+                }
 
-                &:hover {
+                &:hover span {
                     border-bottom: solid 2px $color-action;
                 }
             }

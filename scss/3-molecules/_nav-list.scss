@@ -1,5 +1,6 @@
 ul {
     display: flex;
+    height: 100%;;
     align-items: center;
     justify-content: flex-end; // Align right
     margin: 0;
@@ -11,6 +12,17 @@ ul {
 
         li {
             margin: 8px 0px;
+        }
+    }
+
+    @include medium-screen-all {
+        li {
+            height: 100%;
+
+            a {
+                height: 100%;
+                box-sizing: border-box;
+            }
         }
     }
 

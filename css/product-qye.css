@@ -160,7 +160,7 @@ nav {
   bottom: 0;
   z-index: 10;
   height: 80px;
-  padding: 16px;
+  padding: 0px 16px;
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
@@ -207,6 +207,7 @@ nav label[for='mobile-menu-toggle'] .material-icons {
 
 nav ul {
   display: flex;
+  height: 100%;
   align-items: center;
   justify-content: flex-end;
   margin: 0;
@@ -220,6 +221,16 @@ nav ul {
   }
   nav ul li {
     margin: 8px 0px;
+  }
+}
+
+@media (min-width: 768px) {
+  nav ul li {
+    height: 100%;
+  }
+  nav ul li a {
+    height: 100%;
+    box-sizing: border-box;
   }
 }
 
@@ -241,24 +252,28 @@ nav ul li.active {
   nav ul li {
     max-width: 150px;
     overflow: hidden;
-    transition-property: width,max-width,padding,margin;
+    transition-property: width, max-width, padding, margin;
     transition-duration: 0.5s;
     transition-timing-function: ease;
   }
 }
 
 nav ul li a {
-  display: block;
-  padding: 0px 16px;
+  display: flex;
+  align-items: center;
   text-decoration: none;
   color: #fff;
-  transition-property: font-size, font-weight;
+  transition-property: font-size, font-weight, line-height, height, padding;
   transition-duration: 0.2s;
   transition-timing-function: linear;
 }
 
+nav ul li a span {
+  padding: 2px 16px;
+}
+
 @media (max-width: 767px) {
-  nav ul li a {
+  nav ul li a span {
     padding-left: 0;
   }
 }
@@ -371,6 +386,7 @@ nav .search-box .search-clear img {
 nav .menu {
   display: flex;
   flex-direction: row;
+  height: 100%;
 }
 
 @media (max-width: 767px) {
@@ -617,6 +633,7 @@ nav.nav-subpage .back .label {
 
 nav.nav-subpage .back {
   margin-right: 24px;
+  height: 100%;
 }
 
 @media (min-width: 768px) and (max-width: 1919px) {
