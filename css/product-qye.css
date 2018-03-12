@@ -670,8 +670,14 @@ footer[role="contact"] {
   justify-content: space-between;
   align-items: center;
   padding: 16px;
-  height: 10vh;
+  height: 80px;
   box-sizing: border-box;
+}
+
+@media (max-width: 767px) {
+  footer[role="contact"] {
+    height: 56px;
+  }
 }
 
 footer[role="contact"] a.logo,

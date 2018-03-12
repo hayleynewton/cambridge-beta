@@ -117,7 +117,8 @@ body {
         small { color: $color-text-inverse; }
 
         @include small-screen {
-            margin-bottom: $bl-7;
+            // Disabled while share is disabled
+            // margin-bottom: $bl-7;
         }
 
     }

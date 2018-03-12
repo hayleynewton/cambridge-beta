@@ -1003,8 +1003,14 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 16px;
-  height: 10vh;
+  height: 80px;
   box-sizing: border-box;
+}
+
+@media (max-width: 767px) {
+  .article.detail footer[role="contact"] {
+    height: 56px;
+  }
 }
 
 .article.detail footer[role="contact"] a.logo,
@@ -1156,10 +1162,4 @@ body {
 
 .detail.article footer[role="contact"] small {
   color: #FFFFFF;
-}
-
-@media (max-width: 767px) {
-  .detail.article footer[role="contact"] {
-    margin-bottom: 56px;
-  }
 }
