@@ -699,8 +699,16 @@ body {
   margin-left: 1em;
 }
 
-.article.detail section.content.copy h2 + p, .article.detail section.content.copy h2 + h2, .article.detail section.content.copy p + p, .article.detail section.content.copy p + h2, .article.detail section.content.copy ul + p, .article.detail section.content.copy ul + h2, .article.detail section.content.copy ol + p, .article.detail section.content.copy ol + h2 {
+.article.detail section.content.copy h2,
+.article.detail section.content.copy p,
+.article.detail section.content.copy ul,
+.article.detail section.content.copy ol {
   margin-top: 32px;
+}
+
+.article.detail section.content.copy h2 + *,
+.article.detail section.content.copy img {
+  margin-top: 16px;
 }
 
 .article.detail section.content.copy p + ul {

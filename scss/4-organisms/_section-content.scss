@@ -47,10 +47,16 @@ section.content {
             }
         }
 
-        h2, p, ul, ol {
-            +p, +h2 {
-                margin-top: $bl-4;
-            }
+        h2,
+        p,
+        ul,
+        ol {
+            margin-top: $bl-4;
+        }
+
+        h2+*,
+        img {
+            margin-top: $bl-2;
         }
 
         p+ul {
