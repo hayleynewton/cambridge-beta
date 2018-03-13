@@ -19,20 +19,30 @@ ul[aria-label="filterable"] {
                 display: flex;
                 flex-direction: row;
             }
-    
+
             @import '../3-molecules/fig-image';
             @import '../3-molecules/fig-content';
         }
-    
+
         @include medium-screen-all {
             &:nth-child(even) {
                 figure {
                     flex-direction: row-reverse;
                 }
             }
-        }
+        }    
     }
+
+    a.filter:not(:target) ~ li { display: block; }
+
+    a.filter:target ~ li { display: none; }
+    
+    a.filter[id="perspective"]:target ~ li[data-tag*="perspective"] { display: block; } 
+    
+    a.filter[id="project"]:target ~ li[data-tag*="project"] { display: block; } 
+    
+    a.filter[id="product"]:target ~ li[data-tag*="product"] { display: block; } 
+    
+    a.filter[id="all"]:target ~ li[data-tag*="all"] { display: block; } 
+    
 }
-
-
-

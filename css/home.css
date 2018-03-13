@@ -511,6 +511,30 @@ a {
   }
 }
 
+.home ul[aria-label="filterable"] a.filter:not(:target) ~ li {
+  display: block;
+}
+
+.home ul[aria-label="filterable"] a.filter:target ~ li {
+  display: none;
+}
+
+.home ul[aria-label="filterable"] a.filter[id="perspective"]:target ~ li[data-tag*="perspective"] {
+  display: block;
+}
+
+.home ul[aria-label="filterable"] a.filter[id="project"]:target ~ li[data-tag*="project"] {
+  display: block;
+}
+
+.home ul[aria-label="filterable"] a.filter[id="product"]:target ~ li[data-tag*="product"] {
+  display: block;
+}
+
+.home ul[aria-label="filterable"] a.filter[id="all"]:target ~ li[data-tag*="all"] {
+  display: block;
+}
+
 .home nav {
   position: absolute;
   right: 0;

@@ -32,10 +32,10 @@
                 </label>
                 <ul>
                     <li class="active"><a href="#"><span>Top Picks</span></a></li>
-                    <li><a href="#"><span>All</span></a></li>
-                    <li><a href="#perspectives"><span>Perspectives</span></a></li>
-                    <li><a href="#projects"><span>Projects</span></a></li>
-                    <li><a href="#products"><span>Products</span></a></li>
+                    <li><a href="#all"><span>All</span></a></li>
+                    <li><a href="#perspective"><span>Perspectives</span></a></li>
+                    <li><a href="#project"><span>Projects</span></a></li>
+                    <li><a href="#product"><span>Products</span></a></li>
                 </ul>
                 <div class="search-box">
                     <input type="text" id="search-input" placeholder="search">
@@ -43,7 +43,6 @@
                         <i class="material-icons">clear</i>
                     </a>
                 </div>
-
             </div>
         </nav>
         <!-- article list -->
@@ -92,8 +91,12 @@
             </header>
             <!-- filter articles list-->
             <ul aria-label="filterable">
+                <a id="all" class="filter"></a>
+                <a id="perspective" class="filter"></a>
+                <a id="project" class="filter"></a>
+                <a id="product" class="filter"></a>
                 <!-- feature one -->
-                <li id="one">
+                <li data-tag="perspective all">
                     <figure>
                         <figure class="fig-image">
                             <figcaption>
@@ -108,13 +111,13 @@
                             </p>
                             <a href="articles/perspective-hackathon.html" class="more">&rarr; Read More</a>
                             <footer>
-                                <a href="#" class="category">More <span>Projects</span></a>
+                                <a href="#" class="category">More <span>Perspectives</span></a>
                             </footer>
                         </figcaption>
                     </figure>
                 </li>
                 <!-- feature two -->
-                <li id="two">
+                <li data-tag="product all">
                     <figure>
                         <figure class="fig-image">
                             <figcaption>
@@ -129,13 +132,13 @@
                             </p>
                             <a href="articles/product-quiz-your-english.html" class="more">&rarr; Read More</a>
                             <footer>
-                                <a href="#" class="category">More <span>Projects</span></a>
+                                <a href="#" class="category">More <span>Products</span></a>
                             </footer>
                         </figcaption>
                     </figure>   
                 </li>
                 <!-- feature three -->
-                <li id="three">
+                <li data-tag="project all">
                     <figure>
                         <figure class="fig-image">
                             <figcaption>
@@ -156,27 +159,26 @@
                     </figure>   
                 </li>
                 <!-- feature four -->
-                <li id="four">
-                        <figure>
-                            <figure class="fig-image">
-                                <figcaption>
-                                    <h3>The Digital Teacher</h3>
-                                </figcaption>
-                                <img src="img/cover.jpg"/>
-                            </figure>
-                            <figcaption class="fig-content">
+                <li data-tag="project all">
+                    <figure>
+                        <figure class="fig-image">
+                            <figcaption>
                                 <h3>Techfugees</h3>
-                                <p>
-                                    In October 2016, Cambridge English and Techfugees came together to hold the 'Access to English for refugees and asylum seekers' conference held here in Cambridge.
-                                </p>
-                                <a href="articles/project-techfugees.html" class="more">&rarr; Read More</a>
-                                <footer>
-                                    <a href="#" class="category">More <span>Projects</span></a>
-                                </footer>
                             </figcaption>
-                        </figure>   
-                    </li>
-               
+                            <img src="img/cover.jpg"/>
+                        </figure>
+                        <figcaption class="fig-content">
+                            <h3>Techfugees</h3>
+                            <p>
+                                In October 2016, Cambridge English and Techfugees came together to hold the 'Access to English for refugees and asylum seekers' conference held here in Cambridge.
+                            </p>
+                            <a href="articles/project-techfugees.html" class="more">&rarr; Read More</a>
+                            <footer>
+                                <a href="#" class="category">More <span>Projects</span></a>
+                            </footer>
+                        </figcaption>
+                    </figure>   
+                </li>
             </ul>
         </article>
         <!-- fonter -->
