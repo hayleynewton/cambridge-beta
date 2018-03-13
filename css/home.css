@@ -340,12 +340,6 @@ a {
   display: none;
 }
 
-.home ul[aria-label="filterable"] li {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
 .home ul[aria-label="filterable"] figure {
   margin: 0;
   padding: 0;
@@ -357,26 +351,33 @@ a {
   margin-bottom: 8px;
 }
 
+.home ul[aria-label="filterable"] li {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 @media (min-width: 768px) {
-  .home ul[aria-label="filterable"] figure {
+  .home ul[aria-label="filterable"] li figure {
     display: flex;
+    flex-direction: row;
   }
 }
 
-.home ul[aria-label="filterable"] figure .fig-image {
+.home ul[aria-label="filterable"] li figure .fig-image {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 
 @media (min-width: 768px) {
-  .home ul[aria-label="filterable"] figure .fig-image {
+  .home ul[aria-label="filterable"] li figure .fig-image {
     width: 60%;
     overflow: hidden;
     height: 640px;
     position: relative;
   }
-  .home ul[aria-label="filterable"] figure .fig-image img {
+  .home ul[aria-label="filterable"] li figure .fig-image img {
     min-height: 100%;
     min-width: 100%;
     width: auto;
@@ -384,12 +385,12 @@ a {
   }
 }
 
-.home ul[aria-label="filterable"] figure .fig-image img {
+.home ul[aria-label="filterable"] li figure .fig-image img {
   width: 100%;
 }
 
 @media (min-width: 768px) {
-  .home ul[aria-label="filterable"] figure .fig-image img {
+  .home ul[aria-label="filterable"] li figure .fig-image img {
     position: absolute;
     top: 0;
     left: 50%;
@@ -398,19 +399,19 @@ a {
   }
 }
 
-.home ul[aria-label="filterable"] figure .fig-image figcaption {
+.home ul[aria-label="filterable"] li figure .fig-image figcaption {
   font-size: 3.2rem;
   line-height: 40px;
   padding: 0 16px;
 }
 
 @media (min-width: 768px) {
-  .home ul[aria-label="filterable"] figure .fig-image figcaption {
+  .home ul[aria-label="filterable"] li figure .fig-image figcaption {
     display: none;
   }
 }
 
-.home ul[aria-label="filterable"] figure .fig-content {
+.home ul[aria-label="filterable"] li figure .fig-content {
   display: flex;
   flex-direction: column;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
@@ -418,34 +419,34 @@ a {
 }
 
 @media (min-width: 768px) {
-  .home ul[aria-label="filterable"] figure .fig-content {
+  .home ul[aria-label="filterable"] li figure .fig-content {
     width: 40%;
   }
 }
 
-.home ul[aria-label="filterable"] figure .fig-content p {
+.home ul[aria-label="filterable"] li figure .fig-content p {
   margin: 16px 24px;
 }
 
 @media (min-width: 768px) {
-  .home ul[aria-label="filterable"] figure .fig-content p {
+  .home ul[aria-label="filterable"] li figure .fig-content p {
     margin: 4px 16px 24px;
   }
 }
 
-.home ul[aria-label="filterable"] figure .fig-content h3 {
+.home ul[aria-label="filterable"] li figure .fig-content h3 {
   display: none;
   margin: 128px 16px 0;
   font-family: 'Source Sans Pro', serif;
 }
 
 @media (min-width: 768px) {
-  .home ul[aria-label="filterable"] figure .fig-content h3 {
+  .home ul[aria-label="filterable"] li figure .fig-content h3 {
     display: block;
   }
 }
 
-.home ul[aria-label="filterable"] figure .fig-content .more {
+.home ul[aria-label="filterable"] li figure .fig-content .more {
   font-size: 1.6rem;
   line-height: 25px;
   color: #12B4BA;
@@ -458,11 +459,11 @@ a {
   margin-left: auto;
 }
 
-.home ul[aria-label="filterable"] figure .fig-content .more:hover {
+.home ul[aria-label="filterable"] li figure .fig-content .more:hover {
   color: #0E8682;
 }
 
-.home ul[aria-label="filterable"] figure .fig-content footer {
+.home ul[aria-label="filterable"] li figure .fig-content footer {
   padding: 24px 0;
   margin: auto 16px 24px;
   border-bottom: solid 1px #BDBDBD;
@@ -473,12 +474,12 @@ a {
 }
 
 @media (min-width: 768px) {
-  .home ul[aria-label="filterable"] figure .fig-content footer {
+  .home ul[aria-label="filterable"] li figure .fig-content footer {
     display: block;
   }
 }
 
-.home ul[aria-label="filterable"] figure .fig-content .category {
+.home ul[aria-label="filterable"] li figure .fig-content .category {
   font-size: 1.6rem;
   line-height: 25px;
   color: #bdbdbd;
@@ -489,18 +490,24 @@ a {
   display: none;
 }
 
-.home ul[aria-label="filterable"] figure .fig-content .category span {
+.home ul[aria-label="filterable"] li figure .fig-content .category span {
   color: #333;
 }
 
 @media (min-width: 768px) {
-  .home ul[aria-label="filterable"] figure .fig-content .category {
+  .home ul[aria-label="filterable"] li figure .fig-content .category {
     position: absolute;
     left: 0;
     border-bottom: solid 1px #333;
     bottom: -1px;
     padding-right: 16px;
     display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .home ul[aria-label="filterable"] li:nth-child(even) figure {
+    flex-direction: row-reverse;
   }
 }
 

@@ -7,28 +7,31 @@ ul[aria-label="filterable"] {
         display: none;
     }
 
+    @import '../2-atoms/figure';
+
     li {
         display: block;
         width: 100%;
         height: auto;
-    }
 
-    @import '../2-atoms/figure';
-
-    figure {
-        @include medium-screen-all {
-            display: flex;
+        figure {
+            @include medium-screen-all {
+                display: flex;
+                flex-direction: row;
+            }
+    
+            @import '../3-molecules/fig-image';
+            @import '../3-molecules/fig-content';
         }
-
-        @import '../3-molecules/fig-image';
-        @import '../3-molecules/fig-content';
+    
+        @include medium-screen-all {
+            &:nth-child(even) {
+                figure {
+                    flex-direction: row-reverse;
+                }
+            }
+        }
     }
-    
-    // li:nth-of-type(2n+0) {
-    //     flex-direction: row-reverse;
-    // }
-    
-
 }
 
 
