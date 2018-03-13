@@ -64,12 +64,18 @@ h3 {
     margin: 0 auto;
     text-transform: uppercase;
     padding: 16px 32px;
-    background: #12B4BA;
+    background: $color-action;
     text-decoration: none;
     @include font(16px, 24px, #fff);
     font-family: 'Source Sans Pro', serif;
     font-weight: 600;
     border-radius: 5px;
+    transition: all 0.24s ease-in-out;
+
+    &:focus,
+    &:hover {
+        background: $color-action-active;        
+    }
 }
 
 header {
