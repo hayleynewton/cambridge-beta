@@ -1,0 +1,27 @@
+// Images which appear as blocks in article content
+// - Auto-crop to 16:9 ratio
+// - Images with file name ending in '-full' will be
+//     resized but not cropped
+img {
+    display: block;
+    width: $line-max-copy;
+    height: $line-max-copy * 9 / 16;
+
+    object-fit: cover;
+
+    // Resize for images smaller than normal max-width
+    // No clue why the padding needs *3 here, but it does.
+    @media (max-width: #{$line-max-copy + (16 * 3)}) {
+        $width: calc(100vw - calc(16px * 3));
+        width: $width;
+        height: calc(#{$width} * 9 / 16);
+        object-fit: contain;
+    }
+
+    &[src*='-full.'] {
+        width: 100%;
+        height: auto;
+
+        object-fit: unset;
+    }
+}

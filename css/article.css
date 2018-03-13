@@ -630,6 +630,27 @@ body {
   }
 }
 
+.article.detail section.content img {
+  display: block;
+  width: 640px;
+  height: 360px;
+  object-fit: cover;
+}
+
+@media (max-width: 688px) {
+  .article.detail section.content img {
+    width: calc(100vw - calc(16px * 3));
+    height: calc(calc(100vw - calc(16px * 3)) * 9 / 16);
+    object-fit: contain;
+  }
+}
+
+.article.detail section.content img[src*='-full.'] {
+  width: 100%;
+  height: auto;
+  object-fit: unset;
+}
+
 .article.detail section.content.copy {
   position: relative;
   max-width: 640px;

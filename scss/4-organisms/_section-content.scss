@@ -4,6 +4,7 @@ section.content {
     padding: 0 $bl-2;
 
     @import '../2-atoms/copy';
+    @import '../2-atoms/article-img';
     
 
     &.copy {
