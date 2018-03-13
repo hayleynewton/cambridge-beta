@@ -19,7 +19,7 @@
     <body class="home">
         <!-- main nav -->
         <nav role="banner">
-            <h1 class="logo">BETA</h1>
+            <a href="#" class="logo"><h1>BETA</h1></a>
             <input type="checkbox" id="mobile-menu-toggle">
             <label for="mobile-menu-toggle">
                     MENU
@@ -31,11 +31,11 @@
                     <i class="material-icons">search</i>
                 </label>
                 <ul>
-                    <li class="active"><a href="#">Top Picks</a></li>
-                    <li><a href="#">All</a></li>
-                    <li><a href="#perspectives">Perspectives</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#products">Products</a></li>
+                    <li class="active"><a href="#"><span>Top Picks</span></a></li>
+                    <li><a href="#all"><span>All</span></a></li>
+                    <li><a href="#perspective"><span>Perspectives</span></a></li>
+                    <li><a href="#project"><span>Projects</span></a></li>
+                    <li><a href="#product"><span>Products</span></a></li>
                 </ul>
                 <div class="search-box">
                     <input type="text" id="search-input" placeholder="search">
@@ -43,7 +43,6 @@
                         <i class="material-icons">clear</i>
                     </a>
                 </div>
-
             </div>
         </nav>
         <!-- article list -->
@@ -59,7 +58,7 @@
                     <!-- feature one -->
                     <li class="one" id="one">
                         <figure>
-                            <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e3b92161cef01773ab8e0f83d4da1126&auto=format&fit=crop&w=2550&q=800"/>
+                            <img src="img/article/perspective/hackathon.jpg"/>
                             <figcaption>
                                 <header>
                                     <a href="#" class="category">Perspectives</a>
@@ -75,7 +74,7 @@
                     feature two
                     --><li class="two" id="two">
                         <figure>
-                            <img src="https://images.unsplash.com/photo-1499678329028-101435549a4e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bff1627fffb987bb0026180a324f56e8&auto=format&fit=crop&w=2400&q=80"/>
+                            <img src="img/article/product/BETA-quiz-your-english.jpg"/>
                             <figcaption>
                                 <header>
                                     <a href="#" class="category">Projects</a>
@@ -92,14 +91,18 @@
             </header>
             <!-- filter articles list-->
             <ul aria-label="filterable">
+                <a id="all" class="filter"></a>
+                <a id="perspective" class="filter"></a>
+                <a id="project" class="filter"></a>
+                <a id="product" class="filter"></a>
                 <!-- feature one -->
-                <li id="one">
+                <li data-tag="perspective all">
                     <figure>
                         <figure class="fig-image">
                             <figcaption>
                                 <h3>Hackathon: Technology and Test Tasks</h3>
                             </figcaption>
-                            <img src="img/cover.jpg"/>
+                            <img src="img/article/perspective/hackathon.jpg"/>
                         </figure>
                         <figcaption class="fig-content">
                             <h3>Hackathon: Technology and Test Tasks</h3>
@@ -108,19 +111,19 @@
                             </p>
                             <a href="articles/perspective-hackathon.html" class="more">&rarr; Read More</a>
                             <footer>
-                                <a href="#" class="category">More <span>Projects</span></a>
+                                <a href="#" class="category">More <span>Perspectives</span></a>
                             </footer>
                         </figcaption>
                     </figure>
                 </li>
                 <!-- feature two -->
-                <li id="two">
+                <li data-tag="product all">
                     <figure>
                         <figure class="fig-image">
                             <figcaption>
                                 <h3>Quiz your English app</h3>
                             </figcaption>
-                            <img src="img/cover.jpg"/>
+                            <img src="img/article/product/BETA-quiz-your-english.jpg"/>
                         </figure>
                         <figcaption class="fig-content">
                             <h3>Quiz your English app</h3>
@@ -129,22 +132,22 @@
                             </p>
                             <a href="articles/product-quiz-your-english.html" class="more">&rarr; Read More</a>
                             <footer>
-                                <a href="#" class="category">More <span>Projects</span></a>
+                                <a href="#" class="category">More <span>Products</span></a>
                             </footer>
                         </figcaption>
                     </figure>   
                 </li>
                 <!-- feature three -->
-                <li id="three">
+                <li data-tag="project all">
                     <figure>
                         <figure class="fig-image">
                             <figcaption>
-                                <h3>The Digital Teacher</h3>
+                                <h3>Aim Higher MOOC</h3>
                             </figcaption>
-                            <img src="img/cover.jpg"/>
+                            <img src="img/article/product/BETA-aim-higher.jpg"/>
                         </figure>
                         <figcaption class="fig-content">
-                            <h3>The Digital Teacher</h3>
+                            <h3>Aim Higher MOOC</h3>
                             <p>
                                 This course is designed to help refugees and asylum seekers get the information and the support they need to apply, and reach university in the UK.
                             </p>
@@ -156,27 +159,26 @@
                     </figure>   
                 </li>
                 <!-- feature four -->
-                <li id="four">
-                        <figure>
-                            <figure class="fig-image">
-                                <figcaption>
-                                    <h3>The Digital Teacher</h3>
-                                </figcaption>
-                                <img src="img/cover.jpg"/>
-                            </figure>
-                            <figcaption class="fig-content">
+                <li data-tag="project all">
+                    <figure>
+                        <figure class="fig-image">
+                            <figcaption>
                                 <h3>Techfugees</h3>
-                                <p>
-                                    In October 2016, Cambridge English and Techfugees came together to hold the 'Access to English for refugees and asylum seekers' conference held here in Cambridge.
-                                </p>
-                                <a href="articles/project-techfugees.html" class="more">&rarr; Read More</a>
-                                <footer>
-                                    <a href="#" class="category">More <span>Projects</span></a>
-                                </footer>
                             </figcaption>
-                        </figure>   
-                    </li>
-               
+                            <img src="img/article/project/BETA-cambridge-english-and-tech-fugees.jpg"/>
+                        </figure>
+                        <figcaption class="fig-content">
+                            <h3>Techfugees</h3>
+                            <p>
+                                In October 2016, Cambridge English and Techfugees came together to hold the 'Access to English for refugees and asylum seekers' conference held here in Cambridge.
+                            </p>
+                            <a href="articles/project-techfugees.html" class="more">&rarr; Read More</a>
+                            <footer>
+                                <a href="#" class="category">More <span>Projects</span></a>
+                            </footer>
+                        </figcaption>
+                    </figure>   
+                </li>
             </ul>
         </article>
         <!-- fonter -->

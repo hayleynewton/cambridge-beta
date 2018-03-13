@@ -20,6 +20,42 @@
     // 9. Add the client / brand footer
     @import '../4-organisms/footer-brand';
     // 10. Add common page elements
-    @import '../6-pages/common'; 
+    @import '../6-pages/common';
 
+    // Disable share
+    aside.social,
+    footer.content .like,
+    footer.content .bookmark,
+    aside.related .like {
+        // Using hidden instead so layout isn't messed up
+        visibility: hidden !important;
+    }
+
+    // Disable tags
+    footer.content {
+        display: none !important;
+    }
+
+    // Disable related content
+    aside.related {
+        display: none !important;
+    }
+
+    // Disable comments
+    section.comments {
+        display: none !important;
+    }
+
+    footer.content {
+        margin-top: 16px;
+    }
+
+    aside.profile {
+        margin-top: 32px;
+        margin-bottom: 64px;
+    }
+
+    aside.related {
+        margin-top: 64px;
+    }
 }

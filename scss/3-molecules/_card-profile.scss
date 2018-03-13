@@ -1,10 +1,11 @@
 .card.profile {
     display: inline-block;
-    margin: $bl-2 0;
+    margin: $bl-2 0 0;
 
     h3 {
         @include font($font-heading,$bl-4);
         font-family: $font-family;
+        font-weight: $font-boldest;
         margin: 0; 
     }
 

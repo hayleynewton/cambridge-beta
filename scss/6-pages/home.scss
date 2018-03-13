@@ -23,12 +23,15 @@
         background-color: $color-background-darkest;
 
         li {
+            font-family: $font-family;
             font-weight: $font-bold;
             
             a {
-                border-bottom: solid 2px transparent;
+                span {
+                    border-bottom: solid 2px transparent;
+                }
 
-                &:hover {
+                &:hover span {
                     border-bottom: solid 2px $color-action;
                 }
             }
@@ -37,6 +40,11 @@
                 font-weight: $font-boldest;
             }
         }
+
+        // Disable search
+        #{$search-toggle-input}, #{$search-toggle-label}, .search-box {
+            display: none !important;
+        }
     }
 }
 
@@ -44,7 +52,6 @@
     padding: 0;
     margin: 0; 
 }
-
 
 @keyframes slide-up {
 

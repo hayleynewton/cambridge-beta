@@ -17,26 +17,31 @@ li {
         overflow: hidden;
 
         transition: {
-            property: width,max-width,padding,margin;
+            property: width, max-width, padding, margin;
             duration: 0.5s;
             timing-function: ease;
         }
     }
 
     a {
-        display: block;
-        padding: 0px 16px;
+        display: flex;
+        align-items: center;
 
-        @include small-screen {
-            padding-left: 0;
+        span {
+            padding: 2px 16px; // Vertical padding to offset underline
+    
+            @include small-screen {
+                padding-left: 0;
+            }
         }
 
         text-decoration: none;
         color: #fff;
 
+        // Active/inactive transition
         transition: {
-            property: font-size, font-weight;
-            duration: 0.2s;
+            property: font-size, font-weight, line-height, height, padding;
+            duration: 0.1s;
             timing-function: linear;
         }
     }

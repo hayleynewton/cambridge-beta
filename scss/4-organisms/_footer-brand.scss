@@ -3,8 +3,12 @@ footer[role="contact"] {
     justify-content: space-between;
     align-items: center;
     padding: 16px;
-    height: 10vh;
+    height: 80px;
     box-sizing: border-box;
+
+    @include small-screen {
+        height: 56px;
+    }
 
     @import '../2-atoms/logo';
     @import '../2-atoms/copyright';

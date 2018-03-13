@@ -69,7 +69,7 @@ nav .logo, * {
   -webkit-padding-start: 0;
 }
 
-nav.nav-subpage h1:not(.logo), .panel-view .panel h2, .panel-view .panel h3 {
+nav.nav-subpage > h1:first-of-type, .panel-view .panel h2, .panel-view .panel h3, footer[role="contact"] nav.nav-subpage > h1:first-of-type {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 900;
 }
@@ -79,7 +79,7 @@ nav.nav-subpage h1:not(.logo), .panel-view .panel h2, .panel-view .panel h3 {
   list-style-type: disc;
 }
 
-nav.nav-subpage h1:not(.logo) {
+nav.nav-subpage > h1:first-of-type {
   font-size: 24px;
   line-height: 32px;
   padding: 10px 0px;
@@ -87,7 +87,7 @@ nav.nav-subpage h1:not(.logo) {
 }
 
 @media (max-width: 767px) {
-  nav.nav-subpage h1:not(.logo) {
+  nav.nav-subpage > h1:first-of-type {
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 300;
     font-size: 12px;
@@ -158,9 +158,9 @@ nav {
   right: 0;
   left: 0;
   bottom: 0;
-  z-index: 10;
+  z-index: 20;
   height: 80px;
-  padding: 16px;
+  padding: 0px 16px;
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
@@ -177,6 +177,17 @@ nav {
     padding: 4px 16px;
     justify-content: space-between;
   }
+}
+
+nav .logo {
+  font-family: "Source Serif Pro", serif;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+nav .logo:hover {
+  color: #FFFFFF !important;
+  text-decoration: none;
 }
 
 nav #mobile-menu-toggle {
@@ -207,6 +218,7 @@ nav label[for='mobile-menu-toggle'] .material-icons {
 
 nav ul {
   display: flex;
+  height: 100%;
   align-items: center;
   justify-content: flex-end;
   margin: 0;
@@ -220,6 +232,16 @@ nav ul {
   }
   nav ul li {
     margin: 8px 0px;
+  }
+}
+
+@media (min-width: 768px) {
+  nav ul li {
+    height: 100%;
+  }
+  nav ul li a {
+    height: 100%;
+    box-sizing: border-box;
   }
 }
 
@@ -241,24 +263,28 @@ nav ul li.active {
   nav ul li {
     max-width: 150px;
     overflow: hidden;
-    transition-property: width,max-width,padding,margin;
+    transition-property: width, max-width, padding, margin;
     transition-duration: 0.5s;
     transition-timing-function: ease;
   }
 }
 
 nav ul li a {
-  display: block;
-  padding: 0px 16px;
+  display: flex;
+  align-items: center;
   text-decoration: none;
   color: #fff;
-  transition-property: font-size, font-weight;
-  transition-duration: 0.2s;
+  transition-property: font-size, font-weight, line-height, height, padding;
+  transition-duration: 0.1s;
   transition-timing-function: linear;
 }
 
+nav ul li a span {
+  padding: 2px 16px;
+}
+
 @media (max-width: 767px) {
-  nav ul li a {
+  nav ul li a span {
     padding-left: 0;
   }
 }
@@ -371,6 +397,7 @@ nav .search-box .search-clear img {
 nav .menu {
   display: flex;
   flex-direction: row;
+  height: 100%;
 }
 
 @media (max-width: 767px) {
@@ -498,9 +525,10 @@ nav.nav-subpage {
   position: fixed;
   bottom: unset;
   top: 0;
+  padding-left: 0;
 }
 
-nav.nav-subpage h1:not(.logo), nav.nav-subpage .panel-view .panel h2, .panel-view .panel nav.nav-subpage h2, nav.nav-subpage .panel-view .panel h3, .panel-view .panel nav.nav-subpage h3 {
+nav.nav-subpage > h1:first-of-type, nav.nav-subpage .panel-view .panel h2, .panel-view .panel nav.nav-subpage h2, nav.nav-subpage .panel-view .panel h3, .panel-view .panel nav.nav-subpage h3, footer[role="contact"] nav.nav-subpage > h1:first-of-type {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 900;
 }
@@ -510,7 +538,7 @@ nav.nav-subpage .panel-view .panel ul, .panel-view .panel nav.nav-subpage ul {
   list-style-type: disc;
 }
 
-nav.nav-subpage h1:not(.logo) {
+nav.nav-subpage > h1:first-of-type {
   font-size: 24px;
   line-height: 32px;
   padding: 10px 0px;
@@ -518,7 +546,7 @@ nav.nav-subpage h1:not(.logo) {
 }
 
 @media (max-width: 767px) {
-  nav.nav-subpage h1:not(.logo) {
+  nav.nav-subpage > h1:first-of-type {
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 300;
     font-size: 12px;
@@ -580,13 +608,10 @@ nav.nav-subpage footer[role="contact"] small, footer[role="contact"] nav.nav-sub
 nav.nav-subpage .back {
   display: flex;
   align-items: center;
+  padding: 0px 24px;
   color: #FFFFFF;
   cursor: pointer;
   user-select: none;
-}
-
-nav.nav-subpage .back:hover {
-  color: #9B9B9B;
 }
 
 nav.nav-subpage .back .label {
@@ -610,24 +635,28 @@ nav.nav-subpage .back .label {
 }
 
 @media (max-width: 767px) {
+  nav.nav-subpage .back {
+    padding: 0px 12px;
+  }
   nav.nav-subpage .back .label {
     display: none;
   }
 }
 
 nav.nav-subpage .back {
-  margin-right: 24px;
+  margin-right: calc(24px - 12px);
+  height: 100%;
 }
 
 @media (min-width: 768px) and (max-width: 1919px) {
   nav.nav-subpage .back {
-    margin-right: 64px;
+    margin-right: calc(64px - 24px);
   }
 }
 
 @media (min-width: 1920px) {
   nav.nav-subpage .back {
-    margin-right: 72px;
+    margin-right: calc(72px - 24px);
   }
 }
 
@@ -641,8 +670,14 @@ footer[role="contact"] {
   justify-content: space-between;
   align-items: center;
   padding: 16px;
-  height: 10vh;
+  height: 80px;
   box-sizing: border-box;
+}
+
+@media (max-width: 767px) {
+  footer[role="contact"] {
+    height: 56px;
+  }
 }
 
 footer[role="contact"] a.logo,
@@ -651,7 +686,7 @@ footer[role="contact"] img {
   height: 40px;
 }
 
-footer[role="contact"] nav.nav-subpage h1:not(.logo), nav.nav-subpage footer[role="contact"] h1:not(.logo), footer[role="contact"] .panel-view .panel h2, .panel-view .panel footer[role="contact"] h2, footer[role="contact"] .panel-view .panel h3, .panel-view .panel footer[role="contact"] h3 {
+footer[role="contact"] nav.nav-subpage > h1:first-of-type, footer[role="contact"] .panel-view .panel h2, .panel-view .panel footer[role="contact"] h2, footer[role="contact"] .panel-view .panel h3, .panel-view .panel footer[role="contact"] h3 {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 900;
 }
@@ -661,7 +696,7 @@ footer[role="contact"] .panel-view .panel ul, .panel-view .panel footer[role="co
   list-style-type: disc;
 }
 
-footer[role="contact"] nav.nav-subpage h1:not(.logo), nav.nav-subpage footer[role="contact"] h1:not(.logo) {
+footer[role="contact"] nav.nav-subpage > h1:first-of-type {
   font-size: 24px;
   line-height: 32px;
   padding: 10px 0px;
@@ -669,7 +704,7 @@ footer[role="contact"] nav.nav-subpage h1:not(.logo), nav.nav-subpage footer[rol
 }
 
 @media (max-width: 767px) {
-  footer[role="contact"] nav.nav-subpage h1:not(.logo), nav.nav-subpage footer[role="contact"] h1:not(.logo) {
+  footer[role="contact"] nav.nav-subpage > h1:first-of-type {
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 300;
     font-size: 12px;
@@ -903,7 +938,10 @@ footer[role="contact"] small {
     right: 0;
     bottom: 0;
     width: 40vw;
+    min-height: 100%;
     max-height: 100%;
+    object-fit: contain;
+    object-position: bottom;
     margin: 0;
   }
 }

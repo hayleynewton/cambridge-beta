@@ -7,14 +7,11 @@
 .back {
     display: flex;
     align-items: center;
+    padding: 0px 24px;
     
     color: $color-text-inverse;
     cursor: pointer;
     user-select: none;
-
-    &:hover {
-        color: $color-text-light;
-    }
 
     @import '../2-atoms/nav-back-label';
     @import '../2-atoms/nav-back-arrow';
@@ -28,6 +25,8 @@
     }
 
     @include small-screen {
+        padding: 0px 12px;
+
         .label {
             display: none;
         }

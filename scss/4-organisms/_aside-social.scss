@@ -4,26 +4,25 @@ aside.social {
     flex-direction: column;
     position: absolute;
     top: 0;
-    left: 50%;
+    left: 0;
 
-    @include medium-screen {
-        margin-left: -($line-max-heading / 2);        
-    }
-
-    @media screen and (min-width: 768px) and (max-width: 832px) {
-        left: $bl-2;
-        margin-left: 0;
+    @media screen and (min-width: $mediumScreenMin) and (max-width: $bp-large - 1) {
+        transform: translateX($bl-2 + ($line-max-copy - $line-max-heading) / 2)
     }
 
     @media screen and (min-width: $bp-large) {
-        margin-left: -(($line-max-copy / 2) + ($line-max-heading - $line-max-copy));
+        transform: translateX($bl-2 - $line-max-heading + $line-max-copy);
     }
 
     h2 {
-        @include font($font-small,$bl-4);
+        // Importance as section.content.copy h2 counts as more specific
+        @include font(16px !important, 24px !important);
         font-family: $font-family;
+        font-weight: $font-boldest !important;
         text-align: center;
+        margin-top: 0;
         margin-bottom: 0;
+        text-transform: uppercase;
     }
 
     a {
