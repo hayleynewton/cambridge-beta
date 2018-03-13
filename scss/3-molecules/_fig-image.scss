@@ -27,6 +27,7 @@
     figcaption { 
         @include font($font-large, 40px, null);
         padding: 0 16px;
+        font-family: 'Source Sans Pro', serif;
 
         @include medium-screen-all {
             display: none;
