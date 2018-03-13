@@ -628,6 +628,11 @@ body {
     line-height: 0.9;
     margin: 0 16px -16px 0;
   }
+  @-moz-document url-prefix() {
+    .article.detail section.content.heading p:first-of-type::first-letter {
+      margin: 12px 16px 0 0;
+    }
+  }
 }
 
 .article.detail section.content img {
