@@ -29,6 +29,7 @@
                     @include font(13rem,0.9);
                     margin: 0 $bl-2 -#{$bl-2} 0;
 
+                    // TODO - configure to allow proprietary prefixes 
                     @-moz-document url-prefix() { 
                         margin: ($bl-1 * 1.5) $bl-2 0 0;
                     }
